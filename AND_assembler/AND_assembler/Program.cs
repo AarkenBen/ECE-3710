@@ -17,9 +17,10 @@ namespace AND_assembler
         static void Main(string[] args)
         {
             int pc;
-            String fileName, line, outFileName;
+            String fileName, line, outFileName, currentPath;
             Dictionary<string, int> str_pc;
 
+            currentPath = @"C:\Users\User\Source\Repos\ECE-3710\AND_assembler\";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
@@ -29,7 +30,7 @@ namespace AND_assembler
 
 
 
-            while(!File.Exists(@"C:\Users\Aaron Benson\Source\Repos\ECE-3710\AND_assembler\AND_Assembler\" + fileName))
+            while(!File.Exists(currentPath + fileName))
             {
                 Console.WriteLine("File does not exist. Please enter a valid file name.");
 
@@ -50,7 +51,7 @@ namespace AND_assembler
             }
 
             // remove any previous instances of the coe file
-            File.Delete(@"C:\Users\Aaron Benson\Source\Repos\ECE-3710\AND_assembler\AND_Assembler\" + outFileName + ".coe");
+            File.Delete(currentPath + outFileName + ".coe");
 
             for (int i = 0; i < 2; i++)
             {
@@ -60,7 +61,7 @@ namespace AND_assembler
 
                 // Read the file and display it line by line.  
                 System.IO.StreamReader infile =
-                    new System.IO.StreamReader(@"C:\Users\Aaron Benson\Source\Repos\ECE-3710\AND_assembler\AND_Assembler\" + fileName);
+                    new System.IO.StreamReader(currentPath + fileName);
                 while ((line = infile.ReadLine()) != null)
                 {
 
@@ -270,7 +271,7 @@ namespace AND_assembler
 
 
 
-                            using (System.IO.StreamWriter outfile = new System.IO.StreamWriter(@"C:\Users\Aaron Benson\Source\Repos\ECE-3710\AND_assembler\AND_Assembler\" + outFileName + ".coe", true))
+                            using (System.IO.StreamWriter outfile = new System.IO.StreamWriter(currentPath + outFileName + ".coe", true))
                             {
                                 if (toWrite.Length == 16)
                                     outfile.WriteLine(toWrite +  "," +"\t" + line);
@@ -280,7 +281,7 @@ namespace AND_assembler
                                     outfile.WriteLine(line);
                                     string first = toWrite.Substring(0, 16);
                                     string second = toWrite.Substring(16).Trim();
-                                    outfile.WriteLine(first);
+                                    outfile.WriteLine(first + ",");
                                     outfile.WriteLine(second + ",");
                                 }
                                 else
@@ -352,15 +353,37 @@ namespace AND_assembler
         // convert a string immediate to a binary string (e.g 0x1f -> 11111)
         static private string immediate_helper(string immd, int bits)
         {
-            int i;
+            int i, j;
             string result = immd.Substring(immd.LastIndexOf('x') + 1);
-            
-            // Int32.TryParse(result, out i);
+
             i = Convert.ToInt32(result, 16);
-            
-            string s = Convert.ToString(i, 2).PadLeft(bits, '0');
-           
-            return s;
+            j = -i;
+            if (immd.IndexOf("-", StringComparison.CurrentCultureIgnoreCase) != -1)
+            {
+                i = -i;
+                string s;
+                if (bits == 5) //5 6 16 21 24
+                    s = Convert.ToString(j & 0x1f, 2).PadLeft(bits, '1');
+                else if (bits == 6)
+                    s = Convert.ToString(j & 0x3f, 2).PadLeft(bits, '1');
+                else if (bits == 16)
+                    s = Convert.ToString(j & 0xffff, 2).PadLeft(bits, '1');
+                else if (bits == 21)
+                    s = Convert.ToString(j & 0x1fffff, 2).PadLeft(bits, '1');
+                else if (bits == 24)
+                    s = Convert.ToString(j & 0xffffff, 2).PadLeft(bits, '1');
+                else
+                    s = "didn't work";
+                
+                return s; 
+
+            }
+            else
+            {
+                string s = Convert.ToString(i, 2).PadLeft(bits, '0');
+
+                return s;
+            }
         }
         
         static private string load_write_helper(string register)

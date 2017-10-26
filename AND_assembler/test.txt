@@ -5,7 +5,7 @@
 label:
  addui 0x2 r2
  addsi 0xffff r0
- subui 0x9 r5
+ subui -0x9 r5
  subsi 0x1 r1
  addu r16 r0
  subu r14 r3
