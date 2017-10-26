@@ -1,0 +1,7 @@
+ and r1 r2
+ or r3 r8
+ not r31 r0
+ xor r17 r15
+label:
+ addui 0x2 r2
+ addsi 0xffff r0
