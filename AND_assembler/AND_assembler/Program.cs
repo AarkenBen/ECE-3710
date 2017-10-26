@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ *  jmpsra and jmptra
+ * 
+ */
 
 namespace AND_assembler
 {
@@ -51,7 +55,8 @@ namespace AND_assembler
             for (int i = 0; i < 2; i++)
             {
 
-                pc = 0x2800;
+               // pc = 0x2800;
+                pc = 0;
 
                 // Read the file and display it line by line.  
                 System.IO.StreamReader infile =
@@ -61,8 +66,8 @@ namespace AND_assembler
 
                     if (i == 0)
                     {
-                        // Console.WriteLine(line + " and " + "..." + line[0] + "...");
-                        // Console.ReadLine();
+                        //Console.WriteLine(line + " and " + "..." + line[0] + "...");
+                        //Console.ReadLine();
                         if (!Char.IsWhiteSpace(line[0]))
                         {
                             string l = line.Substring(0, line.LastIndexOf(':'));
@@ -158,6 +163,10 @@ namespace AND_assembler
                                     toWrite = "010000" + register_helper(instruction[2]) + register_helper(instruction[3]);
                                     break; // 0100
 
+                                case "shiftli":
+                                    toWrite = "0100" + "0" + "1" + immediate_helper(instruction[2], 5) + register_helper(instruction[3]); 
+                                    break;  
+
                                 case "jmpl":
                                     toWrite = "010100" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
                                     break; // 0101
@@ -200,8 +209,7 @@ namespace AND_assembler
 
                                     // needs to handle 
                                 case "jmp":
-
-                                    string pc_for_label = str_pc[instruction[2]].ToString();
+                                    string pc_for_label = immediate_helper(str_pc[instruction[2]].ToString(), 24);
 
                                     toWrite = "100000" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
                                     break; // 1000
@@ -265,13 +273,15 @@ namespace AND_assembler
                             using (System.IO.StreamWriter outfile = new System.IO.StreamWriter(@"C:\Users\Aaron Benson\Source\Repos\ECE-3710\AND_assembler\AND_Assembler\" + outFileName + ".coe", true))
                             {
                                 if (toWrite.Length == 16)
-                                    outfile.WriteLine(toWrite);
+                                    outfile.WriteLine(toWrite +  "," +"\t" + line);
                                 else if (toWrite.Length == 32)
                                 {
+                                    outfile.WriteLine("");
+                                    outfile.WriteLine(line);
                                     string first = toWrite.Substring(0, 16);
                                     string second = toWrite.Substring(16).Trim();
                                     outfile.WriteLine(first);
-                                    outfile.WriteLine(second);
+                                    outfile.WriteLine(second + ",");
                                 }
                                 else
                                     outfile.WriteLine("Compile Error" + toWrite + "\n");
