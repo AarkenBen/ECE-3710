@@ -274,15 +274,15 @@ namespace AND_assembler
                             using (System.IO.StreamWriter outfile = new System.IO.StreamWriter(currentPath + outFileName + ".coe", true))
                             {
                                 if (toWrite.Length == 16)
-                                    outfile.WriteLine(toWrite +  "," +"\t" + line);
+                                    outfile.WriteLine(toLittleEndian(toWrite) +  "," +"\t" + line);
                                 else if (toWrite.Length == 32)
                                 {
                                     outfile.WriteLine("");
                                     outfile.WriteLine(line);
                                     string first = toWrite.Substring(0, 16);
                                     string second = toWrite.Substring(16).Trim();
-                                    outfile.WriteLine(first + ",");
-                                    outfile.WriteLine(second + ",");
+                                    outfile.WriteLine(toLittleEndian(first) + ",");
+                                    outfile.WriteLine(toLittleEndian(second) + ",");
                                 }
                                 else
                                     outfile.WriteLine("Compile Error" + toWrite + "\n");
@@ -412,10 +412,7 @@ namespace AND_assembler
             {
                 return s.Substring(8, 8) + s.Substring(0, 8);
             }
-            else if (s.Length == 32)
-            {
-                return toLittleEndian(s.Substring(0,16)) + toLittleEndian(s.Substring(16,16));
-            }
+
 
             return "DIS BROKE LOL";
         }
