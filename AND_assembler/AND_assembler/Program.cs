@@ -20,7 +20,7 @@ namespace AND_assembler
             String fileName, line, outFileName, currentPath;
             Dictionary<string, int> str_pc;
 
-            currentPath = @"C:\Users\User\Source\Repos\ECE-3710\AND_assembler\";
+            currentPath = @"..//..//";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
