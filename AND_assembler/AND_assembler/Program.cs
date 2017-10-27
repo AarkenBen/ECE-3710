@@ -408,9 +408,8 @@ namespace AND_assembler
 
         public static string toLittleEndian(string s)
         {
-            char[] charArray = s.ToCharArray();
-            Array.Reverse(charArray);
-            return new string(charArray);
+
+            return null;
         }
     }
 }
