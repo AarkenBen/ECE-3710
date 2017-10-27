@@ -408,8 +408,16 @@ namespace AND_assembler
 
         public static string toLittleEndian(string s)
         {
+            if (s.Length == 16)
+            {
+                return s.Substring(8, 8) + s.Substring(0, 8);
+            }
+            else if (s.Length == 32)
+            {
+                return toLittleEndian(s.Substring(0,16)) + toLittleEndian(s.Substring(16,16));
+            }
 
-            return null;
+            return "DIS BROKE LOL";
         }
     }
 }
