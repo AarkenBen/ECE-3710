@@ -72,7 +72,6 @@ module reg_file(input clk,
 	always @(*)
 	begin
 		case(reg_index1)
-		begin
 		5'd0: read_reg_data1 = r0;
 		5'd1: read_reg_data1 = r1;
 		5'd2: read_reg_data1 = r2;
@@ -106,13 +105,13 @@ module reg_file(input clk,
 		5'd30: read_reg_data1 = r30;
 		5'd31: read_reg_data1 = r31;
 		endcase
+	end
 
 
 	/// Multiplex reg_index
 	always @(*)
 	begin
-		case(reg_index1)
-		begin
+		case(reg_index2)
 		5'd0: read_reg_data2 = r0;
 		5'd1: read_reg_data2 = r1;
 		5'd2: read_reg_data2 = r2;
@@ -146,45 +145,46 @@ module reg_file(input clk,
 		5'd30: read_reg_data2 = r30;
 		5'd31: read_reg_data2 = r31;
 		endcase
-
-			/// Multiplex reg_index
-	always @(*)
-	begin
-		case(reg_index1)
-		begin
-		5'd0: read_reg_data2 = r0;
-		5'd1: read_reg_data2 = r1;
-		5'd2: read_reg_data2 = r2;
-		5'd3: read_reg_data2 = r3;
-		5'd4: read_reg_data2 = r4;
-		5'd5: read_reg_data2 = r5;
-		5'd6: read_reg_data2 = r6;
-		5'd7: read_reg_data2 = r7;
-		5'd8: read_reg_data2 = r8;
-		5'd9: read_reg_data2 = r9;
-		5'd10: read_reg_data2 = r10;
-		5'd11: read_reg_data2 = r11;
-		5'd12: read_reg_data2 = r12;
-		5'd13: read_reg_data2 = r13;
-		5'd14: read_reg_data2 = r14;
-		5'd15: read_reg_data2 = r15;
-		5'd16: read_reg_data2 = r16;
-		5'd17: read_reg_data2 = r17;
-		5'd18: read_reg_data2 = r18;
-		5'd19: read_reg_data2 = r19;
-		5'd20: read_reg_data2 = r20;
-		5'd21: read_reg_data2 = r21;
-		5'd22: read_reg_data2 = r22;
-		5'd23: read_reg_data2 = r23;
-		5'd24: read_reg_data2 = r24;
-		5'd25: read_reg_data2 = r25;
-		5'd26: read_reg_data2 = r26;
-		5'd27: read_reg_data2 = r27;
-		5'd28: read_reg_data2 = r28;
-		5'd29: read_reg_data2 = r29;
-		5'd30: read_reg_data2 = r30;
-		5'd31: read_reg_data2 = r31;
-		endcase
-
-
 	end
+
+	always@(posedge clk) begin
+		if(w_enable) begin
+			case(reg_index2)
+				5'd0: r0 <= w_data;
+				5'd1: r1 <= w_data;
+				5'd2: r2 <= w_data;
+				5'd3: r3 <= w_data;
+				5'd4: r4 <= w_data;
+				5'd5: r5 <= w_data;
+				5'd6: r6 <= w_data;
+				5'd7: r7 <= w_data;
+				5'd8: r8 <= w_data;
+				5'd9: r9 <= w_data;
+				5'd10: r10 <= w_data;
+				5'd11: r11 <= w_data;
+				5'd12: r12 <= w_data;
+				5'd13: r13 <= w_data;
+				5'd14: r14 <= w_data;
+				5'd15: r15 <= w_data;
+				5'd16: r16 <= w_data;
+				5'd17: r17 <= w_data;
+				5'd18: r18 <= w_data;
+				5'd19: r19 <= w_data;
+				5'd20: r20 <= w_data;
+				5'd21: r21 <= w_data;
+				5'd22: r22 <= w_data;
+				5'd23: r23 <= w_data;
+				5'd24: r24 <= w_data;
+				5'd25: r25 <= w_data;
+				5'd26: r26 <= w_data;
+				5'd27: r27 <= w_data;
+				5'd28: r28 <= w_data;
+				5'd29: r29 <= w_data;
+				5'd30: r30 <= w_data;
+				5'd31: r31 <= w_data;
+			endcase
+		end
+	end
+
+
+endmodule
