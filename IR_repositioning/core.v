@@ -103,6 +103,7 @@ module core(
 						// memory instructions
 						else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
 						begin
+						reg_ndx_1 <= data_from_mem[9:5]; //delete me
 							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
 						end
 					
@@ -126,8 +127,10 @@ module core(
 						
 						if(current_op_code == loadL)
 							state <= load1;
+							
 						else if(current_op_code == writeL)
 							state <= store;
+							
 						else if(current_op_code == jmp)
 							state <= fetch1;
 						else
@@ -162,8 +165,11 @@ module core(
 		always@*
 		begin
 		
+		reg_w_en = 0;
 		write_en = 0;
 		mem_addr = 24'd0;
+		data_from_core_to_mem = 16'd0;
+		w_data = 16'd0;
 		//current_instruction = current_instruction;
 		
 		//current_op_code = current_op_code;
@@ -223,13 +229,13 @@ module core(
 				load2:
 					begin
 						w_data = data_from_mem; //what we got from mem 
-						reg_w_en = 1;
+						reg_w_en = 1'b1;
 					end
 						//w_data = data_from_mem;
 				store:
 					begin	
 						data_from_core_to_mem = reg_right_data;
-						write_en = 1;
+						write_en = 1'b1;
 					
 					end
 				
@@ -241,12 +247,12 @@ module core(
 		// register module
 		wire [15:0] reg_left_data;
 		wire [15:0] reg_right_data;
-		reg  [15:0] store_to_reg;
+		//reg  [15:0] store_to_reg; // prob delete
 
-		reg  [4:0]  reg_ndx_1 = 5'b0;
-		reg  [4:0]  reg_ndx_2 = 5'b0;
+		reg  [4:0]  reg_ndx_1 = 5'd0;
+		reg  [4:0]  reg_ndx_2 = 5'd0;
 		reg  [15:0] w_data;
-		reg	  	   reg_w_en;
+		reg	  	   reg_w_en = 1'b0;
 		
 		
 		reg_manager rm(.clk(clk),
