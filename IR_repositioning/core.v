@@ -34,7 +34,6 @@ module core(
 	reg[31:0] current_instruction = 32'd0;
 	reg[5:0] current_op_code = 6'd0;
 	
-
 	// program counter
 	reg[23:0] pc = 24'd0;
 
@@ -70,13 +69,21 @@ module core(
 		always @(posedge clk)
 		begin
 			case(state)
-				fetch1: state <= decode1;
+				fetch1: 
+					begin
+						state <= decode1;
+						pc = pc + 1'b1;	
+					end
+					
 				fetch2: state <= decode2;
+					begin
+						pc = pc + 1'b1;
+					end
 				
 				decode1: 
 					begin
 						// if one word
-						if(current_op_code == addu || current_op_code == subu)
+						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
 							state <= execute;
 						// if two word
 						else
@@ -124,9 +131,9 @@ module core(
 		
 		write_en = 0;
 		mem_addr = 24'd0;
-		current_instruction = current_instruction;
+		//current_instruction = current_instruction;
 		
-		current_op_code = current_op_code;
+		//current_op_code = current_op_code;
 		
 			case(state)
 				fetch1:
@@ -134,13 +141,12 @@ module core(
 					mem_addr = pc;
 					write_en = 0;
 					
-					pc = pc + 1'b1;
+					
 				end
 				
 				fetch2:
 				begin
 					mem_addr = pc;
-					pc = pc + 1'b1;
 				end
 				
 				decode1: 
