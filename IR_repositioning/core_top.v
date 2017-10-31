@@ -19,46 +19,65 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module core_top(		
-					input			 	clk,
-					output[7:0] 		VGA_pad,
-					output[7:0]			servo_pad
+					input					 	clk,
+					input  		[1:0]		sw,
+					
+					output 					hsync,
+					output 					vsync,
+					output [7:0] 			rgb
+					//output reg[7:0] 		VGA_pad,
+					//output reg[7:0]		servo_pad//
 			    );
 
 
-	//			wire[] mem_out_to_core	
+	// VGA
+	wire [15:0] data_from_mem_to_vga;
+	wire [23:0] vga_mem_addr;
+	
+	// CORE
+	wire [15:0] data_from_mem_to_core;
+	wire [15:0] data_from_core_to_mem;
+	wire [23:0] core_mem_addr;
+	wire        write_en;
 
-//wire mem
 
-/*
 				core core1(
-							.clock(clk),
-				 			.mem_out(),				//input[23:0]
+							.clk							(clk),
+				 			.data_from_mem				(data_from_mem_to_core),	
+							.data_from_core_to_mem	(data_from_core_to_mem),
 				 			//.servo_in(),				//input[7:0] 
 				 			//.ir_in(),				//input[7:0] 
-				 			.mem_addr(),				//output[23:0]
-							.write_en()
+				 			.mem_addr					(core_mem_addr),				//output[23:0]
+							.write_en					(write_en)
 				 			//.ir_out(),				//output[7:0]
 				 			//.servo_out(),				//output[7:0]
     						);
-							
 
-				
 
 				// Instantiate mem_manager
-				mem_manager mem_manager1(
-											.clock(clk)			//input				clock,
-											//.input[23:0] 		addr_in_block1,						
-														//input[23:0] 		addr_in_block2,
-														//input[15:0]			data_in1,
-														//input[15:0]			data_in2,
-														//input				req,
-														//input				read_write1,
-														//input				read_write2,
-														//output reg[15:0]	data_out1,
-														//output reg[15:0]	data_out2,
-
-
+				memory_manager mem_manager1(
+											.clock				(clk),			
+											.addr_in_block1 	(core_mem_addr),						
+											.addr_in_block2	(vga_mem_addr),        // address from vga
+											.data_in1 			(data_from_core_to_mem),
+											.data_in2 			(16'd0),   // data -> vga
+											.req					(1'b1),
+											.read_write1		(write_en),
+											.read_write2      (1'b0),
+											.data_out1			(data_from_mem_to_core),
+											.data_out2			(data_from_mem_to_vga)
 											);
+											
+	
+				VGA_GLPYH_TOP vga(
+											.clk							(clk),
+											.sw							(sw),
+											.data_from_mem_to_vga	(data_from_mem_to_vga),
+											.vga_mem_addr				(vga_mem_addr),
+											.hsync						(hsync),
+											.vsync						(vsync),
+											.rgb							(rgb)
+										);
 
 				// INSTANTIATE CELL MEM
 
@@ -67,5 +86,6 @@ module core_top(
 				// INSTANTIATE IR SENSOR DECODER
 
 				// INSTANTIATE CORE
-*/
+
+
 endmodule

@@ -25,9 +25,9 @@ module memory_manager(
 //						input[23:0] 		addr_in_cell,						
 						input[15:0]			data_in1,
 						input[15:0]			data_in2,
-						//input				req,
-						input				read_write1,
-						input				read_write2,
+						input				req,
+						input				read_write1, // read write enable
+						input				read_write2, // read write enable
 						output reg[15:0]	data_out1,
 						output reg[15:0]	data_out2
 
@@ -37,8 +37,8 @@ module memory_manager(
 	reg[15:0] block_data_in1 = 16'd0;
 	reg[15:0] block_data_in2 = 16'd0;
 
-	reg[15:0] block_data_out_1;
-	reg[15:0] block_data_out_2;
+	wire[15:0] block_data_out_1;
+	wire[15:0] block_data_out_2;
 
 
 	//////////////// Conditinons for actions  ///////////////////////
@@ -57,23 +57,23 @@ input [15 : 0] addrb;
 input [15 : 0] dinb;
 output [15 : 0] doutb;
 */
-
-/*
+ 
+ //synthesis attribute box_type block_mem "black_box"
 	block_mem b_mem(
 						.clka(clock),
-						.wea(read_write),
-						.addra(addr_in_block1),
+						.wea(read_write1),
+						.addra(addr_in_block1[15:0]),
 						.dina(block_data_in1),
-						.douta(block_data_out1),
+						.douta(block_data_out_1),
 						
 						.clkb(clock),
 						.web(read_write2),
-						.addrb(addr_in_block2),
+						.addrb(addr_in_block2[15:0]),
 						.dinb(block_data_in2),
-						.doutb(block_data_out2),
+						.doutb(block_data_out_2)
 					);
 
-*/
+
 	always @(*)
 	begin			
 		if(req == 1)
@@ -108,13 +108,13 @@ output [15 : 0] doutb;
 
 		if(req == 1)
 		begin
-			data_out_1 <= block_data_out1;
-			data_out_2 <= block_data_out2;
+			data_out1 <= block_data_out_1;
+			data_out2 <= block_data_out_2;
 		end
 		else 
 		begin
-			data_out_1 <= 16'd0;
-			data_out_2 <= 16'd0;
+			data_out1 <= 16'd0;
+			data_out2 <= 16'd0;
 		end
 
 		/// if cellular request, then wait 8 cycles else wait only 1 cycle

@@ -39,17 +39,17 @@ module core(
 	reg[23:0] pc = 24'd0;
 
 	////// STATES ///////	
-	reg[2:0] state = 4'd0;
+	reg[2:0] state = 3'd0;
 
 
-	localparam fetch1 = 0;
-	localparam fetch2 = 1;
-	localparam decode1 = 2;
-	localparam decode2 = 3;
-	localparam execute = 4;
-	localparam load1 = 5;
-	localparam load2 = 6;
-	localparam store = 7;
+	localparam fetch1 = 3'd0;
+	localparam fetch2 = 3'd1;
+	localparam decode1 = 3'd2;
+	localparam decode2 = 3'd3;
+	localparam execute = 3'd4;
+	localparam load1 = 3'd5;
+	localparam load2 = 3'd6;
+	localparam store = 3'd7;
 	//localparam fetch = 8;
 	//localparam fetch = 7;
 	
@@ -92,6 +92,7 @@ module core(
 					
 						current_op_code <= data_from_mem[7:2];
 						
+						
 						// one word
 						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
 						begin
@@ -103,11 +104,16 @@ module core(
 						// memory instructions
 						else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
 						begin
-						reg_ndx_1 <= data_from_mem[9:5]; //delete me
+							reg_ndx_1 <= data_from_mem[9:5]; //delete me
 							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
 						end
-					
-					
+						
+						else
+						begin
+							reg_ndx_1 <= data_from_mem[9:5];
+							reg_ndx_2 <= data_from_mem[4:0];
+						end
+						
 						// if one word
 						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
 							state <= execute;
@@ -192,6 +198,7 @@ module core(
 				begin
 					
 					
+					
 					// one word and immediate
 					//else if(current_op_code == jmp)
 				
@@ -229,13 +236,13 @@ module core(
 				load2:
 					begin
 						w_data = data_from_mem; //what we got from mem 
-						reg_w_en = 1'b1;
+						reg_w_en = 1;
 					end
 						//w_data = data_from_mem;
 				store:
 					begin	
 						data_from_core_to_mem = reg_right_data;
-						write_en = 1'b1;
+						write_en = 1;
 					
 					end
 				

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: core.prj
 
@@ -164,14 +164,14 @@ Synthesizing Unit <core>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <reg_right_data[15]_reg_left_data[15]_sub_41_OUT> created at line 216.
+    Found 16-bit subtractor for signal <reg_right_data[15]_reg_left_data[15]_sub_39_OUT> created at line 223.
     Found 24-bit adder for signal <pc[23]_GND_1_o_add_2_OUT> created at line 84.
-    Found 24-bit adder for signal <n0112> created at line 126.
-    Found 16-bit adder for signal <reg_right_data[15]_reg_left_data[15]_add_38_OUT> created at line 210.
+    Found 24-bit adder for signal <n0108> created at line 132.
+    Found 16-bit adder for signal <reg_right_data[15]_reg_left_data[15]_add_36_OUT> created at line 217.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  64 D-type flip-flop(s).
-	inferred  35 Multiplexer(s).
+	inferred  36 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <core> synthesized.
 
@@ -229,12 +229,12 @@ Macro Statistics
  24-bit register                                       : 1
  5-bit register                                        : 2
  6-bit register                                        : 1
-# Multiplexers                                         : 37
+# Multiplexers                                         : 38
  1-bit 2-to-1 multiplexer                              : 20
  16-bit 2-to-1 multiplexer                             : 9
  16-bit 32-to-1 multiplexer                            : 2
  24-bit 2-to-1 multiplexer                             : 5
- 5-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 1
 
 =========================================================================
@@ -254,12 +254,12 @@ Macro Statistics
  24-bit adder                                          : 1
 # Registers                                            : 576
  Flip-Flops                                            : 576
-# Multiplexers                                         : 90
+# Multiplexers                                         : 91
  1-bit 2-to-1 multiplexer                              : 44
  1-bit 32-to-1 multiplexer                             : 32
  16-bit 2-to-1 multiplexer                             : 9
  24-bit 2-to-1 multiplexer                             : 4
- 5-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 1
 
 =========================================================================
@@ -267,6 +267,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <current_op_code_3> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_0> 
+INFO:Xst:2261 - The FF/Latch <current_op_code_4> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_1> 
+INFO:Xst:2261 - The FF/Latch <current_op_code_5> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_2> 
+INFO:Xst:2261 - The FF/Latch <current_instruction_16> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_3> 
+INFO:Xst:2261 - The FF/Latch <current_instruction_17> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_4> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
 -------------------
@@ -285,151 +290,20 @@ Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
 Optimizing unit <core> ...
 
 Optimizing unit <reg_manager> ...
-WARNING:Xst:1293 - FF/Latch <rm/r29_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r29_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r23_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r28_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r30_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r31_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_ndx_1_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r22_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r20_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_15> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_14> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_13> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_12> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_11> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_10> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_9> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_8> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_7> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_6> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_5> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_4> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_3> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_2> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_1> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rm/r21_0> has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block core, actual ratio is 8.
-FlipFlop current_op_code_0 has been replicated 1 time(s)
-INFO:Xst:1843 - HDL ADVISOR - FlipFlop current_op_code_0 connected to a primary input has been replicated
+Found area constraint ratio of 100 (+ 5) on block core, actual ratio is 10.
 FlipFlop current_op_code_2 has been replicated 1 time(s)
 INFO:Xst:1843 - HDL ADVISOR - FlipFlop current_op_code_2 connected to a primary input has been replicated
-FlipFlop reg_ndx_1_0 has been replicated 1 time(s)
-INFO:Xst:1843 - HDL ADVISOR - FlipFlop reg_ndx_1_0 connected to a primary input has been replicated
-FlipFlop reg_ndx_1_2 has been replicated 2 time(s)
-INFO:Xst:1843 - HDL ADVISOR - FlipFlop reg_ndx_1_2 connected to a primary input has been replicated
-FlipFlop reg_ndx_1_3 has been replicated 2 time(s)
-INFO:Xst:1843 - HDL ADVISOR - FlipFlop reg_ndx_1_3 connected to a primary input has been replicated
-FlipFlop reg_ndx_2_0 has been replicated 4 time(s)
-FlipFlop reg_ndx_2_1 has been replicated 4 time(s)
+FlipFlop current_op_code_3 has been replicated 8 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop current_op_code_3 connected to a primary input has been replicated
+FlipFlop current_op_code_4 has been replicated 8 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop current_op_code_4 connected to a primary input has been replicated
+FlipFlop current_op_code_5 has been replicated 3 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop current_op_code_5 connected to a primary input has been replicated
+FlipFlop reg_ndx_2_0 has been replicated 8 time(s)
+FlipFlop reg_ndx_2_1 has been replicated 8 time(s)
 FlipFlop reg_ndx_2_2 has been replicated 1 time(s)
 FlipFlop reg_ndx_2_3 has been replicated 1 time(s)
 
@@ -439,8 +313,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 467
- Flip-Flops                                            : 467
+# Registers                                            : 612
+ Flip-Flops                                            : 612
 
 =========================================================================
 
@@ -463,20 +337,20 @@ Top Level Output File Name         : core.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 786
+# BELS                             : 690
 #      GND                         : 1
-#      LUT2                        : 19
-#      LUT3                        : 264
-#      LUT4                        : 50
-#      LUT5                        : 148
-#      LUT6                        : 193
+#      LUT2                        : 18
+#      LUT3                        : 58
+#      LUT4                        : 37
+#      LUT5                        : 90
+#      LUT6                        : 375
 #      MUXCY                       : 38
 #      MUXF7                       : 32
 #      VCC                         : 1
 #      XORCY                       : 40
-# FlipFlops/Latches                : 467
+# FlipFlops/Latches                : 612
 #      FD                          : 3
-#      FDE                         : 464
+#      FDE                         : 609
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 57
@@ -490,16 +364,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             467  out of  18224     2%  
- Number of Slice LUTs:                  674  out of   9112     7%  
-    Number used as Logic:               674  out of   9112     7%  
+ Number of Slice Registers:             612  out of  18224     3%  
+ Number of Slice LUTs:                  578  out of   9112     6%  
+    Number used as Logic:               578  out of   9112     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    809
-   Number with an unused Flip Flop:     342  out of    809    42%  
-   Number with an unused LUT:           135  out of    809    16%  
-   Number of fully used LUT-FF pairs:   332  out of    809    41%  
-   Number of unique control sets:        30
+ Number of LUT Flip Flop pairs used:   1049
+   Number with an unused Flip Flop:     437  out of   1049    41%  
+   Number with an unused LUT:           471  out of   1049    44%  
+   Number of fully used LUT-FF pairs:   141  out of   1049    13%  
+   Number of unique control sets:        37
 
 IO Utilization: 
  Number of IOs:                          58
@@ -529,7 +403,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 467   |
+clk                                | BUFGP                  | 612   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -540,9 +414,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.865ns (Maximum Frequency: 145.670MHz)
-   Minimum input arrival time before clock: 4.866ns
-   Maximum output required time after clock: 7.990ns
+   Minimum period: 6.015ns (Maximum Frequency: 166.251MHz)
+   Minimum input arrival time before clock: 4.412ns
+   Maximum output required time after clock: 7.788ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -551,62 +425,59 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.865ns (frequency: 145.670MHz)
-  Total number of paths / destination ports: 400347 / 891
+  Clock period: 6.015ns (frequency: 166.251MHz)
+  Total number of paths / destination ports: 744566 / 1164
 -------------------------------------------------------------------------
-Delay:               6.865ns (Levels of Logic = 11)
-  Source:            reg_ndx_2_0 (FF)
-  Destination:       rm/r12_10 (FF)
+Delay:               6.015ns (Levels of Logic = 7)
+  Source:            rm/r24_0 (FF)
+  Destination:       rm/r31_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: reg_ndx_2_0 to rm/r12_10
+  Data Path: rm/r24_0 to rm/r31_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             97   0.447   1.962  reg_ndx_2_0 (reg_ndx_2_0)
-     LUT6:I4->O            1   0.203   0.580  rm/mux28_81 (rm/mux28_81)
-     LUT4:I3->O            1   0.205   0.000  rm/mux28_31 (rm/mux28_3)
-     MUXF7:I1->O           3   0.140   0.651  rm/mux28_2_f7 (reg_right_data<6>)
-     LUT4:I3->O            1   0.205   0.000  Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_lut<6> (Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_lut<6>)
-     MUXCY:S->O            1   0.172   0.000  Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<6> (Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<7> (Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<8> (Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<9> (Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_cy<9>)
-     XORCY:CI->O           2   0.180   0.617  Mmux_GND_1_o_reg_right_data[15]_mux_42_OUT_rs_xor<10> (GND_1_o_reg_right_data[15]_mux_42_OUT<10>)
-     LUT5:I4->O           13   0.205   0.933  Mmux_w_data21 (w_data<10>)
-     LUT3:I2->O            1   0.205   0.000  rm/r11_10_dpot (rm/r11_10_dpot)
-     FDE:D                     0.102          rm/r11_10
+     FDE:C->Q              3   0.447   1.015  rm/r24_0 (rm/r24_0)
+     LUT6:I0->O            1   0.203   0.827  rm/mux_81 (rm/mux_81)
+     LUT6:I2->O            1   0.203   0.000  rm/mux_3 (rm/mux_3)
+     MUXF7:I1->O           1   0.140   0.684  rm/mux_2_f7 (reg_left_data<0>)
+     LUT4:I2->O            1   0.203   0.000  Mmux_GND_1_o_reg_right_data[15]_mux_40_OUT_rs_lut<0> (Mmux_GND_1_o_reg_right_data[15]_mux_40_OUT_rs_lut<0>)
+     XORCY:LI->O           2   0.136   0.617  Mmux_GND_1_o_reg_right_data[15]_mux_40_OUT_rs_xor<0> (GND_1_o_reg_right_data[15]_mux_40_OUT<0>)
+     LUT5:I4->O           17   0.205   1.028  Mmux_w_data17 (w_data<0>)
+     LUT3:I2->O            1   0.205   0.000  rm/r3_0_dpot (rm/r3_0_dpot)
+     FDE:D                     0.102          rm/r3_0
     ----------------------------------------
-    Total                      6.865ns (2.121ns logic, 4.744ns route)
-                                       (30.9% logic, 69.1% route)
+    Total                      6.015ns (1.844ns logic, 4.171ns route)
+                                       (30.7% logic, 69.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 680 / 466
+  Total number of paths / destination ports: 727 / 587
 -------------------------------------------------------------------------
-Offset:              4.866ns (Levels of Logic = 3)
-  Source:            data_from_mem<2> (PAD)
-  Destination:       reg_ndx_1_0 (FF)
+Offset:              4.412ns (Levels of Logic = 4)
+  Source:            data_from_mem<7> (PAD)
+  Destination:       state_FSM_FFd1 (FF)
   Destination Clock: clk rising
 
-  Data Path: data_from_mem<2> to reg_ndx_1_0
+  Data Path: data_from_mem<7> to state_FSM_FFd1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   1.222   0.934  data_from_mem_2_IBUF (data_from_mem_2_IBUF)
-     LUT2:I0->O            1   0.203   0.808  _n0361_inv_SW0 (N01)
-     LUT6:I3->O           24   0.205   1.172  _n0361_inv (_n0361_inv)
-     FDE:CE                    0.322          reg_ndx_1_0
+     IBUF:I->O            13   1.222   1.277  data_from_mem_7_IBUF (data_from_mem_7_IBUF)
+     LUT5:I0->O            2   0.203   0.617  state_FSM_FFd1-In12 (state_FSM_FFd1-In11)
+     LUT5:I4->O            1   0.205   0.580  state_FSM_FFd1-In13 (state_FSM_FFd1-In12)
+     LUT4:I3->O            1   0.205   0.000  state_FSM_FFd1-In14 (state_FSM_FFd1-In)
+     FD:D                      0.102          state_FSM_FFd1
     ----------------------------------------
-    Total                      4.866ns (1.952ns logic, 2.914ns route)
-                                       (40.1% logic, 59.9% route)
+    Total                      4.412ns (1.937ns logic, 2.475ns route)
+                                       (43.9% logic, 56.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 827 / 41
+  Total number of paths / destination ports: 1019 / 41
 -------------------------------------------------------------------------
-Offset:              7.990ns (Levels of Logic = 5)
+Offset:              7.788ns (Levels of Logic = 5)
   Source:            reg_ndx_2_0 (FF)
   Destination:       data_from_core_to_mem<15> (PAD)
   Source Clock:      clk rising
@@ -615,15 +486,15 @@ Offset:              7.990ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             97   0.447   1.962  reg_ndx_2_0 (reg_ndx_2_0)
-     LUT6:I4->O            1   0.203   0.827  rm/mux22_92 (rm/mux22_92)
-     LUT6:I2->O            1   0.203   0.000  rm/mux22_4 (rm/mux22_4)
+     FDE:C->Q             69   0.447   1.777  reg_ndx_2_0 (reg_ndx_2_0)
+     LUT6:I4->O            1   0.203   0.808  rm/mux22_10 (rm/mux22_10)
+     LUT6:I3->O            1   0.205   0.000  rm/mux22_4 (rm/mux22_4)
      MUXF7:I0->O           2   0.131   0.864  rm/mux22_2_f7 (reg_right_data<15>)
      LUT4:I0->O            1   0.203   0.579  Mmux_data_from_core_to_mem71 (data_from_core_to_mem_15_OBUF)
      OBUF:I->O                 2.571          data_from_core_to_mem_15_OBUF (data_from_core_to_mem<15>)
     ----------------------------------------
-    Total                      7.990ns (3.758ns logic, 4.232ns route)
-                                       (47.0% logic, 53.0% route)
+    Total                      7.788ns (3.760ns logic, 4.028ns route)
+                                       (48.3% logic, 51.7% route)
 
 =========================================================================
 
@@ -635,20 +506,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    6.865|         |         |         |
+clk            |    6.015|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.74 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.20 secs
  
 --> 
 
 Total memory usage is 298992 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  129 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 
