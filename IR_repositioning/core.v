@@ -202,13 +202,14 @@ module core(
 				
 						if(current_op_code == addu)
 							begin
-								w_data = reg_right_data + reg_left_data; 
+								w_data = reg_right_data + reg_left_data;
+								w_en = 1;
 							
 							end
 						else if(current_op_code == subu)
 							begin
 								w_data = reg_right_data - reg_left_data;
-							
+								w_en = 1;
 							end
 					end
 				
