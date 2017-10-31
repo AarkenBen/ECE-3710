@@ -149,7 +149,7 @@ module reg_file(input clk,
 
 	always@(posedge clk) begin
 		if(w_enable) begin
-			case(reg_index1)
+			case(reg_index2)
 				5'd0: r0 <= w_data;
 				5'd1: r1 <= w_data;
 				5'd2: r2 <= w_data;

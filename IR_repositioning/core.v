@@ -75,13 +75,38 @@ module core(
 						pc = pc + 1'b1;	
 					end
 					
-				fetch2: state <= decode2;
+				fetch2: 
 					begin
+						state <= decode2;
+					
 						pc = pc + 1'b1;
 					end
 				
 				decode1: 
 					begin
+					
+						current_instruction <= {data_from_mem[7:0], data_from_mem[15:8], 16'd0};
+					
+					
+						current_op_code <= data_from_mem[7:2];
+						
+						
+						
+					// one word
+					if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
+					begin
+						 reg_ndx_1 <= data_from_mem[9:5];
+						 reg_ndx_2 <= data_from_mem[4:0];
+					end
+					
+					
+					// memory instructions
+					else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
+					begin
+						reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
+					end
+					
+					
 						// if one word
 						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
 							state <= execute;
@@ -92,6 +117,13 @@ module core(
 				
 				decode2:
 					begin
+						current_instruction <= {current_instruction[31:16], data_from_mem[7:0], data_from_mem[15:8]};
+						
+						//pc <= pc;
+					
+						if(current_op_code == jmp)
+							pc = current_instruction[22:0] + 1;
+						
 						if(current_op_code == loadL)
 							state <= load1;
 						else if(current_op_code == writeL)
@@ -151,24 +183,7 @@ module core(
 				
 				decode1: 
 				begin
-					current_instruction = {data_from_mem[7:0], data_from_mem[15:8], 16'd0};
 					
-					
-					current_op_code = data_from_mem[7:2];
-					
-					// one word
-					if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
-					begin
-						 reg_ndx_1 = data_from_mem[9:5];
-						 reg_ndx_2 = data_from_mem[4:0];
-					end
-					
-					
-					// memory instructions
-					else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
-					begin
-						reg_ndx_1 = {1'd0, data_from_mem[11:8]};
-					end
 					
 					// one word and immediate
 					//else if(current_op_code == jmp)
@@ -177,12 +192,9 @@ module core(
 				
 				decode2:
 				begin
-					current_instruction = {current_instruction[31:16], data_from_mem[7:0], data_from_mem[15:8]};
 					
-					pc = pc;
 					
-					if(current_op_code == jmp)
-						pc = current_instruction[22:0] + 1;
+					
 				end
 				
 				execute:
@@ -195,7 +207,7 @@ module core(
 							end
 						else if(current_op_code == subu)
 							begin
-								w_data = reg_right_data - reg_left_data ;
+								w_data = reg_right_data - reg_left_data;
 							
 							end
 					end
