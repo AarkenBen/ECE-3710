@@ -23,6 +23,7 @@ module core(
 				input      [15:0] data_from_mem,
 				//input      [7:0]  servo_in,
 				//input      [7:0]  ir_in,
+				output reg [15:0] data_from_core_to_mem,
 				output reg [23:0] mem_addr,
 				output reg        write_en
 				//output reg [7:0]  ir_out,
@@ -91,21 +92,19 @@ module core(
 					
 						current_op_code <= data_from_mem[7:2];
 						
-						
-						
-					// one word
-					if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
-					begin
-						 reg_ndx_1 <= data_from_mem[9:5];
-						 reg_ndx_2 <= data_from_mem[4:0];
-					end
+						// one word
+						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
+						begin
+							reg_ndx_1 <= data_from_mem[9:5];
+							reg_ndx_2 <= data_from_mem[4:0];
+						end
 					
 					
-					// memory instructions
-					else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
-					begin
-						reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
-					end
+						// memory instructions
+						else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
+						begin
+							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
+						end
 					
 					
 						// if one word
@@ -140,8 +139,10 @@ module core(
 					
 						if(current_op_code == addu || current_op_code == subu)
 						begin
-							state <= store;
-						end	
+							state <= fetch1;
+						end
+							
+						
 					
 				
 					end
@@ -191,11 +192,9 @@ module core(
 				end
 				
 				decode2:
-				begin
+					begin
 					
-					
-					
-				end
+					end
 				
 				execute:
 					begin
@@ -218,20 +217,21 @@ module core(
 				load1:
 					begin
 						mem_addr = current_instruction[23:0];
-						write_en = 1;
+						write_en = 0;
 					end
 					
 				load2:
-					write_en = 0;
-						//w_data = data_from_mem;
-				store:
-				begin
-					if(current_op_code == addu || current_op_code == subu)
 					begin
+						w_data = data_from_mem; //what we got from mem 
 						reg_w_en = 1;
 					end
-				
-				end
+						//w_data = data_from_mem;
+				store:
+					begin	
+						data_from_core_to_mem = reg_right_data;
+						write_en = 1;
+					
+					end
 				
 			endcase
 		end

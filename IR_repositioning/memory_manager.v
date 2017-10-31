@@ -25,7 +25,7 @@ module memory_manager(
 //						input[23:0] 		addr_in_cell,						
 						input[15:0]			data_in1,
 						input[15:0]			data_in2,
-						input				req,
+						//input				req,
 						input				read_write1,
 						input				read_write2,
 						output reg[15:0]	data_out1,
