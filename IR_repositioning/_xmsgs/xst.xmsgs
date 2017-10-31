@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core.v</arg>&quot; line <arg fmt="%d" index="2">251</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">rm</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg_manager</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">core</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core.v</arg>&quot; line <arg fmt="%d" index="2">252</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">rm</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg_manager</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">core</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.

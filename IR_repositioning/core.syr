@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> Reading design: core.prj
 
@@ -117,7 +117,7 @@ Parsing module <core>.
 Elaborating module <core>.
 
 Elaborating module <reg_manager>.
-WARNING:Xst:2972 - "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core.v" line 251. All outputs of instance <rm> of block <reg_manager> are unconnected in block <core>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core.v" line 252. All outputs of instance <rm> of block <reg_manager> are unconnected in block <core>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -163,8 +163,8 @@ Synthesizing Unit <core>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 24-bit adder for signal <pc[23]_GND_1_o_add_2_OUT> created at line 82.
-    Found 24-bit adder for signal <n0152> created at line 125.
+    Found 24-bit adder for signal <pc[23]_GND_1_o_add_2_OUT> created at line 83.
+    Found 24-bit adder for signal <n0152> created at line 126.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  54 D-type flip-flop(s).
@@ -434,7 +434,7 @@ clk            |    3.653|         |         |         |
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.50 secs
+Total CPU time to Xst completion: 7.99 secs
  
 --> 
 

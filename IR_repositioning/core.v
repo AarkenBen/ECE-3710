@@ -64,7 +64,8 @@ module core(
 				  jmp = 6'b100000;
 
 	//////////////  STATES  ////////////////////
-
+	
+	
 		//////////////  SEQUANTIAL STATES  ////////////////////
 		always @(posedge clk)
 		begin
@@ -160,7 +161,6 @@ module core(
 		always@*
 		begin
 		
-		
 		write_en = 0;
 		mem_addr = 24'd0;
 		//current_instruction = current_instruction;
@@ -203,13 +203,13 @@ module core(
 						if(current_op_code == addu)
 							begin
 								w_data = reg_right_data + reg_left_data;
-								w_en = 1;
+								reg_w_en = 1;
 							
 							end
 						else if(current_op_code == subu)
 							begin
 								w_data = reg_right_data - reg_left_data;
-								w_en = 1;
+								reg_w_en = 1;
 							end
 					end
 				
