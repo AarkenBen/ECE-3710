@@ -22,7 +22,7 @@ namespace AND_assembler
 
             bool bigendian = true;
 
-            currentPath = @"..//..//";
+            currentPath = @"C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\AND_assembler\";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
