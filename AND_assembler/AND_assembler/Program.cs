@@ -20,10 +20,21 @@ namespace AND_assembler
             String fileName, line, outFileName, currentPath;
             Dictionary<string, int> str_pc;
 
-            currentPath = @"C:\Users\User\Source\Repos\ECE-3710\AND_assembler\";
+            bool bigendian = true;
+
+            currentPath = @"..//..//";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
+
+            if(args.Length > 1)
+            {
+                if(args[1] == "-bigendian")
+                {
+                    bigendian = true;
+                }
+            }
+
 
             Console.WriteLine("Enter a file name you want to assemble");
             fileName = Console.ReadLine();
@@ -58,7 +69,7 @@ namespace AND_assembler
             {
 
                // pc = 0x2800;
-                pc = 0;
+                pc = 0x2800;
 
                 // Read the file and display it line by line.  
                 System.IO.StreamReader infile =
@@ -418,10 +429,7 @@ namespace AND_assembler
             {
                 return s.Substring(8, 8) + s.Substring(0, 8);
             }
-            else if (s.Length == 32)
-            {
-                return toLittleEndian(s.Substring(0,16)) + toLittleEndian(s.Substring(16,16));
-            }
+
 
             return "DIS BROKE LOL";
         }
