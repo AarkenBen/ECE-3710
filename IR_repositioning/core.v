@@ -56,13 +56,15 @@ module core(
 	
 	
 	
-	localparam //AND = 6'b000000, OR = 6'b000001, NOT = 6'b000010, XOR = 6'b000011,
-		        addu = 6'b000100, subu = 6'b000110,
-				  loadL = 6'b100100,
+	localparam AND = 6'b000000, // OR = 6'b000001, 
+			   NOT = 6'b000010, 
+			   XOR = 6'b000011,
+		       addu = 6'b000100, subu = 6'b000110,
+			   loadL = 6'b100100,
 				//  loadH = 6'b101000, 
-				  writeL = 6'b101100, 
+			   writeL = 6'b101100, 
 				 // writeH = 6'b110000,
-				  jmp = 6'b100000;
+			   jmp = 6'b100000;
 
 	//////////////  STATES  ////////////////////
 	
@@ -223,6 +225,20 @@ module core(
 								w_data = reg_right_data - reg_left_data;
 								reg_w_en = 1;
 							end
+						else if(current_op_code == AND)
+							begin
+								w_data = reg_right_data & reg_left_data;
+							end
+						else if(current_op_code == XOR)
+							begin
+								w_data = reg_right_data ^ reg_left_data;
+							end
+						else if(current_op_code == NOT)
+							begin
+								w_data = !reg_left_data;
+							end
+						else  // Default case, should'nt be executed
+								w_data = reg_right_data;							
 					end
 				
 				
