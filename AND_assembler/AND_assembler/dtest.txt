@@ -1,2 +1,5 @@
+Start:
  shiftra r1 r1
  shiftrai 0x1 r1
+ jmp Start
+ jmpl r1 r1 0x2800
