@@ -283,7 +283,7 @@ namespace AND_assembler
                             else
                                 pc++;
                             string endline = ",";
-                            if (pc == end - labelCnt)
+                            if (pc == end)// - labelCnt)
                                 endline = ";";
 
 
