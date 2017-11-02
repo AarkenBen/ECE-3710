@@ -56,7 +56,7 @@ namespace AND_assembler
             for (int i = 0; i < 2; i++)
             {
 
-               // pc = 0x2800;
+                pc = 0x2800;
                 pc = 0;
 
                 // Read the file and display it line by line.  
