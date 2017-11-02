@@ -131,7 +131,7 @@ module core(
 						//pc <= pc;
 					
 						if(current_op_code == jmp)
-							pc = current_instruction[22:0] + 1;
+							pc = current_instruction[22:0];
 						
 						if(current_op_code == loadL)
 							state <= load1;
