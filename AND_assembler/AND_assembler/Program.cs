@@ -16,7 +16,7 @@ namespace AND_assembler
     {
         static void Main(string[] args)
         {
-            int pc;
+            int pc, end, labelCnt;
             String fileName, line, outFileName, currentPath;
             Dictionary<string, int> str_pc;
 
@@ -28,7 +28,8 @@ namespace AND_assembler
             Console.WriteLine("Enter a file name you want to assemble");
             fileName = Console.ReadLine();
 
-
+            end = 0;
+            labelCnt = 0;
 
             while(!File.Exists(currentPath + fileName))
             {
@@ -77,12 +78,14 @@ namespace AND_assembler
                            // Console.ReadLine();
                             str_pc.Add(l, pc);
                             pc++;
+                            labelCnt += 1;
                         }
                         else if (isTwoWords(line))
                             pc += 2; //adjust pc for two word instruction
                         else
                             pc++;
 
+                        end = pc;
 
                     }
                     else if (i == 1)
@@ -268,24 +271,27 @@ namespace AND_assembler
                                 pc += 2;
                             else
                                 pc++;
+                            string endline = ",";
+                            if (pc == end - labelCnt)
+                                endline = ";";
 
 
 
                             using (System.IO.StreamWriter outfile = new System.IO.StreamWriter(currentPath + outFileName + ".coe", true))
                             {
                                 if (toWrite.Length == 16)
-                                    outfile.WriteLine(toWrite +  "," +"\t" + line);
+                                    outfile.WriteLine(toWrite + endline);//+"\t" + line);
                                 else if (toWrite.Length == 32)
                                 {
-                                    outfile.WriteLine("");
-                                    outfile.WriteLine(line);
+                                    // outfile.WriteLine("");
+                                    // outfile.WriteLine(line);
                                     string first = toWrite.Substring(0, 16);
                                     string second = toWrite.Substring(16).Trim();
                                     outfile.WriteLine(first + ",");
-                                    outfile.WriteLine(second + ",");
+                                    outfile.WriteLine(second + endline);
                                 }
                                 else
-                                    outfile.WriteLine("Compile Error" + toWrite + "\n");
+                                    outfile.WriteLine("Compile Error. Code: " + toWrite + "\n");
 
                             }
                         }
@@ -294,7 +300,7 @@ namespace AND_assembler
                 infile.Close();
             }
         }
-
+        // semi colon at end
         private static bool isTwoWords(string line)
         {
             string[] instruction;
