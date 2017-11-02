@@ -88,7 +88,6 @@ namespace AND_assembler
                            // Console.WriteLine(l);
                            // Console.ReadLine();
                             str_pc.Add(l, pc);
-                            pc++;
                             labelCnt += 1;
                         }
                         else if (isTwoWords(line))
@@ -224,7 +223,7 @@ namespace AND_assembler
 
                                     // needs to handle 
                                 case "jmp":
-                                    string pc_for_label = immediate_helper(str_pc[instruction[2]].ToString(), 24);
+                                    string pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
 
                                     toWrite = "100000" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
                                     break; // 1000
@@ -377,7 +376,6 @@ namespace AND_assembler
             j = -i;
             if (immd.IndexOf("-", StringComparison.CurrentCultureIgnoreCase) != -1)
             {
-                i = -i;
                 string s;
                 if (bits == 5) //5 6 16 21 24
                     s = Convert.ToString(j & 0x1f, 2).PadLeft(bits, '1');
@@ -388,19 +386,40 @@ namespace AND_assembler
                 else if (bits == 21)
                     s = Convert.ToString(j & 0x1fffff, 2).PadLeft(bits, '1');
                 else if (bits == 24)
+                {
                     s = Convert.ToString(j & 0xffffff, 2).PadLeft(bits, '1');
+                    Console.WriteLine(immd + "\t" + s);
+                    Console.ReadLine();
+                }
                 else
                     s = "didn't work";
-                
                 return s; 
 
             }
             else
             {
-                string s = Convert.ToString(i, 2).PadLeft(bits, '0');
-
+                string s;
+                if (bits == 5) //5 6 16 21 24
+                    s = Convert.ToString(i & 0x1f, 2).PadLeft(bits, '0');
+                else if (bits == 6)
+                    s = Convert.ToString(i & 0x3f, 2).PadLeft(bits, '0');
+                else if (bits == 16)
+                    s = Convert.ToString(i & 0xffff, 2).PadLeft(bits, '0');
+                else if (bits == 21)
+                    s = Convert.ToString(i & 0x1fffff, 2).PadLeft(bits, '0');
+                else if (bits == 24)
+                {
+                    s = Convert.ToString(i & 0xffffff, 2).PadLeft(bits, '0');
+                    Console.WriteLine(immd + "\t" + s);
+                    Console.ReadLine();
+                }
+                else
+                    s = "didn't work";
                 return s;
             }
+
+
+
         }
         
         static private string load_write_helper(string register)
