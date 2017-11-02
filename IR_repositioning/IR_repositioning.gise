@@ -59,7 +59,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1509482958" xil_pn:in_ck="420159549963121680" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5785008394158019009" xil_pn:start_ts="1509482958">
+    <transform xil_pn:end_ts="1509604242" xil_pn:in_ck="420159549963121680" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5785008394158019009" xil_pn:start_ts="1509604242">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/block_mem.ngc"/>
@@ -81,10 +81,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1509484147" xil_pn:in_ck="5652210431513104251" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="1366265255199681838" xil_pn:start_ts="1509484120">
+    <transform xil_pn:end_ts="1509604262" xil_pn:in_ck="5652210431513104251" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="1366265255199681838" xil_pn:start_ts="1509604242">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="core.ngr"/>
       <outfile xil_pn:name="core_top.lso"/>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: core_top.prj
 
@@ -108,21 +108,21 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v" into library work
 Parsing module <VGA_SIGNAL_GENERATOR>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v" into library work
 Parsing module <VGA_PIXEL_GENERATOR>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\reg_manager.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\reg_manager.v" into library work
 Parsing module <reg_manager>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\ipcore_dir\block_mem.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\ipcore_dir\block_mem.v" into library work
 Parsing module <block_mem>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v" into library work
 Parsing module <VGA_GLPYH_TOP>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\memory_manager.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\memory_manager.v" into library work
 Parsing module <memory_manager>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\core.v" into library work
 Parsing module <core>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core_top.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\core_top.v" into library work
 Parsing module <core_top>.
 
 =========================================================================
@@ -150,13 +150,13 @@ Elaborating module <VGA_SIGNAL_GENERATOR>.
 =========================================================================
 
 Synthesizing Unit <core_top>.
-    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core_top.v".
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\core_top.v".
     Summary:
 	no macro.
 Unit <core_top> synthesized.
 
 Synthesizing Unit <core>.
-    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\core.v".
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\core.v".
     Found 1-bit register for signal <current_instruction<23>>.
     Found 1-bit register for signal <current_instruction<22>>.
     Found 1-bit register for signal <current_instruction<21>>.
@@ -209,7 +209,7 @@ Synthesizing Unit <core>.
 Unit <core> synthesized.
 
 Synthesizing Unit <reg_manager>.
-    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\reg_manager.v".
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\reg_manager.v".
     Found 16-bit register for signal <r30>.
     Found 16-bit register for signal <r29>.
     Found 16-bit register for signal <r28>.
@@ -250,7 +250,7 @@ Synthesizing Unit <reg_manager>.
 Unit <reg_manager> synthesized.
 
 Synthesizing Unit <memory_manager>.
-    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\memory_manager.v".
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\memory_manager.v".
 WARNING:Xst:647 - Input <addr_in_block1<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <addr_in_block2<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit register for signal <data_out2>.
@@ -261,13 +261,13 @@ WARNING:Xst:647 - Input <addr_in_block2<23:16>> is never used. This port will be
 Unit <memory_manager> synthesized.
 
 Synthesizing Unit <VGA_GLPYH_TOP>.
-    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v".
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v".
     Summary:
 	no macro.
 Unit <VGA_GLPYH_TOP> synthesized.
 
 Synthesizing Unit <VGA_PIXEL_GENERATOR>.
-    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v".
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v".
         BLACK = 8'b00000000
         WHITE = 8'b11111111
         RED = 8'b11111100
@@ -295,7 +295,7 @@ Synthesizing Unit <VGA_PIXEL_GENERATOR>.
 Unit <VGA_PIXEL_GENERATOR> synthesized.
 
 Synthesizing Unit <VGA_SIGNAL_GENERATOR>.
-    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v".
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v".
         frameWidth = 799
         frameHeight = 524
         hfp = 16
@@ -711,12 +711,12 @@ clk            |    6.015|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 20.09 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.61 secs
  
 --> 
 
-Total memory usage is 300104 kilobytes
+Total memory usage is 315536 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   16 (   0 filtered)

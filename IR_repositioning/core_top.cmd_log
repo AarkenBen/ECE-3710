@@ -19,3 +19,4 @@ xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning
 xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/core_top.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/core_top.syr" 
 xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/core_top.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/core_top.syr" 
 xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/core_top.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/core_top.syr" 
+xst -intstyle ise -ifn "C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/ECE-3710/IR_repositioning/core_top.xst" -ofn "C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/ECE-3710/IR_repositioning/core_top.syr" 

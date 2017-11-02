@@ -1,0 +1,67 @@
+ 
+ xor r1 r1
+
+ xor r2 r2
+
+ not r2 r2
+
+ xor r3 r3
+
+ xor r4 r4
+
+init:
+
+ xor r1 r1
+
+ xor r2 r2
+
+ not r2 r2
+
+ xor r3 r3
+
+ xor r4 r4
+
+ xor r5 r5
+
+ xor r6 r6
+
+ xor r7 r7
+
+ xor r8 r8
+
+ xor r9 r9
+
+ xor r10 r10
+
+count:
+ write r1 0x0001
+
+ write r1 0x0002
+
+ write r1 0x0003
+
+ write r1 0x0004
+
+ write r1 0x0005
+
+ write r1 0x0006
+
+ write r1 0x0007
+
+ write r1 0x0008
+
+ write r1 0x0009
+
+ write r1 0x000a
+
+ write r1 0x000b
+
+ write r1 0x000c
+
+ write r1 0x000e
+
+ write r1 0x000f
+
+ addu r2 r1
+
+ jmp count

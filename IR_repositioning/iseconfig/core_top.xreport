@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-31T10:25:15</DateModified>
-  <ModuleName>core</ModuleName>
+  <DateModified>2017-11-02T00:25:38</DateModified>
+  <ModuleName>core_top</ModuleName>
   <SummaryTimeStamp>2017-10-31T10:25:00</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/User/Desktop/School/ECE-3710/IR_repositioning/iseconfig/core_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/User/Desktop/School/ECE-3710/IR_repositioning</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/ECE-3710/IR_repositioning/iseconfig/core_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/ECE-3710/IR_repositioning\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-31T10:12:37</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
