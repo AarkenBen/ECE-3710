@@ -20,10 +20,21 @@ namespace AND_assembler
             String fileName, line, outFileName, currentPath;
             Dictionary<string, int> str_pc;
 
+            bool bigendian = false;
+
             currentPath = @"..//..//";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
+
+            if(args.Length > 1)
+            {
+                if(args[1] == "-bigendian")
+                {
+                    bigendian = true;
+                }
+            }
+
 
             Console.WriteLine("Enter a file name you want to assemble");
             fileName = Console.ReadLine();
@@ -57,7 +68,7 @@ namespace AND_assembler
             {
 
                // pc = 0x2800;
-                pc = 0;
+                pc = 0x2800;
 
                 // Read the file and display it line by line.  
                 System.IO.StreamReader infile =
@@ -274,15 +285,24 @@ namespace AND_assembler
                             using (System.IO.StreamWriter outfile = new System.IO.StreamWriter(currentPath + outFileName + ".coe", true))
                             {
                                 if (toWrite.Length == 16)
-                                    outfile.WriteLine(toLittleEndian(toWrite) +  "," +"\t" + line);
+                                    if (bigendian)
+                                        outfile.WriteLine(toWrite + ",\t" + line);
+                                    else
+                                        outfile.WriteLine(toLittleEndian(toWrite) +  "," +"\t" + line);
                                 else if (toWrite.Length == 32)
                                 {
                                     outfile.WriteLine("");
                                     outfile.WriteLine(line);
                                     string first = toWrite.Substring(0, 16);
                                     string second = toWrite.Substring(16).Trim();
-                                    outfile.WriteLine(toLittleEndian(first) + ",");
-                                    outfile.WriteLine(toLittleEndian(second) + ",");
+                                    if (bigendian)
+                                    {
+                                        outfile.WriteLine(first + ",");
+                                        outfile.WriteLine(second + ",");
+                                    }
+                                    else
+                                        outfile.WriteLine(toLittleEndian(first) + ",");
+                                        outfile.WriteLine(toLittleEndian(second) + ",");
                                 }
                                 else
                                     outfile.WriteLine("Compile Error" + toWrite + "\n");
