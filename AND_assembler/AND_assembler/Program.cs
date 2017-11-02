@@ -20,7 +20,7 @@ namespace AND_assembler
             String fileName, line, outFileName, currentPath;
             Dictionary<string, int> str_pc;
 
-            bool bigendian = false;
+            bool bigendian = true;
 
             currentPath = @"..//..//";
             outFileName = "Error";
