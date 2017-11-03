@@ -26,3 +26,9 @@ par -w -intstyle ise -ol high -mt off core_top_map.ncd core_top.ncd core_top.pcf
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml core_top.twx core_top.ncd -o core_top.twr core_top.pcf -ucf Aaron_Nexys3_Master.ucf 
 bitgen -intstyle ise -f core_top.ut core_top.ncd 
 xst -intstyle ise -ifn "C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/IR_repositioning/core_top.xst" -ofn "C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/IR_repositioning/core_top.syr" 
+xst -intstyle ise -ifn "C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/IR_repositioning/core_top.xst" -ofn "C:/Users/Nickj/Desktop/NickFall2017/ECE_3710/GROUP_FPGA_PROJECT/IR_repositioning/core_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Aaron_Nexys3_Master.ucf -p xc6slx16-csg324-3 core_top.ngc core_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o core_top_map.ncd core_top.ngd core_top.pcf 
+par -w -intstyle ise -ol high -mt off core_top_map.ncd core_top.ncd core_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml core_top.twx core_top.ncd -o core_top.twr core_top.pcf -ucf Aaron_Nexys3_Master.ucf 
+bitgen -intstyle ise -f core_top.ut core_top.ncd 

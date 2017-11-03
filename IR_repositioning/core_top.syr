@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.59 secs
+Total CPU time to Xst completion: 0.41 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.59 secs
+Total CPU time to Xst completion: 0.41 secs
  
 --> Reading design: core_top.prj
 
@@ -120,14 +120,607 @@ Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_
 Parsing module <VGA_GLPYH_TOP>.
 Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\memory_manager.v" into library work
 Parsing module <memory_manager>.
-ERROR:HDLCompiler:329 - "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\memory_manager.v" Line 125: Target <data_out2> of concurrent assignment or output port connection should be a net type.
-ERROR:HDLCompiler:598 - "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\memory_manager.v" Line 21: Module <memory_manager> ignored due to previous errors.
-Verilog file C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\memory_manager.v ignored due to errors
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\core.v" into library work
+Parsing module <core>.
+Analyzing Verilog file "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\core_top.v" into library work
+Parsing module <core_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <core_top>.
+
+Elaborating module <core>.
+
+Elaborating module <reg_manager>.
+
+Elaborating module <memory_manager>.
+
+Elaborating module <block_mem>.
+
+Elaborating module <VGA_GLPYH_TOP>.
+
+Elaborating module <VGA_PIXEL_GENERATOR>.
+
+Elaborating module <VGA_SIGNAL_GENERATOR>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <core_top>.
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\core_top.v".
+    Summary:
+	no macro.
+Unit <core_top> synthesized.
+
+Synthesizing Unit <core>.
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\core.v".
+    Found 1-bit register for signal <current_instruction<23>>.
+    Found 1-bit register for signal <current_instruction<22>>.
+    Found 1-bit register for signal <current_instruction<21>>.
+    Found 1-bit register for signal <current_instruction<20>>.
+    Found 1-bit register for signal <current_instruction<19>>.
+    Found 1-bit register for signal <current_instruction<18>>.
+    Found 1-bit register for signal <current_instruction<17>>.
+    Found 1-bit register for signal <current_instruction<16>>.
+    Found 1-bit register for signal <current_instruction<15>>.
+    Found 1-bit register for signal <current_instruction<14>>.
+    Found 1-bit register for signal <current_instruction<13>>.
+    Found 1-bit register for signal <current_instruction<12>>.
+    Found 1-bit register for signal <current_instruction<11>>.
+    Found 1-bit register for signal <current_instruction<10>>.
+    Found 1-bit register for signal <current_instruction<9>>.
+    Found 1-bit register for signal <current_instruction<8>>.
+    Found 1-bit register for signal <current_instruction<7>>.
+    Found 1-bit register for signal <current_instruction<6>>.
+    Found 1-bit register for signal <current_instruction<5>>.
+    Found 1-bit register for signal <current_instruction<4>>.
+    Found 1-bit register for signal <current_instruction<3>>.
+    Found 1-bit register for signal <current_instruction<2>>.
+    Found 1-bit register for signal <current_instruction<1>>.
+    Found 1-bit register for signal <current_instruction<0>>.
+    Found 24-bit register for signal <pc>.
+    Found 6-bit register for signal <current_op_code>.
+    Found 5-bit register for signal <reg_ndx_1>.
+    Found 5-bit register for signal <reg_ndx_2>.
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <reg_right_data[15]_reg_left_data[15]_sub_38_OUT> created at line 225.
+    Found 24-bit adder for signal <pc[23]_GND_2_o_add_2_OUT> created at line 86.
+    Found 16-bit adder for signal <reg_right_data[15]_reg_left_data[15]_add_35_OUT> created at line 219.
+    Found 16-bit 8-to-1 multiplexer for signal <_n0214> created at line 223.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred  39 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <core> synthesized.
+
+Synthesizing Unit <reg_manager>.
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\reg_manager.v".
+    Found 16-bit register for signal <r30>.
+    Found 16-bit register for signal <r29>.
+    Found 16-bit register for signal <r28>.
+    Found 16-bit register for signal <r27>.
+    Found 16-bit register for signal <r26>.
+    Found 16-bit register for signal <r25>.
+    Found 16-bit register for signal <r24>.
+    Found 16-bit register for signal <r23>.
+    Found 16-bit register for signal <r22>.
+    Found 16-bit register for signal <r21>.
+    Found 16-bit register for signal <r20>.
+    Found 16-bit register for signal <r19>.
+    Found 16-bit register for signal <r18>.
+    Found 16-bit register for signal <r17>.
+    Found 16-bit register for signal <r16>.
+    Found 16-bit register for signal <r15>.
+    Found 16-bit register for signal <r14>.
+    Found 16-bit register for signal <r13>.
+    Found 16-bit register for signal <r12>.
+    Found 16-bit register for signal <r11>.
+    Found 16-bit register for signal <r10>.
+    Found 16-bit register for signal <r9>.
+    Found 16-bit register for signal <r8>.
+    Found 16-bit register for signal <r7>.
+    Found 16-bit register for signal <r6>.
+    Found 16-bit register for signal <r5>.
+    Found 16-bit register for signal <r4>.
+    Found 16-bit register for signal <r3>.
+    Found 16-bit register for signal <r2>.
+    Found 16-bit register for signal <r1>.
+    Found 16-bit register for signal <r0>.
+    Found 16-bit register for signal <r31>.
+    Found 16-bit 32-to-1 multiplexer for signal <read_reg_data1> created at line 74.
+    Found 16-bit 32-to-1 multiplexer for signal <read_reg_data2> created at line 114.
+    Summary:
+	inferred 512 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <reg_manager> synthesized.
+
+Synthesizing Unit <memory_manager>.
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\memory_manager.v".
+WARNING:Xst:647 - Input <addr_in_block1<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addr_in_block2<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <data_out1>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <memory_manager> synthesized.
+
+Synthesizing Unit <VGA_GLPYH_TOP>.
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\VGA_GLPYH_TOP.v".
+    Summary:
+	no macro.
+Unit <VGA_GLPYH_TOP> synthesized.
+
+Synthesizing Unit <VGA_PIXEL_GENERATOR>.
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\VGA_PIXEL_GENERATOR.v".
+        BLACK = 8'b00000000
+        WHITE = 8'b11111111
+        RED = 8'b11111100
+        BLUE = 8'b11111111
+    Found 10-bit register for signal <trow>.
+    Found 2-bit register for signal <state>.
+    Found 31-bit register for signal <seed>.
+    Found 8-bit register for signal <tempColor>.
+    Found 8-bit register for signal <color>.
+    Found 10-bit register for signal <tcol>.
+    Found 10-bit subtractor for signal <col[9]_GND_7_o_sub_22_OUT> created at line 86.
+    Found 10-bit subtractor for signal <row[9]_GND_7_o_sub_23_OUT> created at line 87.
+    Found 2-bit adder for signal <state[1]_GND_7_o_add_1_OUT> created at line 60.
+    Found 4-bit adder for signal <GND_7_o_PWR_8_o_add_12_OUT> created at line 78.
+    Found 14-bit adder for signal <trow[9]_GND_7_o_add_32_OUT> created at line 102.
+    Found 14-bit adder for signal <n0093> created at line 106.
+    Found 14-bit adder for signal <PWR_8_o_GND_7_o_add_35_OUT> created at line 106.
+    Found 1-bit 8-to-1 multiplexer for signal <tcol[2]_DOUTA[7]_Mux_10_o> created at line 78.
+    Found 1-bit 16-to-1 multiplexer for signal <GND_7_o_DOUTA[15]_Mux_13_o> created at line 78.
+    Found 14-bit 4-to-1 multiplexer for signal <ADDRA> created at line 122.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <VGA_PIXEL_GENERATOR> synthesized.
+
+Synthesizing Unit <VGA_SIGNAL_GENERATOR>.
+    Related source file is "C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\VGA_SIGNAL_GENERATOR.v".
+        frameWidth = 799
+        frameHeight = 524
+        hfp = 16
+        hbp = 48
+        hsyncR = 96
+        vfp = 10
+        vbp = 33
+        vsyncR = 2
+    Found 10-bit register for signal <hCnt>.
+    Found 10-bit register for signal <vCnt>.
+    Found 1-bit register for signal <en>.
+    Found 1-bit register for signal <hsync>.
+    Found 1-bit register for signal <vsync>.
+    Found 10-bit register for signal <col>.
+    Found 10-bit register for signal <row>.
+    Found 1-bit register for signal <req>.
+    Found 2-bit register for signal <pCnt>.
+    Found 10-bit adder for signal <nHCnt> created at line 57.
+    Found 10-bit adder for signal <nVCnt> created at line 60.
+    Found 2-bit adder for signal <pCnt[1]_GND_8_o_add_6_OUT> created at line 71.
+    Found 10-bit comparator greater for signal <nHsync> created at line 63
+    Found 10-bit comparator greater for signal <nVsync> created at line 66
+    Found 10-bit comparator lessequal for signal <hCnt[9]_PWR_10_o_LessThan_8_o> created at line 72
+    Found 10-bit comparator lessequal for signal <vCnt[9]_PWR_10_o_LessThan_13_o> created at line 73
+    Found 10-bit comparator greater for signal <GND_8_o_col[9]_LessThan_18_o> created at line 76
+    Found 10-bit comparator greater for signal <col[9]_PWR_10_o_LessThan_19_o> created at line 76
+    Found 10-bit comparator greater for signal <GND_8_o_row[9]_LessThan_20_o> created at line 76
+    Found 10-bit comparator greater for signal <row[9]_PWR_10_o_LessThan_21_o> created at line 76
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+Unit <VGA_SIGNAL_GENERATOR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 11
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 14-bit adder                                          : 2
+ 16-bit addsub                                         : 1
+ 2-bit adder                                           : 2
+ 24-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 76
+ 1-bit register                                        : 28
+ 10-bit register                                       : 6
+ 16-bit register                                       : 33
+ 2-bit register                                        : 2
+ 24-bit register                                       : 1
+ 31-bit register                                       : 1
+ 5-bit register                                        : 2
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 8
+ 10-bit comparator greater                             : 6
+ 10-bit comparator lessequal                           : 2
+# Multiplexers                                         : 51
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 20
+ 1-bit 8-to-1 multiplexer                              : 1
+ 14-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 13
+ 16-bit 32-to-1 multiplexer                            : 2
+ 24-bit 2-to-1 multiplexer                             : 5
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 3
+ 16-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/block_mem.ngc>.
+Loading core <block_mem> for timing and area information for instance <b_mem>.
+INFO:Xst:2261 - The FF/Latch <current_op_code_3> in Unit <core1> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_0> 
+INFO:Xst:2261 - The FF/Latch <current_op_code_4> in Unit <core1> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_1> 
+INFO:Xst:2261 - The FF/Latch <current_op_code_5> in Unit <core1> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_2> 
+INFO:Xst:2261 - The FF/Latch <current_instruction_16> in Unit <core1> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_3> 
+INFO:Xst:2261 - The FF/Latch <current_instruction_17> in Unit <core1> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_4> 
+
+Synthesizing (advanced) Unit <VGA_PIXEL_GENERATOR>.
+The following registers are absorbed into counter <state>: 1 register on signal <state>.
+Unit <VGA_PIXEL_GENERATOR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_SIGNAL_GENERATOR>.
+The following registers are absorbed into counter <hCnt>: 1 register on signal <hCnt>.
+The following registers are absorbed into counter <vCnt>: 1 register on signal <vCnt>.
+The following registers are absorbed into counter <pCnt>: 1 register on signal <pCnt>.
+Unit <VGA_SIGNAL_GENERATOR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <core>.
+The following registers are absorbed into counter <pc>: 1 register on signal <pc>.
+Unit <core> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 14-bit adder                                          : 2
+ 16-bit addsub                                         : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 2
+ 24-bit up counter                                     : 1
+# Registers                                            : 659
+ Flip-Flops                                            : 659
+# Comparators                                          : 8
+ 10-bit comparator greater                             : 6
+ 10-bit comparator lessequal                           : 2
+# Multiplexers                                         : 80
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 20
+ 1-bit 32-to-1 multiplexer                             : 32
+ 1-bit 8-to-1 multiplexer                              : 1
+ 14-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 13
+ 24-bit 2-to-1 multiplexer                             : 4
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 3
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <current_op_code_3> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_0> 
+INFO:Xst:2261 - The FF/Latch <current_op_code_4> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_1> 
+INFO:Xst:2261 - The FF/Latch <current_op_code_5> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_2> 
+INFO:Xst:2261 - The FF/Latch <current_instruction_16> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_3> 
+INFO:Xst:2261 - The FF/Latch <current_instruction_17> in Unit <core> is equivalent to the following FF/Latch, which will be removed : <reg_ndx_1_4> 
+INFO:Xst:2146 - In block <VGA_PIXEL_GENERATOR>, Counter <state> <vsg/pCnt> are equivalent, XST will keep only <state>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <core1/FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 010   | 010
+ 011   | 011
+ 001   | 001
+ 100   | 100
+ 111   | 111
+ 101   | 101
+ 110   | 110
+-------------------
+
+Optimizing unit <core_top> ...
+
+Optimizing unit <VGA_PIXEL_GENERATOR> ...
+
+Optimizing unit <core> ...
+
+Optimizing unit <reg_manager> ...
+
+Optimizing unit <memory_manager> ...
+WARNING:Xst:2677 - Node <core1/pc_23> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/pc_22> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/pc_21> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/pc_20> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/pc_19> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/pc_18> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/pc_17> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/pc_16> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/current_instruction_18> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/current_instruction_19> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/current_instruction_20> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/current_instruction_21> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/current_instruction_22> of sequential type is unconnected in block <core_top>.
+WARNING:Xst:2677 - Node <core1/current_instruction_23> of sequential type is unconnected in block <core_top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block core_top, actual ratio is 14.
+
+Final Macro Processing ...
+
+Processing Unit <core_top> :
+	Found 11-bit shift register for signal <vga/vpg/seed_28>.
+	Found 10-bit shift register for signal <vga/vpg/seed_27>.
+Unit <core_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 668
+ Flip-Flops                                            : 668
+# Shift Registers                                      : 2
+ 10-bit shift register                                 : 1
+ 11-bit shift register                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : core_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1010
+#      GND                         : 2
+#      INV                         : 8
+#      LUT1                        : 18
+#      LUT2                        : 33
+#      LUT3                        : 86
+#      LUT4                        : 52
+#      LUT5                        : 84
+#      LUT6                        : 566
+#      MUXCY                       : 59
+#      MUXF7                       : 36
+#      VCC                         : 2
+#      XORCY                       : 64
+# FlipFlops/Latches                : 682
+#      FD                          : 63
+#      FDE                         : 591
+#      FDR                         : 8
+#      FDRE                        : 20
+# RAMS                             : 34
+#      RAMB16BWER                  : 30
+#      RAMB8BWER                   : 4
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             682  out of  18224     3%  
+ Number of Slice LUTs:                  849  out of   9112     9%  
+    Number used as Logic:               847  out of   9112     9%  
+    Number used as Memory:                2  out of   2176     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1379
+   Number with an unused Flip Flop:     697  out of   1379    50%  
+   Number with an unused LUT:           530  out of   1379    38%  
+   Number of fully used LUT-FF pairs:   152  out of   1379    11%  
+   Number of unique control sets:        43
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               32  out of     32   100%  
+    Number using Block RAM only:         32
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 718   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.116ns (Maximum Frequency: 109.692MHz)
+   Minimum input arrival time before clock: 5.045ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.116ns (frequency: 109.692MHz)
+  Total number of paths / destination ports: 873620 / 2499
+-------------------------------------------------------------------------
+Delay:               9.116ns (Levels of Logic = 11)
+  Source:            mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_3 (FF)
+  Destination:       mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_3 to mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             58   0.447   1.829  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_3 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<3>)
+     LUT3:I0->O           18   0.205   1.394  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux1181 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux118)
+     LUT6:I1->O            1   0.203   0.924  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux288 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux287)
+     LUT6:I1->O            2   0.203   0.617  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux289 (doutb<7>)
+     end scope: 'mem_manager1/b_mem:doutb<7>'
+     LUT4:I3->O            1   0.205   0.000  vga/vpg/Mmux_ADDRA3_A121 (vga/vpg/Mmux_ADDRA3_rs_A<9>)
+     MUXCY:S->O            1   0.172   0.000  vga/vpg/Mmux_ADDRA3_rs_cy<9> (vga/vpg/Mmux_ADDRA3_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  vga/vpg/Mmux_ADDRA3_rs_cy<10> (vga/vpg/Mmux_ADDRA3_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  vga/vpg/Mmux_ADDRA3_rs_cy<11> (vga/vpg/Mmux_ADDRA3_rs_cy<11>)
+     MUXCY:CI->O           0   0.019   0.000  vga/vpg/Mmux_ADDRA3_rs_cy<12> (vga/vpg/Mmux_ADDRA3_rs_cy<12>)
+     XORCY:CI->O          35   0.180   1.679  vga/vpg/Mmux_ADDRA3_rs_xor<13> (vga_mem_addr<13>)
+     begin scope: 'mem_manager1/b_mem:addrb<13>'
+     LUT5:I0->O            1   0.203   0.579  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/out391 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.ram_enb)
+     RAMB16BWER:ENB            0.220          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram
+    ----------------------------------------
+    Total                      9.116ns (2.095ns logic, 7.021ns route)
+                                       (23.0% logic, 77.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 56 / 16
+-------------------------------------------------------------------------
+Offset:              5.045ns (Levels of Logic = 4)
+  Source:            sw<1> (PAD)
+  Destination:       vga/vpg/tempColor_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<1> to vga/vpg/tempColor_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   1.156  sw_1_IBUF (sw_1_IBUF)
+     LUT4:I0->O            8   0.203   1.147  vga/vpg/_n0139_inv1 (vga/vpg/_n0139_inv)
+     LUT5:I0->O            1   0.203   0.808  vga/vpg/_n0130<1>3_SW0 (N14)
+     LUT6:I3->O            1   0.205   0.000  vga/vpg/tempColor_7_glue_set (vga/vpg/tempColor_7_glue_set)
+     FDR:D                     0.102          vga/vpg/tempColor_7
+    ----------------------------------------
+    Total                      5.045ns (1.935ns logic, 3.110ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            vga/vpg/color_7 (FF)
+  Destination:       rgb<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: vga/vpg/color_7 to rgb<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  vga/vpg/color_7 (vga/vpg/color_7)
+     OBUF:I->O                 2.571          rgb_7_OBUF (rgb<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.116|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.70 secs
+ 
 --> 
 
-Total memory usage is 261772 kilobytes
+Total memory usage is 315588 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
 

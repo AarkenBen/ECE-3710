@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="329" delta="new" >"C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\memory_manager.v" Line 125: Target &lt;<arg fmt="%s" index="1">data_out2</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\IR_repositioning\memory_manager.v" Line 21: Module &lt;<arg fmt="%s" index="1">memory_manager</arg>&gt; ignored due to previous errors.
-</msg>
-
 </messages>
 
