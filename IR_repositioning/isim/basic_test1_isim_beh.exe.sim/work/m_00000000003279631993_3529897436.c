@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Nickj/Documents/GitHub/ECE-3710/IR_repositioning/VGA_PIXEL_GENERATOR.v";
+static const char *ng0 = "C:/Users/Derek/Documents/GitHub/ECE-3710/IR_repositioning/VGA_PIXEL_GENERATOR.v";
 static unsigned int ng1[] = {1U, 0U};
 static unsigned int ng2[] = {0U, 0U};
 static unsigned int ng3[] = {252U, 0U};

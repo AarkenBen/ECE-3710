@@ -76,6 +76,7 @@ output [15 : 0] doutb;
 
 	always @(*)
 	begin			
+	data_out1 = block_data_out_1;
 	data_out2 = block_data_out_2;
 		if(req == 1)
 		begin
@@ -109,12 +110,12 @@ output [15 : 0] doutb;
 
 		if(req == 1)
 		begin
-			data_out1 <= block_data_out_1;
+			///data_out1 <= block_data_out_1;
 			//data_out2 <= block_data_out_2;
 		end
 		else 
 		begin
-			data_out1 <= 16'd0;
+			//data_out1 <= 16'd0;
 			//data_out2 <= 16'd0;
 		end
 

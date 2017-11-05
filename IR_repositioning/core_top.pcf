@@ -1,0 +1,742 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Nov 05 00:10:05 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "hsync" LOCATE = SITE "N6" LEVEL 1;
+COMP "vsync" LOCATE = SITE "P7" LEVEL 1;
+COMP "rgb<0>" LOCATE = SITE "T7" LEVEL 1;
+COMP "rgb<1>" LOCATE = SITE "R7" LEVEL 1;
+COMP "rgb<2>" LOCATE = SITE "V6" LEVEL 1;
+COMP "rgb<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "rgb<4>" LOCATE = SITE "P8" LEVEL 1;
+COMP "rgb<5>" LOCATE = SITE "N7" LEVEL 1;
+COMP "rgb<6>" LOCATE = SITE "V7" LEVEL 1;
+COMP "rgb<7>" LOCATE = SITE "U7" LEVEL 1;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKBRDCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKBRDCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKBRDCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKBRDCLK;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>
+        = BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram"
+        PINNAME CLKB;
+TIMEGRP sys_clk_pin = BEL "vga/vpg/vsg/hCnt_9" BEL "vga/vpg/vsg/hCnt_8" BEL
+        "vga/vpg/vsg/hCnt_7" BEL "vga/vpg/vsg/hCnt_6" BEL "vga/vpg/vsg/hCnt_5"
+        BEL "vga/vpg/vsg/hCnt_4" BEL "vga/vpg/vsg/hCnt_3" BEL
+        "vga/vpg/vsg/hCnt_2" BEL "vga/vpg/vsg/hCnt_1" BEL "vga/vpg/vsg/hCnt_0"
+        BEL "vga/vpg/vsg/vCnt_9" BEL "vga/vpg/vsg/vCnt_8" BEL
+        "vga/vpg/vsg/vCnt_7" BEL "vga/vpg/vsg/vCnt_6" BEL "vga/vpg/vsg/vCnt_5"
+        BEL "vga/vpg/vsg/vCnt_4" BEL "vga/vpg/vsg/vCnt_3" BEL
+        "vga/vpg/vsg/vCnt_2" BEL "vga/vpg/vsg/vCnt_1" BEL "vga/vpg/vsg/vCnt_0"
+        BEL "vga/vpg/state_1" BEL "vga/vpg/state_0" BEL "vga/vpg/tcol_9" BEL
+        "vga/vpg/tcol_8" BEL "vga/vpg/tcol_7" BEL "vga/vpg/tcol_6" BEL
+        "vga/vpg/tcol_5" BEL "vga/vpg/tcol_4" BEL "vga/vpg/tcol_3" BEL
+        "vga/vpg/tcol_2" BEL "vga/vpg/tcol_1" BEL "vga/vpg/tcol_0" BEL
+        "vga/vpg/trow_9" BEL "vga/vpg/trow_8" BEL "vga/vpg/trow_7" BEL
+        "vga/vpg/trow_6" BEL "vga/vpg/trow_5" BEL "vga/vpg/trow_4" BEL
+        "vga/vpg/trow_3" BEL "vga/vpg/trow_2" BEL "vga/vpg/trow_1" BEL
+        "vga/vpg/trow_0" BEL "vga/vpg/vsg/hsync" BEL "vga/vpg/vsg/vsync" BEL
+        "vga/vpg/vsg/col_9" BEL "vga/vpg/vsg/col_8" BEL "vga/vpg/vsg/col_7"
+        BEL "vga/vpg/vsg/col_6" BEL "vga/vpg/vsg/col_5" BEL
+        "vga/vpg/vsg/col_4" BEL "vga/vpg/vsg/col_3" BEL "vga/vpg/vsg/col_2"
+        BEL "vga/vpg/vsg/col_1" BEL "vga/vpg/vsg/col_0" BEL
+        "vga/vpg/vsg/row_9" BEL "vga/vpg/vsg/row_8" BEL "vga/vpg/vsg/row_7"
+        BEL "vga/vpg/vsg/row_6" BEL "vga/vpg/vsg/row_5" BEL
+        "vga/vpg/vsg/row_4" BEL "vga/vpg/vsg/row_3" BEL "vga/vpg/vsg/row_2"
+        BEL "vga/vpg/vsg/row_1" BEL "vga/vpg/vsg/row_0" BEL "vga/vpg/color_7"
+        BEL "vga/vpg/color_6" BEL "vga/vpg/color_5" BEL "vga/vpg/color_4" BEL
+        "vga/vpg/color_3" BEL "vga/vpg/color_2" BEL "vga/vpg/color_1" BEL
+        "vga/vpg/color_0" BEL "vga/vpg/seed_30" BEL "vga/vpg/seed_29" BEL
+        "vga/vpg/seed_7" BEL "vga/vpg/seed_6" BEL "vga/vpg/seed_5" BEL
+        "vga/vpg/seed_4" BEL "vga/vpg/seed_3" BEL "vga/vpg/seed_2" BEL
+        "vga/vpg/seed_1" BEL "vga/vpg/seed_0" BEL "vga/vpg/vsg/en" BEL
+        "core1/state_FSM_FFd1" BEL "core1/state_FSM_FFd2" BEL "core1/pc_15"
+        BEL "core1/pc_14" BEL "core1/pc_13" BEL "core1/pc_12" BEL
+        "core1/pc_11" BEL "core1/pc_10" BEL "core1/pc_9" BEL "core1/pc_8" BEL
+        "core1/pc_7" BEL "core1/pc_6" BEL "core1/pc_5" BEL "core1/pc_4" BEL
+        "core1/pc_3" BEL "core1/pc_2" BEL "core1/pc_1" BEL "core1/pc_0" BEL
+        "core1/state_FSM_FFd3" BEL "core1/reg_ndx_2_4" BEL "core1/reg_ndx_2_3"
+        BEL "core1/reg_ndx_2_2" BEL "core1/reg_ndx_2_1" BEL
+        "core1/reg_ndx_2_0" BEL "core1/current_instruction_0" BEL
+        "core1/current_instruction_1" BEL "core1/current_instruction_2" BEL
+        "core1/current_instruction_3" BEL "core1/current_instruction_5" BEL
+        "core1/current_instruction_6" BEL "core1/current_instruction_4" BEL
+        "core1/current_instruction_7" BEL "core1/current_instruction_8" BEL
+        "core1/current_instruction_10" BEL "core1/current_instruction_11" BEL
+        "core1/current_instruction_9" BEL "core1/current_instruction_12" BEL
+        "core1/current_instruction_13" BEL "core1/current_instruction_15" BEL
+        "core1/current_instruction_14" BEL "core1/reg_ndx_1_4" BEL
+        "core1/reg_ndx_1_3" BEL "core1/reg_ndx_1_2" BEL "core1/reg_ndx_1_1"
+        BEL "core1/reg_ndx_1_0" BEL "core1/current_op_code_5" BEL
+        "core1/current_op_code_4" BEL "core1/current_op_code_3" BEL
+        "core1/current_op_code_2" BEL "core1/current_op_code_1" BEL
+        "core1/current_op_code_0" BEL "core1/rm/r31_15" BEL "core1/rm/r31_14"
+        BEL "core1/rm/r31_13" BEL "core1/rm/r31_12" BEL "core1/rm/r31_11" BEL
+        "core1/rm/r31_10" BEL "core1/rm/r31_9" BEL "core1/rm/r31_8" BEL
+        "core1/rm/r31_7" BEL "core1/rm/r31_6" BEL "core1/rm/r31_5" BEL
+        "core1/rm/r31_4" BEL "core1/rm/r31_3" BEL "core1/rm/r31_2" BEL
+        "core1/rm/r31_1" BEL "core1/rm/r31_0" BEL "core1/rm/r0_15" BEL
+        "core1/rm/r0_14" BEL "core1/rm/r0_13" BEL "core1/rm/r0_12" BEL
+        "core1/rm/r0_11" BEL "core1/rm/r0_10" BEL "core1/rm/r0_9" BEL
+        "core1/rm/r0_8" BEL "core1/rm/r0_7" BEL "core1/rm/r0_6" BEL
+        "core1/rm/r0_5" BEL "core1/rm/r0_4" BEL "core1/rm/r0_3" BEL
+        "core1/rm/r0_2" BEL "core1/rm/r0_1" BEL "core1/rm/r0_0" BEL
+        "core1/rm/r1_15" BEL "core1/rm/r1_14" BEL "core1/rm/r1_13" BEL
+        "core1/rm/r1_12" BEL "core1/rm/r1_11" BEL "core1/rm/r1_10" BEL
+        "core1/rm/r1_9" BEL "core1/rm/r1_8" BEL "core1/rm/r1_7" BEL
+        "core1/rm/r1_6" BEL "core1/rm/r1_5" BEL "core1/rm/r1_4" BEL
+        "core1/rm/r1_3" BEL "core1/rm/r1_2" BEL "core1/rm/r1_1" BEL
+        "core1/rm/r1_0" BEL "core1/rm/r2_15" BEL "core1/rm/r2_14" BEL
+        "core1/rm/r2_13" BEL "core1/rm/r2_12" BEL "core1/rm/r2_11" BEL
+        "core1/rm/r2_10" BEL "core1/rm/r2_9" BEL "core1/rm/r2_8" BEL
+        "core1/rm/r2_7" BEL "core1/rm/r2_6" BEL "core1/rm/r2_5" BEL
+        "core1/rm/r2_4" BEL "core1/rm/r2_3" BEL "core1/rm/r2_2" BEL
+        "core1/rm/r2_1" BEL "core1/rm/r2_0" BEL "core1/rm/r3_15" BEL
+        "core1/rm/r3_14" BEL "core1/rm/r3_13" BEL "core1/rm/r3_12" BEL
+        "core1/rm/r3_11" BEL "core1/rm/r3_10" BEL "core1/rm/r3_9" BEL
+        "core1/rm/r3_8" BEL "core1/rm/r3_7" BEL "core1/rm/r3_6" BEL
+        "core1/rm/r3_5" BEL "core1/rm/r3_4" BEL "core1/rm/r3_3" BEL
+        "core1/rm/r3_2" BEL "core1/rm/r3_1" BEL "core1/rm/r3_0" BEL
+        "core1/rm/r4_15" BEL "core1/rm/r4_14" BEL "core1/rm/r4_13" BEL
+        "core1/rm/r4_12" BEL "core1/rm/r4_11" BEL "core1/rm/r4_10" BEL
+        "core1/rm/r4_9" BEL "core1/rm/r4_8" BEL "core1/rm/r4_7" BEL
+        "core1/rm/r4_6" BEL "core1/rm/r4_5" BEL "core1/rm/r4_4" BEL
+        "core1/rm/r4_3" BEL "core1/rm/r4_2" BEL "core1/rm/r4_1" BEL
+        "core1/rm/r4_0" BEL "core1/rm/r5_15" BEL "core1/rm/r5_14" BEL
+        "core1/rm/r5_13" BEL "core1/rm/r5_12" BEL "core1/rm/r5_11" BEL
+        "core1/rm/r5_10" BEL "core1/rm/r5_9" BEL "core1/rm/r5_8" BEL
+        "core1/rm/r5_7" BEL "core1/rm/r5_6" BEL "core1/rm/r5_5" BEL
+        "core1/rm/r5_4" BEL "core1/rm/r5_3" BEL "core1/rm/r5_2" BEL
+        "core1/rm/r5_1" BEL "core1/rm/r5_0" BEL "core1/rm/r6_15" BEL
+        "core1/rm/r6_14" BEL "core1/rm/r6_13" BEL "core1/rm/r6_12" BEL
+        "core1/rm/r6_11" BEL "core1/rm/r6_10" BEL "core1/rm/r6_9" BEL
+        "core1/rm/r6_8" BEL "core1/rm/r6_7" BEL "core1/rm/r6_6" BEL
+        "core1/rm/r6_5" BEL "core1/rm/r6_4" BEL "core1/rm/r6_3" BEL
+        "core1/rm/r6_2" BEL "core1/rm/r6_1" BEL "core1/rm/r6_0" BEL
+        "core1/rm/r7_15" BEL "core1/rm/r7_14" BEL "core1/rm/r7_13" BEL
+        "core1/rm/r7_12" BEL "core1/rm/r7_11" BEL "core1/rm/r7_10" BEL
+        "core1/rm/r7_9" BEL "core1/rm/r7_8" BEL "core1/rm/r7_7" BEL
+        "core1/rm/r7_6" BEL "core1/rm/r7_5" BEL "core1/rm/r7_4" BEL
+        "core1/rm/r7_3" BEL "core1/rm/r7_2" BEL "core1/rm/r7_1" BEL
+        "core1/rm/r7_0" BEL "core1/rm/r8_15" BEL "core1/rm/r8_14" BEL
+        "core1/rm/r8_13" BEL "core1/rm/r8_12" BEL "core1/rm/r8_11" BEL
+        "core1/rm/r8_10" BEL "core1/rm/r8_9" BEL "core1/rm/r8_8" BEL
+        "core1/rm/r8_7" BEL "core1/rm/r8_6" BEL "core1/rm/r8_5" BEL
+        "core1/rm/r8_4" BEL "core1/rm/r8_3" BEL "core1/rm/r8_2" BEL
+        "core1/rm/r8_1" BEL "core1/rm/r8_0" BEL "core1/rm/r9_15" BEL
+        "core1/rm/r9_14" BEL "core1/rm/r9_13" BEL "core1/rm/r9_12" BEL
+        "core1/rm/r9_11" BEL "core1/rm/r9_10" BEL "core1/rm/r9_9" BEL
+        "core1/rm/r9_8" BEL "core1/rm/r9_7" BEL "core1/rm/r9_6" BEL
+        "core1/rm/r9_5" BEL "core1/rm/r9_4" BEL "core1/rm/r9_3" BEL
+        "core1/rm/r9_2" BEL "core1/rm/r9_1" BEL "core1/rm/r9_0" BEL
+        "core1/rm/r10_15" BEL "core1/rm/r10_14" BEL "core1/rm/r10_13" BEL
+        "core1/rm/r10_12" BEL "core1/rm/r10_11" BEL "core1/rm/r10_10" BEL
+        "core1/rm/r10_9" BEL "core1/rm/r10_8" BEL "core1/rm/r10_7" BEL
+        "core1/rm/r10_6" BEL "core1/rm/r10_5" BEL "core1/rm/r10_4" BEL
+        "core1/rm/r10_3" BEL "core1/rm/r10_2" BEL "core1/rm/r10_1" BEL
+        "core1/rm/r10_0" BEL "core1/rm/r12_15" BEL "core1/rm/r12_14" BEL
+        "core1/rm/r12_13" BEL "core1/rm/r12_12" BEL "core1/rm/r12_11" BEL
+        "core1/rm/r12_10" BEL "core1/rm/r12_9" BEL "core1/rm/r12_8" BEL
+        "core1/rm/r12_7" BEL "core1/rm/r12_6" BEL "core1/rm/r12_5" BEL
+        "core1/rm/r12_4" BEL "core1/rm/r12_3" BEL "core1/rm/r12_2" BEL
+        "core1/rm/r12_1" BEL "core1/rm/r12_0" BEL "core1/rm/r13_15" BEL
+        "core1/rm/r13_14" BEL "core1/rm/r13_13" BEL "core1/rm/r13_12" BEL
+        "core1/rm/r13_11" BEL "core1/rm/r13_10" BEL "core1/rm/r13_9" BEL
+        "core1/rm/r13_8" BEL "core1/rm/r13_7" BEL "core1/rm/r13_6" BEL
+        "core1/rm/r13_5" BEL "core1/rm/r13_4" BEL "core1/rm/r13_3" BEL
+        "core1/rm/r13_2" BEL "core1/rm/r13_1" BEL "core1/rm/r13_0" BEL
+        "core1/rm/r11_15" BEL "core1/rm/r11_14" BEL "core1/rm/r11_13" BEL
+        "core1/rm/r11_12" BEL "core1/rm/r11_11" BEL "core1/rm/r11_10" BEL
+        "core1/rm/r11_9" BEL "core1/rm/r11_8" BEL "core1/rm/r11_7" BEL
+        "core1/rm/r11_6" BEL "core1/rm/r11_5" BEL "core1/rm/r11_4" BEL
+        "core1/rm/r11_3" BEL "core1/rm/r11_2" BEL "core1/rm/r11_1" BEL
+        "core1/rm/r11_0" BEL "core1/rm/r14_15" BEL "core1/rm/r14_14" BEL
+        "core1/rm/r14_13" BEL "core1/rm/r14_12" BEL "core1/rm/r14_11" BEL
+        "core1/rm/r14_10" BEL "core1/rm/r14_9" BEL "core1/rm/r14_8" BEL
+        "core1/rm/r14_7" BEL "core1/rm/r14_6" BEL "core1/rm/r14_5" BEL
+        "core1/rm/r14_4" BEL "core1/rm/r14_3" BEL "core1/rm/r14_2" BEL
+        "core1/rm/r14_1" BEL "core1/rm/r14_0" BEL "core1/rm/r15_15" BEL
+        "core1/rm/r15_14" BEL "core1/rm/r15_13" BEL "core1/rm/r15_12" BEL
+        "core1/rm/r15_11" BEL "core1/rm/r15_10" BEL "core1/rm/r15_9" BEL
+        "core1/rm/r15_8" BEL "core1/rm/r15_7" BEL "core1/rm/r15_6" BEL
+        "core1/rm/r15_5" BEL "core1/rm/r15_4" BEL "core1/rm/r15_3" BEL
+        "core1/rm/r15_2" BEL "core1/rm/r15_1" BEL "core1/rm/r15_0" BEL
+        "core1/rm/r16_15" BEL "core1/rm/r16_14" BEL "core1/rm/r16_13" BEL
+        "core1/rm/r16_12" BEL "core1/rm/r16_11" BEL "core1/rm/r16_10" BEL
+        "core1/rm/r16_9" BEL "core1/rm/r16_8" BEL "core1/rm/r16_7" BEL
+        "core1/rm/r16_6" BEL "core1/rm/r16_5" BEL "core1/rm/r16_4" BEL
+        "core1/rm/r16_3" BEL "core1/rm/r16_2" BEL "core1/rm/r16_1" BEL
+        "core1/rm/r16_0" BEL "core1/rm/r17_15" BEL "core1/rm/r17_14" BEL
+        "core1/rm/r17_13" BEL "core1/rm/r17_12" BEL "core1/rm/r17_11" BEL
+        "core1/rm/r17_10" BEL "core1/rm/r17_9" BEL "core1/rm/r17_8" BEL
+        "core1/rm/r17_7" BEL "core1/rm/r17_6" BEL "core1/rm/r17_5" BEL
+        "core1/rm/r17_4" BEL "core1/rm/r17_3" BEL "core1/rm/r17_2" BEL
+        "core1/rm/r17_1" BEL "core1/rm/r17_0" BEL "core1/rm/r18_15" BEL
+        "core1/rm/r18_14" BEL "core1/rm/r18_13" BEL "core1/rm/r18_12" BEL
+        "core1/rm/r18_11" BEL "core1/rm/r18_10" BEL "core1/rm/r18_9" BEL
+        "core1/rm/r18_8" BEL "core1/rm/r18_7" BEL "core1/rm/r18_6" BEL
+        "core1/rm/r18_5" BEL "core1/rm/r18_4" BEL "core1/rm/r18_3" BEL
+        "core1/rm/r18_2" BEL "core1/rm/r18_1" BEL "core1/rm/r18_0" BEL
+        "core1/rm/r19_15" BEL "core1/rm/r19_14" BEL "core1/rm/r19_13" BEL
+        "core1/rm/r19_12" BEL "core1/rm/r19_11" BEL "core1/rm/r19_10" BEL
+        "core1/rm/r19_9" BEL "core1/rm/r19_8" BEL "core1/rm/r19_7" BEL
+        "core1/rm/r19_6" BEL "core1/rm/r19_5" BEL "core1/rm/r19_4" BEL
+        "core1/rm/r19_3" BEL "core1/rm/r19_2" BEL "core1/rm/r19_1" BEL
+        "core1/rm/r19_0" BEL "core1/rm/r20_15" BEL "core1/rm/r20_14" BEL
+        "core1/rm/r20_13" BEL "core1/rm/r20_12" BEL "core1/rm/r20_11" BEL
+        "core1/rm/r20_10" BEL "core1/rm/r20_9" BEL "core1/rm/r20_8" BEL
+        "core1/rm/r20_7" BEL "core1/rm/r20_6" BEL "core1/rm/r20_5" BEL
+        "core1/rm/r20_4" BEL "core1/rm/r20_3" BEL "core1/rm/r20_2" BEL
+        "core1/rm/r20_1" BEL "core1/rm/r20_0" BEL "core1/rm/r21_15" BEL
+        "core1/rm/r21_14" BEL "core1/rm/r21_13" BEL "core1/rm/r21_12" BEL
+        "core1/rm/r21_11" BEL "core1/rm/r21_10" BEL "core1/rm/r21_9" BEL
+        "core1/rm/r21_8" BEL "core1/rm/r21_7" BEL "core1/rm/r21_6" BEL
+        "core1/rm/r21_5" BEL "core1/rm/r21_4" BEL "core1/rm/r21_3" BEL
+        "core1/rm/r21_2" BEL "core1/rm/r21_1" BEL "core1/rm/r21_0" BEL
+        "core1/rm/r22_15" BEL "core1/rm/r22_14" BEL "core1/rm/r22_13" BEL
+        "core1/rm/r22_12" BEL "core1/rm/r22_11" BEL "core1/rm/r22_10" BEL
+        "core1/rm/r22_9" BEL "core1/rm/r22_8" BEL "core1/rm/r22_7" BEL
+        "core1/rm/r22_6" BEL "core1/rm/r22_5" BEL "core1/rm/r22_4" BEL
+        "core1/rm/r22_3" BEL "core1/rm/r22_2" BEL "core1/rm/r22_1" BEL
+        "core1/rm/r22_0" BEL "core1/rm/r23_15" BEL "core1/rm/r23_14" BEL
+        "core1/rm/r23_13" BEL "core1/rm/r23_12" BEL "core1/rm/r23_11" BEL
+        "core1/rm/r23_10" BEL "core1/rm/r23_9" BEL "core1/rm/r23_8" BEL
+        "core1/rm/r23_7" BEL "core1/rm/r23_6" BEL "core1/rm/r23_5" BEL
+        "core1/rm/r23_4" BEL "core1/rm/r23_3" BEL "core1/rm/r23_2" BEL
+        "core1/rm/r23_1" BEL "core1/rm/r23_0" BEL "core1/rm/r24_15" BEL
+        "core1/rm/r24_14" BEL "core1/rm/r24_13" BEL "core1/rm/r24_12" BEL
+        "core1/rm/r24_11" BEL "core1/rm/r24_10" BEL "core1/rm/r24_9" BEL
+        "core1/rm/r24_8" BEL "core1/rm/r24_7" BEL "core1/rm/r24_6" BEL
+        "core1/rm/r24_5" BEL "core1/rm/r24_4" BEL "core1/rm/r24_3" BEL
+        "core1/rm/r24_2" BEL "core1/rm/r24_1" BEL "core1/rm/r24_0" BEL
+        "core1/rm/r25_15" BEL "core1/rm/r25_14" BEL "core1/rm/r25_13" BEL
+        "core1/rm/r25_12" BEL "core1/rm/r25_11" BEL "core1/rm/r25_10" BEL
+        "core1/rm/r25_9" BEL "core1/rm/r25_8" BEL "core1/rm/r25_7" BEL
+        "core1/rm/r25_6" BEL "core1/rm/r25_5" BEL "core1/rm/r25_4" BEL
+        "core1/rm/r25_3" BEL "core1/rm/r25_2" BEL "core1/rm/r25_1" BEL
+        "core1/rm/r25_0" BEL "core1/rm/r26_15" BEL "core1/rm/r26_14" BEL
+        "core1/rm/r26_13" BEL "core1/rm/r26_12" BEL "core1/rm/r26_11" BEL
+        "core1/rm/r26_10" BEL "core1/rm/r26_9" BEL "core1/rm/r26_8" BEL
+        "core1/rm/r26_7" BEL "core1/rm/r26_6" BEL "core1/rm/r26_5" BEL
+        "core1/rm/r26_4" BEL "core1/rm/r26_3" BEL "core1/rm/r26_2" BEL
+        "core1/rm/r26_1" BEL "core1/rm/r26_0" BEL "core1/rm/r27_15" BEL
+        "core1/rm/r27_14" BEL "core1/rm/r27_13" BEL "core1/rm/r27_12" BEL
+        "core1/rm/r27_11" BEL "core1/rm/r27_10" BEL "core1/rm/r27_9" BEL
+        "core1/rm/r27_8" BEL "core1/rm/r27_7" BEL "core1/rm/r27_6" BEL
+        "core1/rm/r27_5" BEL "core1/rm/r27_4" BEL "core1/rm/r27_3" BEL
+        "core1/rm/r27_2" BEL "core1/rm/r27_1" BEL "core1/rm/r27_0" BEL
+        "core1/rm/r29_15" BEL "core1/rm/r29_14" BEL "core1/rm/r29_13" BEL
+        "core1/rm/r29_12" BEL "core1/rm/r29_11" BEL "core1/rm/r29_10" BEL
+        "core1/rm/r29_9" BEL "core1/rm/r29_8" BEL "core1/rm/r29_7" BEL
+        "core1/rm/r29_6" BEL "core1/rm/r29_5" BEL "core1/rm/r29_4" BEL
+        "core1/rm/r29_3" BEL "core1/rm/r29_2" BEL "core1/rm/r29_1" BEL
+        "core1/rm/r29_0" BEL "core1/rm/r30_15" BEL "core1/rm/r30_14" BEL
+        "core1/rm/r30_13" BEL "core1/rm/r30_12" BEL "core1/rm/r30_11" BEL
+        "core1/rm/r30_10" BEL "core1/rm/r30_9" BEL "core1/rm/r30_8" BEL
+        "core1/rm/r30_7" BEL "core1/rm/r30_6" BEL "core1/rm/r30_5" BEL
+        "core1/rm/r30_4" BEL "core1/rm/r30_3" BEL "core1/rm/r30_2" BEL
+        "core1/rm/r30_1" BEL "core1/rm/r30_0" BEL "core1/rm/r28_15" BEL
+        "core1/rm/r28_14" BEL "core1/rm/r28_13" BEL "core1/rm/r28_12" BEL
+        "core1/rm/r28_11" BEL "core1/rm/r28_10" BEL "core1/rm/r28_9" BEL
+        "core1/rm/r28_8" BEL "core1/rm/r28_7" BEL "core1/rm/r28_6" BEL
+        "core1/rm/r28_5" BEL "core1/rm/r28_4" BEL "core1/rm/r28_3" BEL
+        "core1/rm/r28_2" BEL "core1/rm/r28_1" BEL "core1/rm/r28_0" BEL
+        "vga/vpg/tempColor_7" BEL "vga/vpg/tempColor_6" BEL
+        "vga/vpg/tempColor_5" BEL "vga/vpg/tempColor_4" BEL
+        "vga/vpg/tempColor_3" BEL "vga/vpg/tempColor_2" BEL
+        "vga/vpg/tempColor_1" BEL "vga/vpg/tempColor_0" BEL "vga/vpg/vsg/req"
+        BEL "clk_BUFGP/BUFG" BEL "vga/vpg/Mshreg_seed_28" BEL
+        "vga/vpg/seed_28" BEL "vga/vpg/Mshreg_seed_27" BEL "vga/vpg/seed_27"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_0"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_1"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_2"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_3"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_4"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_5"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_1"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_2"
+        BEL
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_3"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<26>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram_pins<27>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<28>"
+        PIN
+        "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM18.ram_pins<29>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

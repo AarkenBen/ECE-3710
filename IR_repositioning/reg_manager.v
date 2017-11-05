@@ -28,7 +28,7 @@ module reg_manager(input clk,
     			);
 
 
-reg[15:0] r0 = 16'd0;
+reg[15:0] r0 = 16'd79;
 reg[15:0] r1 = 16'd0;
 reg[15:0] r2 = 16'd0;
 reg[15:0] r3 = 16'd0;

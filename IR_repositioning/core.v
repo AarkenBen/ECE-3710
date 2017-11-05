@@ -89,19 +89,19 @@ module core(
 				decode1: 
 					begin
 					
-						current_instruction <= {data_from_mem[7:0], data_from_mem[15:8], 16'd0};
+						//current_instruction <= {data_from_mem[7:0], data_from_mem[15:8], 16'd0};
+						current_instruction <= {data_from_mem, 16'd0};
 					
-					
-						current_op_code <= data_from_mem[7:2];
+						current_op_code <= data_from_mem[15:10];
 						
 						
 /// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 /// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 						// one word
-						if(		   data_from_mem[7:2] == addu 
-								|| data_from_mem[7:2] == subu
-								|| data_from_mem[7:2] == NOT
-								|| data_from_mem[7:2] == XOR
+						if(		   data_from_mem[15:10] == addu 
+								|| data_from_mem[15:10] == subu
+								|| data_from_mem[15:10] == NOT
+								|| data_from_mem[15:10] == XOR
 							)																
 						begin
 							reg_ndx_1 <= data_from_mem[9:5];
@@ -111,9 +111,9 @@ module core(
 /// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 					
 						// memory instructions
-						else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
+						else if(data_from_mem[15:10] == loadL || data_from_mem[15:10] == writeL)
 						begin
-							reg_ndx_1 <= data_from_mem[9:5]; //delete me
+							reg_ndx_1 <= 5'd0; //data_from_mem[9:5]; //delete me
 							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
 						end
 						
@@ -124,7 +124,10 @@ module core(
 						end
 						
 						// if one word
-						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
+						if(data_from_mem[15:10] == addu 
+								|| data_from_mem[15:10] == subu
+								|| data_from_mem[15:10] == NOT
+								|| data_from_mem[15:10] == XOR)
 							state <= execute;
 						// if two word
 						else
@@ -133,7 +136,8 @@ module core(
 				
 				decode2:
 					begin
-						current_instruction <= {current_instruction[31:16], data_from_mem[7:0], data_from_mem[15:8]};
+						//current_instruction <= {current_instruction[31:16], data_from_mem[7:0], data_from_mem[15:8]};
+						current_instruction <= {current_instruction[31:16], data_from_mem[15:0]};
 						
 						//pc <= pc;
 					
@@ -147,7 +151,10 @@ module core(
 							state <= store;
 							
 						else if(current_op_code == jmp)
+						begin
 							state <= fetch1;
+							pc = current_instruction[23:0];
+						end
 						else
 						state <= execute;
 				
@@ -155,7 +162,7 @@ module core(
 				execute:
 					begin
 					
-						if(current_op_code == addu || current_op_code == subu)
+						//if(current_op_code == addu || current_op_code == subu)
 						begin
 							state <= fetch1;
 						end
@@ -193,9 +200,6 @@ module core(
 				fetch1:
 				begin
 					mem_addr = pc;
-					write_en = 0;
-					
-					
 				end
 				
 				fetch2:
@@ -235,14 +239,18 @@ module core(
 						else if(current_op_code == AND)
 							begin
 								w_data = reg_right_data & reg_left_data;
+								reg_w_en = 1;
+
 							end
 						else if(current_op_code == XOR)
 							begin
 								w_data = reg_right_data ^ reg_left_data;
+								reg_w_en = 1;
 							end
 						else if(current_op_code == NOT)
 							begin
 								w_data = !reg_left_data;
+								reg_w_en = 1;
 							end
 						else  // Default case, should'nt be executed
 								w_data = reg_right_data;							

@@ -5,5 +5,63 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-</messages>
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr_in_block1&lt;23:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
 
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr_in_block2&lt;23:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="2146" delta="old" >In block &lt;<arg fmt="%s" index="1">VGA_PIXEL_GENERATOR</arg>&gt;, <arg fmt="%s" index="2">Counter</arg> &lt;<arg fmt="%s" index="3">state</arg>&gt; </msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/pc_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core1/current_instruction_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">core_top</arg>&gt;.
+</msg>
+
+</messages>
