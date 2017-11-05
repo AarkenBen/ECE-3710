@@ -98,7 +98,11 @@ module core(
 /// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 /// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 						// one word
-						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
+						if(		   data_from_mem[7:2] == addu 
+								|| data_from_mem[7:2] == subu
+								|| data_from_mem[7:2] == NOT
+								|| data_from_mem[7:2] == XOR
+							)																
 						begin
 							reg_ndx_1 <= data_from_mem[9:5];
 							reg_ndx_2 <= data_from_mem[4:0];
