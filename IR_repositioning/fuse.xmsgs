@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1007" delta="unknown" >"C:/Users/Derek/Documents/GitHub/ECE-3710/IR_repositioning/core.v" Line 95: Element index <arg fmt="%d" index="1">31</arg> into <arg fmt="%s" index="2">data_from_mem</arg> is out of bounds
-</msg>
-
 </messages>
 

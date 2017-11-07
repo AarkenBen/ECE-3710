@@ -60,9 +60,9 @@ module core(
 			   NOT = 6'b000010, 
 			   XOR = 6'b000011,
 		       addu = 6'b000100, subu = 6'b000110,
-			   loadL = 6'b100100,
+			   loadL = 4'b1001,
 				//  loadH = 6'b101000, 
-			   writeL = 6'b101100, 
+			   writeL = 4'b1011, 
 				 // writeH = 6'b110000,
 			   jmp = 6'b100000;
 
@@ -111,7 +111,7 @@ module core(
 /// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 					
 						// memory instructions
-						else if(data_from_mem[15:10] == loadL || data_from_mem[15:10] == writeL)
+						else if(data_from_mem[15:12] == loadL || data_from_mem[15:12] == writeL)
 						begin
 							reg_ndx_1 <= 5'd0; //data_from_mem[9:5]; //delete me
 							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
@@ -144,10 +144,10 @@ module core(
 						if(current_op_code == jmp)
 							pc = current_instruction[22:0];
 						
-						if(current_op_code == loadL)
+						if(current_op_code[5:2] == loadL) //Because loadL is only highest 4 bits of opcode 
 							state <= load1;
 							
-						else if(current_op_code == writeL)
+						else if(current_op_code[5:2] == writeL) //Same as above comment
 							state <= store;
 							
 						else if(current_op_code == jmp)
@@ -272,6 +272,7 @@ module core(
 						//w_data = data_from_mem;
 				store:
 					begin	
+						mem_addr = current_instruction[23:0];
 						data_from_core_to_mem = reg_right_data;
 						write_en = 1;
 					

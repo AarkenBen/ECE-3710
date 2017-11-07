@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 07 10:15:33 2017
+// Written by: Map P.20131013 on Tue Nov 07 15:08:41 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -395,13 +395,13 @@ TIMEGRP sys_clk_pin = BEL "vga/vpg/vsg/hCnt_9" BEL "vga/vpg/vsg/hCnt_8" BEL
         BEL "core1/reg_ndx_2_2" BEL "core1/reg_ndx_2_1" BEL
         "core1/reg_ndx_2_0" BEL "core1/current_instruction_0" BEL
         "core1/current_instruction_1" BEL "core1/current_instruction_2" BEL
-        "core1/current_instruction_3" BEL "core1/current_instruction_5" BEL
-        "core1/current_instruction_6" BEL "core1/current_instruction_4" BEL
-        "core1/current_instruction_7" BEL "core1/current_instruction_8" BEL
-        "core1/current_instruction_10" BEL "core1/current_instruction_11" BEL
-        "core1/current_instruction_9" BEL "core1/current_instruction_12" BEL
-        "core1/current_instruction_13" BEL "core1/current_instruction_15" BEL
-        "core1/current_instruction_14" BEL "core1/reg_ndx_1_4" BEL
+        "core1/current_instruction_4" BEL "core1/current_instruction_5" BEL
+        "core1/current_instruction_3" BEL "core1/current_instruction_6" BEL
+        "core1/current_instruction_7" BEL "core1/current_instruction_9" BEL
+        "core1/current_instruction_10" BEL "core1/current_instruction_8" BEL
+        "core1/current_instruction_11" BEL "core1/current_instruction_12" BEL
+        "core1/current_instruction_14" BEL "core1/current_instruction_15" BEL
+        "core1/current_instruction_13" BEL "core1/reg_ndx_1_4" BEL
         "core1/reg_ndx_1_3" BEL "core1/reg_ndx_1_2" BEL "core1/reg_ndx_1_1"
         BEL "core1/reg_ndx_1_0" BEL "core1/current_op_code_5" BEL
         "core1/current_op_code_4" BEL "core1/current_op_code_3" BEL
