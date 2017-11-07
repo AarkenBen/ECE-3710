@@ -36,7 +36,7 @@ module core(
 	reg[5:0] current_op_code = 6'd0;
 	
 	// program counter
-	reg[23:0] pc = 24'd0;
+	reg[23:0] pc = 24'h2800;
 
 	////// STATES ///////	
 	reg[2:0] state = 3'd0;
@@ -95,13 +95,20 @@ module core(
 						current_op_code <= data_from_mem[7:2];
 						
 						
+/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
+/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 						// one word
-						if(data_from_mem[7:2] == addu || data_from_mem[7:2] == subu)
+						if(		   data_from_mem[7:2] == addu 
+								|| data_from_mem[7:2] == subu
+								|| data_from_mem[7:2] == NOT
+								|| data_from_mem[7:2] == XOR
+							)																
 						begin
 							reg_ndx_1 <= data_from_mem[9:5];
 							reg_ndx_2 <= data_from_mem[4:0];
 						end
-					
+/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100					
+/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
 					
 						// memory instructions
 						else if(data_from_mem[7:2] == loadL || data_from_mem[7:2] == writeL)
@@ -131,7 +138,7 @@ module core(
 						//pc <= pc;
 					
 						if(current_op_code == jmp)
-							pc = current_instruction[22:0] + 1;
+							pc = current_instruction[22:0];
 						
 						if(current_op_code == loadL)
 							state <= load1;
