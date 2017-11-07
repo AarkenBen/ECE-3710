@@ -201,13 +201,19 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <status xil_pn:value="InputChanged"/>
 =======
+=======
+>>>>>>> 54f6f898c29bcea0fa36a3c52eae6e0c08c1b341
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
+<<<<<<< HEAD
+>>>>>>> 54f6f898c29bcea0fa36a3c52eae6e0c08c1b341
+=======
 >>>>>>> 54f6f898c29bcea0fa36a3c52eae6e0c08c1b341
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="core.ngr"/>

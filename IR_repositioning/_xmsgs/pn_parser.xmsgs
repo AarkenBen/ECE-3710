@@ -9,12 +9,18 @@
 
 <messages>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/core.v&quot; into library work</arg>
 =======
+=======
+>>>>>>> 54f6f898c29bcea0fa36a3c52eae6e0c08c1b341
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Nickj/Documents/GitHub/ECE-3710/IR_repositioning/core.v&quot; into library work</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Nickj/Documents/GitHub/ECE-3710/IR_repositioning/core_top.v&quot; into library work</arg>
+<<<<<<< HEAD
+>>>>>>> 54f6f898c29bcea0fa36a3c52eae6e0c08c1b341
+=======
 >>>>>>> 54f6f898c29bcea0fa36a3c52eae6e0c08c1b341
 </msg>
 
