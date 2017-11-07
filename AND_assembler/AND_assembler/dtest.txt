@@ -1,5 +1,14 @@
-Start:
- shiftra r1 r1
- shiftrai 0x1 r1
- jmp Start
- jmpl r1 r1 0x2800
+ load r0 0x0
+ load r1 0x1
+ load r2 0x2
+ load r3 0x3
+ load r4 0x4
+ load r5 0x5
+ write r0 0x5
+ write r1 0x4
+ write r2 0x3
+ write r3 0x2
+ write r4 0x1
+ write r5 0x0
+Unstart:
+ jmp Unstart

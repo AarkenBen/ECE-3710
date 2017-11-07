@@ -76,6 +76,10 @@ namespace AND_assembler
                     new System.IO.StreamReader(currentPath + fileName);
                 while ((line = infile.ReadLine()) != null)
                 {
+                    if(!(line.Length > 1))
+                    {
+                        continue;
+                    }
 
                     if (i == 0)
                     {
@@ -97,6 +101,7 @@ namespace AND_assembler
 
                         end = pc;
 
+                        
                     }
                     else if (i == 1)
                     {
@@ -244,7 +249,7 @@ namespace AND_assembler
                                            break; // 1001
                                            */
                                 case "load":
-                                    toWrite = load_write_helper(instruction[2]) + immediate_helper(instruction[3], 24);
+                                    toWrite = load_helper(instruction[2]) + immediate_helper(instruction[3], 24);
                                     break;
                                 /*
                             case "loadh":
@@ -260,7 +265,7 @@ namespace AND_assembler
 
 
                                 case "write":
-                                    toWrite = load_write_helper(instruction[2]) + immediate_helper(instruction[3], 24);
+                                    toWrite = write_helper(instruction[2]) + immediate_helper(instruction[3], 24);
                                     break;
 
                                 case "push":
@@ -270,7 +275,9 @@ namespace AND_assembler
                                 case "pop":
                                     toWrite = "1101" + "1" + register_helper(instruction[2]) + immediate_helper(instruction[3], 6); // instruction[2] = to something like 010110
                                     break; // 1101 1
-                                           //       
+                                           //
+                               // case "writeReg":
+                                    //toWrite = "111000" +        
                                 default:
                                     toWrite = "didn't work";
                                     break;
@@ -308,6 +315,9 @@ namespace AND_assembler
                     }
                 }
                 infile.Close();
+
+                Console.WriteLine("PC: " + pc);
+                Console.ReadLine();
             }
         }
         // semi colon at end
@@ -422,7 +432,7 @@ namespace AND_assembler
 
         }
         
-        static private string load_write_helper(string register)
+        static private string load_helper(string register)
         {
             int j;
             j = register_num(register);
@@ -433,7 +443,19 @@ namespace AND_assembler
                 return "1010" + Convert.ToString(j & 0xF, 2).PadLeft(4, '0');
 
         }
-        
+
+        static private string write_helper(string register)
+        {
+            int j;
+            j = register_num(register);
+
+            if (j < 16) // I think this has to be < 16
+                return "1011" + Convert.ToString(j, 2).PadLeft(4, '0');
+            else
+                return "1100" + Convert.ToString(j & 0xF, 2).PadLeft(4, '0');
+
+        }
+
         static private int register_num(string reg)
         {
             int i;
