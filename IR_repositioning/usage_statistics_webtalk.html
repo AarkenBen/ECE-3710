@@ -17,7 +17,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project ID (random number)</B></TD>
-<TD><xtag-property name="RandomID">7c15fd5eefe94ce49bade0ced1f45077</xtag-property>.<xtag-property name="ProjectID">E0401C4F32EB4F5292BDCD2F36B05616</xtag-property>.<xtag-property name="ProjectIteration">5</xtag-property></TD>
+<TD><xtag-property name="RandomID">7c15fd5eefe94ce49bade0ced1f45077</xtag-property>.<xtag-property name="ProjectID">E0401C4F32EB4F5292BDCD2F36B05616</xtag-property>.<xtag-property name="ProjectIteration">7</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Target Package:</B></TD>
 <TD><xtag-property name="TargetPackage">csg324</xtag-property></TD>
 </TR>
@@ -29,7 +29,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Date Generated</B></TD>
-<TD><xtag-property name="Date Generated">2017-11-05T00:12:25</xtag-property></TD>
+<TD><xtag-property name="Date Generated">2017-11-07T09:53:20</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Tool Flow</B></TD>
 <TD><xtag-property name="ToolFlow">ISE</xtag-property></TD>
 </TR>
@@ -380,7 +380,7 @@
 <UL>
 <LI><xtag-item3>CK=[CK:642] [CK_INV:0]</xtag-item3></LI>
 <LI><xtag-item3>LATCH_OR_FF=[FF:642]</xtag-item3></LI>
-<LI><xtag-item3>SRINIT=[SRINIT0:632] [SRINIT1:10]</xtag-item3></LI>
+<LI><xtag-item3>SRINIT=[SRINIT0:627] [SRINIT1:15]</xtag-item3></LI>
 <LI><xtag-item3>SYNC_ATTR=[ASYNC:609] [SYNC:33]</xtag-item3></LI>
 </UL>
 </xtag-group>
@@ -1169,6 +1169,19 @@
 <LI><xtag-cmdline>par -w -intstyle ise -ol high -mt off &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
 <LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>xst -intstyle ise -ifn &lt;ise_file&gt;</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -intstyle ise -dd _ngo -sd &lt;dname&gt; -nt timestamp -uc &lt;fname&gt;.ucf -p xc6slx16-csg324-3 &lt;fname&gt;.ngc &lt;fname&gt;.ngd</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -w -intstyle ise -ol high -mt off &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>xst -intstyle ise -ifn &lt;ise_file&gt;</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -intstyle ise -dd _ngo -sd &lt;dname&gt; -nt timestamp -uc &lt;fname&gt;.ucf -p xc6slx16-csg324-3 &lt;fname&gt;.ngc &lt;fname&gt;.ngd</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -w -intstyle ise -ol high -mt off &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
 <LI><xtag-cmdline>fuse</xtag-cmdline></LI>
 </xtag-section></UL></TD></TR>
 </TABLE>
@@ -1176,7 +1189,7 @@
 
 <tr>
   <td><xtag-program-name>_impact</xtag-program-name></td>
-  <td><xtag-total-run-started>4</xtag-total-run-started></td>
+  <td><xtag-total-run-started>5</xtag-total-run-started></td>
   <td><xtag-total-run-finished>3</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
@@ -1186,8 +1199,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>bitgen</xtag-program-name></td>
-  <td><xtag-total-run-started>54</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>52</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>57</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>55</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -1196,8 +1209,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>map</xtag-program-name></td>
-  <td><xtag-total-run-started>60</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>57</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>62</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>59</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -1206,8 +1219,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>ngcbuild</xtag-program-name></td>
-  <td><xtag-total-run-started>4</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>4</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>6</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>6</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -1216,8 +1229,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>ngdbuild</xtag-program-name></td>
-  <td><xtag-total-run-started>63</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>61</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>65</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>63</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -1226,8 +1239,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>par</xtag-program-name></td>
-  <td><xtag-total-run-started>57</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>57</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>59</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>59</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -1236,8 +1249,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>trce</xtag-program-name></td>
-  <td><xtag-total-run-started>56</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>56</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>58</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>58</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -1246,8 +1259,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>xst</xtag-program-name></td>
-  <td><xtag-total-run-started>211</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>203</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>215</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>207</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -1261,27 +1274,24 @@
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD COLSPAN=2><B>Project Statistics</B></TD></TR>
 <TR>
 <TD><xtag-design-property-name>PROP_Enable_Message_Filtering</xtag-design-property-name>=<xtag-design-property-value>false</xtag-design-property-value></TD>
-<TD><xtag-process-property-name>PROP_FitterReportFormat</xtag-process-property-name>=<xtag-process-property-value>HTML</xtag-process-property-value></TD>
+<TD><xtag-design-property-name>PROP_LastAppliedGoal</xtag-design-property-name>=<xtag-design-property-value>Balanced</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_LastAppliedGoal</xtag-design-property-name>=<xtag-design-property-value>Balanced</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_LastAppliedStrategy</xtag-design-property-name>=<xtag-design-property-value>Xilinx Default (unlocked)</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_LastAppliedStrategy</xtag-design-property-name>=<xtag-design-property-value>Xilinx Default (unlocked)</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_ManualCompileOrderImp</xtag-design-property-name>=<xtag-design-property-value>false</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_ManualCompileOrderImp</xtag-design-property-name>=<xtag-design-property-value>false</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_PropSpecInProjFile</xtag-design-property-name>=<xtag-design-property-value>Store all values</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_PropSpecInProjFile</xtag-design-property-name>=<xtag-design-property-value>Store all values</xtag-design-property-value></TD>
+<TD><xtag-process-property-name>PROP_SelectedInstanceHierarchicalPath</xtag-process-property-name>=<xtag-process-property-value>/basic_test1</xtag-process-property-value></TD>
 
-</TR><TR><TD><xtag-process-property-name>PROP_SelectedInstanceHierarchicalPath</xtag-process-property-name>=<xtag-process-property-value>/basic_test1</xtag-process-property-value></TD>
-<TD><xtag-design-property-name>PROP_Simulator</xtag-design-property-name>=<xtag-design-property-value>ISim (VHDL/Verilog)</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_Simulator</xtag-design-property-name>=<xtag-design-property-value>ISim (VHDL/Verilog)</xtag-design-property-value></TD>
+<TD><xtag-process-property-name>PROP_SynthTopFile</xtag-process-property-name>=<xtag-process-property-value>changed</xtag-process-property-value></TD>
 
-</TR><TR><TD><xtag-process-property-name>PROP_SynthTopFile</xtag-process-property-name>=<xtag-process-property-value>changed</xtag-process-property-value></TD>
-<TD><xtag-design-property-name>PROP_Top_Level_Module_Type</xtag-design-property-name>=<xtag-design-property-value>HDL</xtag-design-property-value></TD>
-
-</TR><TR><TD><xtag-design-property-name>PROP_UseSmartGuide</xtag-design-property-name>=<xtag-design-property-value>false</xtag-design-property-value></TD>
-<TD><xtag-process-property-name>PROP_UserConstraintEditorPreference</xtag-process-property-name>=<xtag-process-property-value>Text Editor</xtag-process-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_Top_Level_Module_Type</xtag-design-property-name>=<xtag-design-property-value>HDL</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_UseSmartGuide</xtag-design-property-name>=<xtag-design-property-value>false</xtag-design-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intProjectCreationTimestamp</xtag-design-property-name>=<xtag-design-property-value>2017-10-30T11:51:59</xtag-design-property-value></TD>
 <TD><xtag-design-property-name>PROP_intWbtProjectID</xtag-design-property-name>=<xtag-design-property-value>E0401C4F32EB4F5292BDCD2F36B05616</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>5</xtag-process-property-value></TD>
+</TR><TR><TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>7</xtag-process-property-value></TD>
 <TD><xtag-design-property-name>PROP_intWorkingDirLocWRTProjDir</xtag-design-property-name>=<xtag-design-property-value>Same</xtag-design-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWorkingDirUsed</xtag-design-property-name>=<xtag-design-property-value>No</xtag-design-property-value></TD>
