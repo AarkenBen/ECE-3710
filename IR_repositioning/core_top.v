@@ -41,6 +41,7 @@ module core_top(
 	wire        write_en;
 
 
+
 				core core1(
 							.clk							(clk),
 				 			.data_from_mem				(data_from_mem_to_core),	
@@ -56,7 +57,8 @@ module core_top(
 
 				// Instantiate mem_manager
 				memory_manager mem_manager1(
-											.clock				(clk),			
+											.clock1				(clk),
+											.clock2           (clk),
 											.addr_in_block1 	(core_mem_addr),						
 											.addr_in_block2	(vga_mem_addr),        // address from vga
 											.data_in1 			(data_from_core_to_mem),

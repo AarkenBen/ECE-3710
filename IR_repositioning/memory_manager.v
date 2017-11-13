@@ -19,7 +19,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module memory_manager(	
-						input				clock,
+						input				clock1,
+						input          clock2,
 						input[23:0] 		addr_in_block1,						
 						input[23:0] 		addr_in_block2,
 //						input[23:0] 		addr_in_cell,						
@@ -60,13 +61,13 @@ output [15 : 0] doutb;
  
  //synthesis attribute box_type block_mem "black_box"
 	block_mem b_mem(
-						.clka(clock),
+						.clka(clock1),
 						.wea(read_write1),
 						.addra(addr_in_block1[15:0]),
 						.dina(block_data_in1),
 						.douta(block_data_out_1),
 						
-						.clkb(clock),
+						.clkb(clock2),
 						.web(read_write2),
 						.addrb(addr_in_block2[15:0]),
 						.dinb(block_data_in2),
@@ -76,6 +77,7 @@ output [15 : 0] doutb;
 
 	always @(*)
 	begin			
+	data_out1 = block_data_out_1;
 	data_out2 = block_data_out_2;
 		if(req == 1)
 		begin
@@ -104,17 +106,17 @@ output [15 : 0] doutb;
 	/****
 	SEQUENTIAL LOGIC
 	****/
-	always @(posedge clock)
+	always @(posedge clock1)
 	begin			
 
 		if(req == 1)
 		begin
-			data_out1 <= block_data_out_1;
+			///data_out1 <= block_data_out_1;
 			//data_out2 <= block_data_out_2;
 		end
 		else 
 		begin
-			data_out1 <= 16'd0;
+			//data_out1 <= 16'd0;
 			//data_out2 <= 16'd0;
 		end
 
