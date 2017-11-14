@@ -65,11 +65,18 @@ namespace AND_assembler
             // remove any previous instances of the coe file
             File.Delete(currentPath + outFileName + ".coe");
 
+
+            Console.WriteLine("\t~~~~~~~~~Starting Assembler~~~~~~~~~\t");
+
             for (int i = 0; i < 2; i++)
             {
+                if (i == 0)
+                    Console.WriteLine("~~~~~Labels~~~~~");
+                else
+                    Console.WriteLine("~~~~~Assembly~~~~~");
 
-               // pc = 0x2800;
-                pc = 0x2800;
+                    // pc = 0x2800;
+                    pc = 0x2800;
 
                 // Read the file and display it line by line.  
                 System.IO.StreamReader infile =
@@ -89,8 +96,8 @@ namespace AND_assembler
                         {
                             string l = line.Substring(0, line.LastIndexOf(':'));
 
-                           // Console.WriteLine(l);
-                           // Console.ReadLine();
+                            Console.WriteLine(l + " @ 0x"+ Convert.ToString(pc,16));
+                            //Console.ReadLine();
                             str_pc.Add(l, pc);
                             labelCnt += 1;
                         }
@@ -109,6 +116,7 @@ namespace AND_assembler
                         {
                             string[] instruction;
                             string toWrite;
+                            string pc_for_label;
 
                             // not correct
                             instruction = line.Split(null);
@@ -187,48 +195,70 @@ namespace AND_assembler
                                     break;  
 
                                 case "jmpl":
-                                    toWrite = "010100" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0101
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "010100" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break; // 1000
 
                                 case "jmple":
-                                    toWrite = "010101" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0101
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "010101" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break; // 1000
 
                                 case "jmpb":
-                                    toWrite = "010110" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0101
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "010110" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break; // 1000
 
                                 case "jmpbe":
-                                    toWrite = "010111" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0101
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "010111" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break;
 
                                 case "jmpg":
-                                    toWrite = "011000" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0110
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "011000" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break;
 
                                 case "jmpge":
-                                    toWrite = "011001" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0110
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "011001" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break;
 
                                 case "jmpa":
-                                    toWrite = "011010" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; //0110
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "011010" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break;
 
                                 case "jmpae":
-                                    toWrite = "011011" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; //0110
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "011011" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break;
 
                                 case "jmpe":
-                                    toWrite = "011100" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0111
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+
+                                    toWrite = "011100" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break;
 
                                 case "jmpne":
-                                    toWrite = "011110" + register_helper(instruction[2]) + register_helper(instruction[3]) + immediate_helper(instruction[4], 16);
-                                    break; // 0111
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
 
+                                    toWrite = "011101" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
+                                    break;
+                                case "cmp":
+                                    toWrite = "011110" + register_helper(instruction[2]) + register_helper(instruction[3]);
+                                    break; //011110
                                     // needs to handle 
                                 case "jmp":
-                                    string pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
 
                                     toWrite = "100000" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
                                     break; // 1000
@@ -316,7 +346,7 @@ namespace AND_assembler
                 }
                 infile.Close();
 
-                Console.WriteLine("PC: " + pc);
+                Console.WriteLine("PC: " + Convert.ToString(pc,16));
                 Console.ReadLine();
             }
         }
@@ -399,7 +429,7 @@ namespace AND_assembler
                 {
                     s = Convert.ToString(j & 0xffffff, 2).PadLeft(bits, '1');
                     Console.WriteLine(immd + "\t" + s);
-                    Console.ReadLine();
+                    //Console.ReadLine();
                 }
                 else
                     s = "didn't work";
@@ -421,7 +451,7 @@ namespace AND_assembler
                 {
                     s = Convert.ToString(i & 0xffffff, 2).PadLeft(bits, '0');
                     Console.WriteLine(immd + "\t" + s);
-                    Console.ReadLine();
+                    //Console.ReadLine();
                 }
                 else
                     s = "didn't work";

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.51 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.05 secs
  
 --> Parameter xsthdpdir set to C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.51 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.06 secs
  
 --> Reading design: core_top.prj
 
@@ -57,8 +57,8 @@ Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_reposit
 Parsing module <core_top>.
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 21.02 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.65 secs
  
 --> 
 

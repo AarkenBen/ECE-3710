@@ -41,6 +41,14 @@ module core(
 
 	////// STATES ///////	
 	reg[2:0] state = 3'd0;
+	
+	
+	///// FLAGS /////////
+	reg zero = 0;
+	reg sign = 0;
+	reg carry = 0;
+	reg overflow = 0;
+	wire [15:0] result;
 
 
 	localparam fetch1 = 3'd0;
@@ -63,9 +71,14 @@ module core(
 				addui = 6'b000101,    subui = 6'b000111,
 			shiftrli = 6'b001111,  shiftli = 6'b010001,
 			 shiftrl = 6'b001110,   shiftl = 6'b010000,
-			   loadL = 4'b1001,    //loadH = 6'b1010, 
-			  writeL = 4'b1011,   //writeH = 6'b1100,
-			   jmp = 6'b100000;
+			    jmpb = 6'b010110,    jmpbe = 6'b010111,
+				 jmpa = 6'b011010,    jmpae = 6'b011011,
+				 jmpe = 6'b011100,    jmpne = 6'b011101,
+				  jmp = 6'b100000,
+				  cmp = 6'b011110,
+			   loadL = 4'b1001,      loadH = 6'b1010, 
+			  writeL = 4'b1011,     writeH = 6'b1100;
+
 
 	//////////////  STATES  ////////////////////
 	
@@ -106,6 +119,7 @@ module core(
 								|| data_from_mem[15:10] == OR
 								|| data_from_mem[15:10] == shiftrli
 								|| data_from_mem[15:10] == shiftli //Not doing register versions
+								|| data_from_mem[15:10] == cmp
 							)																
 						begin
 							reg_ndx_1 <= data_from_mem[9:5];
@@ -126,7 +140,13 @@ module core(
 							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
 							state <= fetch2;
 						end
-						else if(data_from_mem[15:10] == jmp)
+						else if(data_from_mem[15:10] == jmp
+						     || data_from_mem[15:10] == jmpb
+							  || data_from_mem[15:10] == jmpbe
+							  || data_from_mem[15:10] == jmpa
+							  || data_from_mem[15:10] == jmpae
+							  || data_from_mem[15:10] == jmpe
+							  || data_from_mem[15:10] == jmpne)
 						begin
 							state <= fetch2;
 						end
@@ -177,27 +197,94 @@ module core(
 						else if(current_op_code[5:2] == writeL) //Same as above comment
 							state <= store;
 							
-						else if(current_op_code == jmp)
+						else if(current_op_code == jmp) 
 						begin
 							state <= fetch1;
 							pc = {current_instruction[23:16], data_from_mem[15:0]};
 						end
+						else if(current_op_code == jmpb)  //Jump based on registers
+						begin
+							state<= fetch1;
+							
+							if(carry == 1)
+								pc = {current_instruction[23:16], data_from_mem[15:0]};
+						end
+						else if(current_op_code == jmpbe)
+						begin
+							state<= fetch1;
+							
+							if(carry == 1 && zero == 1)
+								pc = {current_instruction[23:16], data_from_mem[15:0]};
+						end
+						else if(current_op_code == jmpa)
+						begin
+							state<= fetch1;
+							
+							if(carry == 0 && zero == 0)
+								pc = {current_instruction[23:16], data_from_mem[15:0]};
+						end
+						else if(current_op_code == jmpae)
+						begin
+							state<= fetch1;
+							
+							if(carry == 0)
+								pc = {current_instruction[23:16], data_from_mem[15:0]};
+						end
+						else if(current_op_code == jmpe)
+						begin
+							state<= fetch1;
+							
+							if(zero == 1)
+								pc = {current_instruction[23:16], data_from_mem[15:0]};
+						end
+						else if(current_op_code == jmpne)
+						begin
+							state<= fetch1;
+							
+							if(zero == 0)
+								pc = {current_instruction[23:16], data_from_mem[15:0]};
+						end
 						else
-						state <= execute;
+							state <= execute;
 				
 					end
 				execute:
 					begin
-					
+						//Flag setting
+						if(  current_op_code == cmp
+						  || current_op_code == subu)
+						begin	
+							if(reg_right_data == reg_left_data)
+								zero <= 1;
+							else 
+								zero <= 0;
+								
+							if(reg_right_data < reg_left_data)
+								carry <= 1;
+							else
+								carry <= 0;
+						end
+						else if(current_op_code == subui)
+						begin
+							if(reg_right_data == current_immediate)
+								zero <= 1;
+							else 
+								zero <= 0;
+									
+							if(reg_right_data < current_immediate) //If unsigned operation needs to carry
+								carry <= 1;
+							else
+								carry <= 0;
+						end
+						
+						
 						//if(current_op_code == addu || current_op_code == subu)
 						begin
 							state <= fetch1;
 						end
 							
-						
-					
-				
 					end
+						
 				load1:
 					state <= load2;
 				load2:

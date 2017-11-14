@@ -3,14 +3,14 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/Derek/Documents/GitHub/ECE-3710/IR_repositioning/basic_test1_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/basic_test1_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="basic_test1" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/basic_test1/hsync" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">hsync</obj_property>
       <obj_property name="ObjectShortName">hsync</obj_property>
@@ -88,6 +88,26 @@
       <wvobject fp_name="/basic_test1/uut/core1/rm/r5" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">r5[15:0]</obj_property>
          <obj_property name="ObjectShortName">r5[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group29" type="group">
+      <obj_property name="label">Flags</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/basic_test1/uut/core1/zero" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">zero</obj_property>
+         <obj_property name="ObjectShortName">zero</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/sign" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">sign</obj_property>
+         <obj_property name="ObjectShortName">sign</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/carry" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">carry</obj_property>
+         <obj_property name="ObjectShortName">carry</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/overflow" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">overflow</obj_property>
+         <obj_property name="ObjectShortName">overflow</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>
