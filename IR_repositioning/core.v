@@ -34,6 +34,7 @@ module core(
 	// current info
 	reg[31:0] current_instruction = 32'd0;
 	reg[5:0] current_op_code = 6'd0;
+	reg[15:0] current_immediate = 16'd0;   //All Immediate arithmetic should use only 16 bits!!! 
 	
 	// program counter
 	reg[23:0] pc = 24'h2800;
@@ -56,14 +57,14 @@ module core(
 	
 	
 	
-	localparam AND = 6'b000000, // OR = 6'b000001, 
-			   NOT = 6'b000010, 
-			   XOR = 6'b000011,
-		       addu = 6'b000100, subu = 6'b000110,
-			   loadL = 4'b1001,
-				//  loadH = 6'b101000, 
-			   writeL = 4'b1011, 
-				 // writeH = 6'b110000,
+	localparam AND = 6'b000000,       OR = 6'b000001, 
+			     NOT = 6'b000010,      XOR = 6'b000011,
+		       addu = 6'b000100,     subu = 6'b000110,
+				addui = 6'b000101,    subui = 6'b000111,
+			shiftrli = 6'b001111,  shiftli = 6'b010001,
+			 shiftrl = 6'b001110,   shiftl = 6'b010000,
+			   loadL = 4'b1001,    //loadH = 6'b1010, 
+			  writeL = 4'b1011,   //writeH = 6'b1100,
 			   jmp = 6'b100000;
 
 	//////////////  STATES  ////////////////////
@@ -94,44 +95,58 @@ module core(
 					
 						current_op_code <= data_from_mem[15:10];
 						
-						
-/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
-/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
+						//TODO: Move index setting for multiword instructions to decode2
+
 						// one word
-						if(		   data_from_mem[15:10] == addu 
+						if(		data_from_mem[15:10] == addu 
 								|| data_from_mem[15:10] == subu
 								|| data_from_mem[15:10] == NOT
 								|| data_from_mem[15:10] == XOR
+								|| data_from_mem[15:10] == AND
+								|| data_from_mem[15:10] == OR
+								|| data_from_mem[15:10] == shiftrli
+								|| data_from_mem[15:10] == shiftli //Not doing register versions
 							)																
 						begin
 							reg_ndx_1 <= data_from_mem[9:5];
 							reg_ndx_2 <= data_from_mem[4:0];
+							state <= execute;
 						end
-/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100					
-/// !!!!!!!!!!!!!!!!!!! Not working as expected? transitioned from decode1 to fetch2 where data from mem[7:2] == 00100
-					
+						// Two Word Arithmetic    
+						else if( data_from_mem[15:10] == addui
+								|| data_from_mem[15:10] == subui
+								  )
+						begin
+							state <= fetch2;
+						end
 						// memory instructions
 						else if(data_from_mem[15:12] == loadL || data_from_mem[15:12] == writeL)
 						begin
 							reg_ndx_1 <= 5'd0; //data_from_mem[9:5]; //delete me
 							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
+							state <= fetch2;
 						end
-						
+						else if(data_from_mem[15:10] == jmp)
+						begin
+							state <= fetch2;
+						end
 						else
+						//When will we hit this case??
 						begin
 							reg_ndx_1 <= data_from_mem[9:5];
 							reg_ndx_2 <= data_from_mem[4:0];
+							state <= execute;
 						end
 						
-						// if one word
-						if(data_from_mem[15:10] == addu 
+					/*	// if one word
+						if(      data_from_mem[15:10] == addu 
 								|| data_from_mem[15:10] == subu
 								|| data_from_mem[15:10] == NOT
 								|| data_from_mem[15:10] == XOR)
 							state <= execute;
 						// if two word
 						else
-							state <= fetch2;
+							state <= fetch2;*/
 					end
 				
 				decode2:
@@ -140,11 +155,23 @@ module core(
 						current_instruction <= {current_instruction[31:16], data_from_mem[15:0]};
 						
 						//pc <= pc;
-					
-						if(current_op_code == jmp)
-							pc = current_instruction[22:0];
 						
-						if(current_op_code[5:2] == loadL) //Because loadL is only highest 4 bits of opcode 
+						if(current_op_code == addui || current_op_code == subui)
+						begin
+							reg_ndx_1 <= data_from_mem[4:0];
+							reg_ndx_2 <= data_from_mem[4:0];
+							current_immediate <= {current_instruction[20:16],data_from_mem[15:5]}; //See ISA doc for structure of instruction
+							state <= execute;
+						end
+						
+						
+						//else if(current_op_code == jmp)
+						//begin
+							//pc = current_instruction[22:0];
+							//state <= fetch1;
+						//end
+						
+						else if(current_op_code[5:2] == loadL) //Because loadL is only highest 4 bits of opcode 
 							state <= load1;
 							
 						else if(current_op_code[5:2] == writeL) //Same as above comment
@@ -153,7 +180,7 @@ module core(
 						else if(current_op_code == jmp)
 						begin
 							state <= fetch1;
-							pc = current_instruction[23:0];
+							pc = {current_instruction[23:16], data_from_mem[15:0]};
 						end
 						else
 						state <= execute;
@@ -236,6 +263,16 @@ module core(
 								w_data = reg_right_data - reg_left_data;
 								reg_w_en = 1;
 							end
+						else if(current_op_code == addui)
+							begin
+								w_data = reg_right_data + current_immediate;
+								reg_w_en = 1;
+							end
+						else if(current_op_code == subui)
+							begin
+								w_data = reg_right_data - current_immediate;
+								reg_w_en = 1;
+							end
 						else if(current_op_code == AND)
 							begin
 								w_data = reg_right_data & reg_left_data;
@@ -249,7 +286,27 @@ module core(
 							end
 						else if(current_op_code == NOT)
 							begin
-								w_data = !reg_left_data;
+								w_data = ~reg_left_data;
+								reg_w_en = 1;
+							end
+						else if(current_op_code == OR)
+							begin
+								w_data = reg_right_data | reg_left_data;
+								reg_w_en = 1;
+							end
+						else if(current_op_code == AND)
+							begin
+								w_data = reg_right_data & reg_left_data;
+								reg_w_en = 1;
+							end
+						else if(current_op_code == shiftrli)
+							begin
+								w_data = reg_right_data >> current_instruction[25:21];
+								reg_w_en = 1;
+							end
+						else if(current_op_code == shiftli)
+							begin
+							   w_data = reg_right_data << current_instruction[25:21];
 								reg_w_en = 1;
 							end
 						else  // Default case, should'nt be executed

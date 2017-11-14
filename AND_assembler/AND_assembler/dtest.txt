@@ -1,14 +1,6 @@
- load r0 0x0
- load r1 0x1
- load r2 0x2
- load r3 0x3
- load r4 0x4
- load r5 0x5
- write r0 0x5
- write r1 0x4
- write r2 0x3
- write r3 0x2
- write r4 0x1
- write r5 0x0
+ xor r0 r0
+ addui 1 r0
+ shiftli 1 r0
+ shiftli 2 r0
 Unstart:
  jmp Unstart

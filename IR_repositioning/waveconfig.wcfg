@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/basic_test1/hsync" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">hsync</obj_property>
       <obj_property name="ObjectShortName">hsync</obj_property>
@@ -85,9 +85,9 @@
          <obj_property name="ElementShortName">r4[15:0]</obj_property>
          <obj_property name="ObjectShortName">r4[15:0]</obj_property>
       </wvobject>
-   </wvobject>
-   <wvobject fp_name="/basic_test1/uut/core1/rm/r5" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">r5[15:0]</obj_property>
-      <obj_property name="ObjectShortName">r5[15:0]</obj_property>
+      <wvobject fp_name="/basic_test1/uut/core1/rm/r5" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r5[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r5[15:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

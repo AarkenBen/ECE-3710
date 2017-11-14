@@ -22,7 +22,7 @@ namespace AND_assembler
 
             bool bigendian = true;
 
-            currentPath = @"C:\Users\Nickj\Desktop\NickFall2017\ECE_3710\GROUP_FPGA_PROJECT\AND_assembler\";
+            currentPath = @"..\..\";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
@@ -115,7 +115,7 @@ namespace AND_assembler
 
 
                             //Console.WriteLine(" here " + instruction[1] + " " + instruction[2] + " " + instruction[3] + " \n");
-                            //Console.ReadLine();
+                           // Console.ReadLine();
                             switch (instruction[1])
                             {
                                 // logic
@@ -327,7 +327,7 @@ namespace AND_assembler
 
             instruction = line.Split(null);
 
-            switch (instruction[0])
+            switch (instruction[1])
             {
                 case "addui":
                 case "addsi":
