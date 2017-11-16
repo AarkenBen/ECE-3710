@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Reading design: core_top.prj
 
@@ -108,21 +108,21 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v" into library work
 Parsing module <VGA_SIGNAL_GENERATOR>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v" into library work
 Parsing module <VGA_PIXEL_GENERATOR>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\reg_manager.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\reg_manager.v" into library work
 Parsing module <reg_manager>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\ipcore_dir\block_mem.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\ipcore_dir\block_mem.v" into library work
 Parsing module <block_mem>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v" into library work
 Parsing module <VGA_GLPYH_TOP>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\memory_manager.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\memory_manager.v" into library work
 Parsing module <memory_manager>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\core.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core.v" into library work
 Parsing module <core>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\core_top.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core_top.v" into library work
 Parsing module <core_top>.
 
 =========================================================================
@@ -150,13 +150,17 @@ Elaborating module <VGA_SIGNAL_GENERATOR>.
 =========================================================================
 
 Synthesizing Unit <core_top>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\core_top.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core_top.v".
     Summary:
 	no macro.
 Unit <core_top> synthesized.
 
 Synthesizing Unit <core>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\core.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core.v".
+    Found 1-bit register for signal <zero>.
+    Found 1-bit register for signal <carry>.
+    Found 1-bit register for signal <current_instruction<25>>.
+    Found 1-bit register for signal <current_instruction<24>>.
     Found 1-bit register for signal <current_instruction<23>>.
     Found 1-bit register for signal <current_instruction<22>>.
     Found 1-bit register for signal <current_instruction<21>>.
@@ -181,35 +185,45 @@ Synthesizing Unit <core>.
     Found 1-bit register for signal <current_instruction<2>>.
     Found 1-bit register for signal <current_instruction<1>>.
     Found 1-bit register for signal <current_instruction<0>>.
-    Found 24-bit register for signal <pc>.
-    Found 6-bit register for signal <current_op_code>.
     Found 5-bit register for signal <reg_ndx_1>.
     Found 5-bit register for signal <reg_ndx_2>.
+    Found 16-bit register for signal <current_immediate>.
+    Found 24-bit register for signal <pc>.
+    Found 6-bit register for signal <current_op_code>.
     Found 3-bit register for signal <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
-    | Transitions        | 12                                             |
-    | Inputs             | 4                                              |
+    | Transitions        | 28                                             |
+    | Inputs             | 13                                             |
     | Outputs            | 5                                              |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | 000                                            |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <reg_right_data[15]_reg_left_data[15]_sub_44_OUT> created at line 236.
-    Found 24-bit adder for signal <pc[23]_GND_2_o_add_2_OUT> created at line 86.
-    Found 16-bit adder for signal <reg_right_data[15]_reg_left_data[15]_add_41_OUT> created at line 230.
-    Found 16-bit 8-to-1 multiplexer for signal <_n0231> created at line 234.
+    Found 16-bit subtractor for signal <reg_right_data[15]_reg_left_data[15]_sub_109_OUT> created at line 350.
+    Found 16-bit subtractor for signal <reg_right_data[15]_current_immediate[15]_sub_113_OUT> created at line 360.
+    Found 24-bit adder for signal <pc[23]_GND_2_o_add_2_OUT> created at line 100.
+    Found 16-bit adder for signal <reg_right_data[15]_reg_left_data[15]_add_106_OUT> created at line 344.
+    Found 16-bit adder for signal <reg_right_data[15]_current_immediate[15]_add_110_OUT> created at line 355.
+    Found 16-bit shifter logical right for signal <reg_right_data[15]_current_instruction[25]_shift_right_124_OUT> created at line 391
+    Found 16-bit shifter logical left for signal <reg_right_data[15]_current_instruction[25]_shift_left_126_OUT> created at line 396
+    Found 16-bit comparator equal for signal <reg_right_data[15]_reg_left_data[15]_equal_86_o> created at line 257
+    Found 16-bit comparator greater for signal <reg_right_data[15]_reg_left_data[15]_LessThan_87_o> created at line 262
+    Found 16-bit comparator equal for signal <reg_right_data[15]_current_immediate[15]_equal_89_o> created at line 269
+    Found 16-bit comparator greater for signal <reg_right_data[15]_current_immediate[15]_LessThan_90_o> created at line 274
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  64 D-type flip-flop(s).
-	inferred  50 Multiplexer(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  59 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
 	inferred   1 Finite State Machine(s).
 Unit <core> synthesized.
 
 Synthesizing Unit <reg_manager>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\reg_manager.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\reg_manager.v".
     Found 16-bit register for signal <r30>.
     Found 16-bit register for signal <r29>.
     Found 16-bit register for signal <r28>.
@@ -250,7 +264,7 @@ Synthesizing Unit <reg_manager>.
 Unit <reg_manager> synthesized.
 
 Synthesizing Unit <memory_manager>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\memory_manager.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\memory_manager.v".
 WARNING:Xst:647 - Input <addr_in_block1<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <addr_in_block2<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
@@ -258,13 +272,13 @@ WARNING:Xst:647 - Input <addr_in_block2<23:16>> is never used. This port will be
 Unit <memory_manager> synthesized.
 
 Synthesizing Unit <VGA_GLPYH_TOP>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v".
     Summary:
 	no macro.
 Unit <VGA_GLPYH_TOP> synthesized.
 
 Synthesizing Unit <VGA_PIXEL_GENERATOR>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v".
         BLACK = 8'b00000000
         WHITE = 8'b11111111
         RED = 8'b11111100
@@ -275,24 +289,25 @@ Synthesizing Unit <VGA_PIXEL_GENERATOR>.
     Found 8-bit register for signal <tempColor>.
     Found 8-bit register for signal <color>.
     Found 10-bit register for signal <tcol>.
-    Found 10-bit subtractor for signal <col[9]_GND_7_o_sub_22_OUT> created at line 86.
-    Found 10-bit subtractor for signal <row[9]_GND_7_o_sub_23_OUT> created at line 87.
-    Found 2-bit adder for signal <state[1]_GND_7_o_add_1_OUT> created at line 60.
-    Found 4-bit adder for signal <GND_7_o_PWR_8_o_add_12_OUT> created at line 78.
-    Found 14-bit adder for signal <trow[9]_GND_7_o_add_32_OUT> created at line 102.
-    Found 14-bit adder for signal <n0093> created at line 106.
-    Found 14-bit adder for signal <PWR_8_o_GND_7_o_add_35_OUT> created at line 106.
-    Found 1-bit 8-to-1 multiplexer for signal <tcol[2]_DOUTA[7]_Mux_10_o> created at line 78.
-    Found 1-bit 16-to-1 multiplexer for signal <GND_7_o_DOUTA[15]_Mux_13_o> created at line 78.
-    Found 14-bit 4-to-1 multiplexer for signal <ADDRA> created at line 122.
+    Found 10-bit subtractor for signal <col[9]_GND_9_o_sub_25_OUT> created at line 90.
+    Found 10-bit subtractor for signal <row[9]_GND_9_o_sub_26_OUT> created at line 91.
+    Found 2-bit adder for signal <state[1]_GND_9_o_add_1_OUT> created at line 60.
+    Found 4-bit adder for signal <GND_9_o_PWR_8_o_add_14_OUT> created at line 82.
+    Found 14-bit adder for signal <trow[9]_GND_9_o_add_35_OUT> created at line 106.
+    Found 14-bit adder for signal <n0098> created at line 110.
+    Found 14-bit adder for signal <PWR_8_o_GND_9_o_add_38_OUT> created at line 110.
+    Found 1-bit 8-to-1 multiplexer for signal <tcol[2]_DOUTA[7]_Mux_12_o> created at line 82.
+    Found 1-bit 16-to-1 multiplexer for signal <GND_9_o_DOUTA[15]_Mux_15_o> created at line 82.
+    Found 8-bit 4-to-1 multiplexer for signal <tempColor[7]_tempColor[7]_mux_22_OUT> created at line 71.
+    Found 14-bit 4-to-1 multiplexer for signal <ADDRA> created at line 126.
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  69 D-type flip-flop(s).
-	inferred   9 Multiplexer(s).
+	inferred  16 Multiplexer(s).
 Unit <VGA_PIXEL_GENERATOR> synthesized.
 
 Synthesizing Unit <VGA_SIGNAL_GENERATOR>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v".
         frameWidth = 799
         frameHeight = 524
         hfp = 16
@@ -312,14 +327,14 @@ Synthesizing Unit <VGA_SIGNAL_GENERATOR>.
     Found 2-bit register for signal <pCnt>.
     Found 10-bit adder for signal <nHCnt> created at line 57.
     Found 10-bit adder for signal <nVCnt> created at line 60.
-    Found 2-bit adder for signal <pCnt[1]_GND_8_o_add_6_OUT> created at line 71.
+    Found 2-bit adder for signal <pCnt[1]_GND_10_o_add_6_OUT> created at line 71.
     Found 10-bit comparator greater for signal <nHsync> created at line 63
     Found 10-bit comparator greater for signal <nVsync> created at line 66
     Found 10-bit comparator lessequal for signal <hCnt[9]_PWR_10_o_LessThan_8_o> created at line 72
     Found 10-bit comparator lessequal for signal <vCnt[9]_PWR_10_o_LessThan_13_o> created at line 73
-    Found 10-bit comparator greater for signal <GND_8_o_col[9]_LessThan_18_o> created at line 76
+    Found 10-bit comparator greater for signal <GND_10_o_col[9]_LessThan_18_o> created at line 76
     Found 10-bit comparator greater for signal <col[9]_PWR_10_o_LessThan_19_o> created at line 76
-    Found 10-bit comparator greater for signal <GND_8_o_row[9]_LessThan_20_o> created at line 76
+    Found 10-bit comparator greater for signal <GND_10_o_row[9]_LessThan_20_o> created at line 76
     Found 10-bit comparator greater for signal <row[9]_PWR_10_o_LessThan_21_o> created at line 76
     Summary:
 	inferred   3 Adder/Subtractor(s).
@@ -339,29 +354,36 @@ Macro Statistics
  2-bit adder                                           : 2
  24-bit adder                                          : 1
  4-bit adder                                           : 1
-# Registers                                            : 75
+# Registers                                            : 77
  1-bit register                                        : 28
  10-bit register                                       : 6
- 16-bit register                                       : 32
+ 16-bit register                                       : 33
  2-bit register                                        : 2
  24-bit register                                       : 1
  31-bit register                                       : 1
+ 4-bit register                                        : 1
  5-bit register                                        : 2
  6-bit register                                        : 1
  8-bit register                                        : 2
-# Comparators                                          : 8
+# Comparators                                          : 12
  10-bit comparator greater                             : 6
  10-bit comparator lessequal                           : 2
-# Multiplexers                                         : 62
+ 16-bit comparator equal                               : 2
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 78
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 27
+ 1-bit 2-to-1 multiplexer                              : 23
  1-bit 8-to-1 multiplexer                              : 1
  14-bit 2-to-1 multiplexer                             : 6
- 16-bit 2-to-1 multiplexer                             : 13
+ 16-bit 2-to-1 multiplexer                             : 25
  16-bit 32-to-1 multiplexer                            : 2
- 24-bit 2-to-1 multiplexer                             : 9
- 5-bit 2-to-1 multiplexer                              : 2
- 8-bit 2-to-1 multiplexer                              : 1
+ 24-bit 2-to-1 multiplexer                             : 6
+ 5-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 7
+ 8-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
 # FSMs                                                 : 1
 # Xors                                                 : 4
  1-bit xor2                                            : 3
@@ -405,21 +427,27 @@ Macro Statistics
  10-bit up counter                                     : 2
  2-bit up counter                                      : 2
  24-bit up counter                                     : 1
-# Registers                                            : 643
- Flip-Flops                                            : 643
-# Comparators                                          : 8
+# Registers                                            : 663
+ Flip-Flops                                            : 663
+# Comparators                                          : 12
  10-bit comparator greater                             : 6
  10-bit comparator lessequal                           : 2
-# Multiplexers                                         : 91
+ 16-bit comparator equal                               : 2
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 107
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 27
+ 1-bit 2-to-1 multiplexer                              : 23
  1-bit 32-to-1 multiplexer                             : 32
  1-bit 8-to-1 multiplexer                              : 1
  14-bit 2-to-1 multiplexer                             : 6
- 16-bit 2-to-1 multiplexer                             : 13
- 24-bit 2-to-1 multiplexer                             : 8
- 5-bit 2-to-1 multiplexer                              : 2
- 8-bit 2-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 25
+ 24-bit 2-to-1 multiplexer                             : 5
+ 5-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 7
+ 8-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
 # FSMs                                                 : 1
 # Xors                                                 : 4
  1-bit xor2                                            : 3
@@ -439,8 +467,8 @@ Optimizing FSM <core1/FSM_0> on signal <state[1:3]> with user encoding.
  000   | 000
  010   | 010
  011   | 011
- 001   | 001
  100   | 100
+ 001   | 001
  111   | 111
  101   | 101
  110   | 110
@@ -461,18 +489,10 @@ WARNING:Xst:2677 - Node <core1/pc_19> of sequential type is unconnected in block
 WARNING:Xst:2677 - Node <core1/pc_18> of sequential type is unconnected in block <core_top>.
 WARNING:Xst:2677 - Node <core1/pc_17> of sequential type is unconnected in block <core_top>.
 WARNING:Xst:2677 - Node <core1/pc_16> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_16> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_17> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_19> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_20> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_18> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_22> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_23> of sequential type is unconnected in block <core_top>.
-WARNING:Xst:2677 - Node <core1/current_instruction_21> of sequential type is unconnected in block <core_top>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block core_top, actual ratio is 14.
+Found area constraint ratio of 100 (+ 5) on block core_top, actual ratio is 16.
 
 Final Macro Processing ...
 
@@ -485,8 +505,8 @@ Unit <core_top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 655
- Flip-Flops                                            : 655
+# Registers                                            : 683
+ Flip-Flops                                            : 683
 # Shift Registers                                      : 2
  10-bit shift register                                 : 1
  11-bit shift register                                 : 1
@@ -512,24 +532,23 @@ Top Level Output File Name         : core_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1008
+# BELS                             : 1252
 #      GND                         : 2
 #      INV                         : 8
 #      LUT1                        : 18
-#      LUT2                        : 33
-#      LUT3                        : 86
-#      LUT4                        : 55
-#      LUT5                        : 84
-#      LUT6                        : 563
-#      MUXCY                       : 59
-#      MUXF7                       : 34
+#      LUT2                        : 38
+#      LUT3                        : 95
+#      LUT4                        : 93
+#      LUT5                        : 126
+#      LUT6                        : 672
+#      MUXCY                       : 87
+#      MUXF7                       : 47
 #      VCC                         : 2
 #      XORCY                       : 64
-# FlipFlops/Latches                : 669
-#      FD                          : 47
-#      FDE                         : 589
-#      FDR                         : 8
-#      FDRE                        : 25
+# FlipFlops/Latches                : 697
+#      FD                          : 56
+#      FDE                         : 621
+#      FDRE                        : 20
 # RAMS                             : 34
 #      RAMB16BWER                  : 30
 #      RAMB8BWER                   : 4
@@ -548,18 +567,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             669  out of  18224     3%  
- Number of Slice LUTs:                  849  out of   9112     9%  
-    Number used as Logic:               847  out of   9112     9%  
+ Number of Slice Registers:             697  out of  18224     3%  
+ Number of Slice LUTs:                 1052  out of   9112    11%  
+    Number used as Logic:              1050  out of   9112    11%  
     Number used as Memory:                2  out of   2176     0%  
        Number used as SRL:                2
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1366
-   Number with an unused Flip Flop:     697  out of   1366    51%  
-   Number with an unused LUT:           517  out of   1366    37%  
-   Number of fully used LUT-FF pairs:   152  out of   1366    11%  
-   Number of unique control sets:        44
+ Number of LUT Flip Flop pairs used:   1586
+   Number with an unused Flip Flop:     889  out of   1586    56%  
+   Number with an unused LUT:           534  out of   1586    33%  
+   Number of fully used LUT-FF pairs:   163  out of   1586    10%  
+   Number of unique control sets:        45
 
 IO Utilization: 
  Number of IOs:                          13
@@ -591,7 +610,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 705   |
+clk                                | BUFGP                  | 733   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -603,7 +622,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 9.116ns (Maximum Frequency: 109.692MHz)
-   Minimum input arrival time before clock: 5.045ns
+   Minimum input arrival time before clock: 5.368ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -614,7 +633,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 9.116ns (frequency: 109.692MHz)
-  Total number of paths / destination ports: 875325 / 2494
+  Total number of paths / destination ports: 1377852 / 2536
 -------------------------------------------------------------------------
 Delay:               9.116ns (Levels of Logic = 11)
   Source:            mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_3 (FF)
@@ -646,25 +665,26 @@ Delay:               9.116ns (Levels of Logic = 11)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 56 / 16
+  Total number of paths / destination ports: 90 / 8
 -------------------------------------------------------------------------
-Offset:              5.045ns (Levels of Logic = 4)
+Offset:              5.368ns (Levels of Logic = 5)
   Source:            sw<1> (PAD)
-  Destination:       vga/vpg/tempColor_7 (FF)
+  Destination:       vga/vpg/tempColor_1 (FF)
   Destination Clock: clk rising
 
-  Data Path: sw<1> to vga/vpg/tempColor_7
+  Data Path: sw<1> to vga/vpg/tempColor_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   1.222   1.156  sw_1_IBUF (sw_1_IBUF)
-     LUT4:I0->O            8   0.203   1.147  vga/vpg/_n0139_inv1 (vga/vpg/_n0139_inv)
-     LUT5:I0->O            1   0.203   0.808  vga/vpg/_n0130<1>3_SW0 (N30)
-     LUT6:I3->O            1   0.205   0.000  vga/vpg/tempColor_7_glue_set (vga/vpg/tempColor_7_glue_set)
-     FDR:D                     0.102          vga/vpg/tempColor_7
+     IBUF:I->O            11   1.222   1.227  sw_1_IBUF (sw_1_IBUF)
+     LUT5:I0->O           17   0.203   1.256  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_22_OUT111 (vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_22_OUT11)
+     LUT3:I0->O            1   0.205   0.000  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_22_OUT1211_SW3_G (N50)
+     MUXF7:I1->O           1   0.140   0.808  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_22_OUT1211_SW3 (N20)
+     LUT6:I3->O            1   0.205   0.000  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_22_OUT22 (vga/vpg/tempColor[7]_tempColor[7]_mux_22_OUT<1>)
+     FD:D                      0.102          vga/vpg/tempColor_1
     ----------------------------------------
-    Total                      5.045ns (1.935ns logic, 3.110ns route)
-                                       (38.4% logic, 61.6% route)
+    Total                      5.368ns (2.077ns logic, 3.291ns route)
+                                       (38.7% logic, 61.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -701,14 +721,14 @@ clk            |    9.116|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 61.00 secs
-Total CPU time to Xst completion: 60.45 secs
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.11 secs
  
 --> 
 
-Total memory usage is 284280 kilobytes
+Total memory usage is 346604 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   18 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

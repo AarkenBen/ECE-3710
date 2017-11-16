@@ -1,11 +1,11 @@
 set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
--ifn core_top.prj
--ofn core_top
+-ifn I2C_interface.prj
+-ofn I2C_interface
 -ofmt NGC
 -p xc6slx16-3-csg324
--top core_top
+-top I2C_interface
 -opt_mode Speed
 -opt_level 1
 -power NO

@@ -1,0 +1,784 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: I2C_interface.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "I2C_interface.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "I2C_interface"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : I2C_interface
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\I2C_interface.v" into library work
+Parsing module <I2C_interface>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <I2C_interface>.
+WARNING:HDLCompiler:413 - "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\I2C_interface.v" Line 156: Result of 14-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\I2C_interface.v" Line 132: Assignment to master_clk ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <I2C_interface>.
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\I2C_interface.v".
+    Found 5-bit register for signal <state>.
+    Found 8-bit register for signal <cur_byt_R>.
+    Found 14-bit register for signal <cntr_10k>.
+    Found 8-bit register for signal <byte1>.
+    Found 8-bit register for signal <byte2>.
+    Found 8-bit register for signal <byte3>.
+    Found 8-bit register for signal <byte4>.
+    Found 8-bit register for signal <byte5>.
+    Found 8-bit register for signal <byte6>.
+    Found 8-bit register for signal <byte7>.
+    Found 8-bit register for signal <byte8>.
+    Found 8-bit register for signal <byte9>.
+    Found 8-bit register for signal <byte10>.
+    Found 8-bit register for signal <byte11>.
+    Found 8-bit register for signal <byte12>.
+    Found 8-bit register for signal <byte13>.
+    Found 8-bit register for signal <byte14>.
+    Found 8-bit register for signal <byte15>.
+    Found 8-bit register for signal <byte16>.
+    Found 8-bit register for signal <byte17>.
+    Found 8-bit register for signal <byte18>.
+    Found 8-bit register for signal <byte19>.
+    Found 4-bit register for signal <cycle>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 25                                             |
+    | Transitions        | 53                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 18                                             |
+    | Clock              | lead_clk_10khz (rising_edge)                   |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <cycle[3]_GND_1_o_add_2_OUT> created at line 78.
+    Found 14-bit adder for signal <cntr_10k[13]_GND_1_o_add_73_OUT> created at line 129.
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_85_OUT<2:0>> created at line 143.
+    Found 1-bit tristate buffer for signal <master_data_out> created at line 132
+    Found 14-bit comparator greater for signal <clk_10khz> created at line 123
+    Found 14-bit comparator greater for signal <GND_1_o_cntr_10k[13]_LessThan_70_o> created at line 124
+    Found 14-bit comparator greater for signal <cntr_10k[13]_GND_1_o_LessThan_71_o> created at line 124
+    Found 14-bit comparator greater for signal <cntr_10k[13]_PWR_1_o_LessThan_73_o> created at line 129
+    Found 4-bit comparator greater for signal <cycle[3]_PWR_1_o_LessThan_83_o> created at line 143
+    Found 4-bit comparator lessequal for signal <cycle[3]_GND_1_o_LessThan_102_o> created at line 166
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 178 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  21 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <I2C_interface> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 14-bit adder                                          : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 22
+ 14-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 20
+# Comparators                                          : 6
+ 14-bit comparator greater                             : 4
+ 4-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 21
+ 1-bit 2-to-1 multiplexer                              : 20
+ 4-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_1> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_2> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_3> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_4> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_5> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_6> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_7> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <I2C_interface>.
+The following registers are absorbed into counter <cntr_10k>: 1 register on signal <cntr_10k>.
+The following registers are absorbed into counter <cycle>: 1 register on signal <cycle>.
+Unit <I2C_interface> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 3-bit subtractor                                      : 1
+# Counters                                             : 2
+ 14-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 160
+ Flip-Flops                                            : 160
+# Comparators                                          : 6
+ 14-bit comparator greater                             : 4
+ 4-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 20
+ 1-bit 2-to-1 multiplexer                              : 20
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_1> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_2> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_3> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_4> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_5> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_6> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_byt_R_7> has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte1_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte2_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte3_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte4_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte5_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte6_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte7_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte8_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte9_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte10_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte11_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte12_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte13_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte14_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte15_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte16_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte17_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte18_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_1> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_2> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_3> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_4> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_5> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_6> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <byte19_7> (without init value) has a constant value of 0 in block <I2C_interface>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 00001 | 00001
+ 11000 | 11000
+ 00010 | 00010
+ 00011 | 00011
+ 00100 | 00100
+ 00101 | 00101
+ 00110 | 00110
+ 00111 | 00111
+ 01000 | 01000
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01100 | 01100
+ 01101 | 01101
+ 01110 | 01110
+ 01111 | 01111
+ 10000 | 10000
+ 10001 | 10001
+ 10010 | 10010
+ 10011 | 10011
+ 10100 | 10100
+ 10101 | 10101
+ 10110 | 10110
+ 10111 | 10111
+-------------------
+WARNING:Xst:2041 - Unit I2C_interface: 1 internal tristate is replaced by logic (pull-up yes): master_data_out.
+
+Optimizing unit <I2C_interface> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block I2C_interface, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 43
+ Flip-Flops                                            : 43
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : I2C_interface.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 86
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 13
+#      LUT2                        : 2
+#      LUT3                        : 6
+#      LUT4                        : 5
+#      LUT5                        : 12
+#      LUT6                        : 17
+#      MUXCY                       : 13
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 14
+# FlipFlops/Latches                : 43
+#      FD                          : 6
+#      FDE                         : 19
+#      FDR                         : 18
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 152
+#      OBUF                        : 152
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              43  out of  18224     0%  
+ Number of Slice LUTs:                   56  out of   9112     0%  
+    Number used as Logic:                56  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     71
+   Number with an unused Flip Flop:      28  out of     71    39%  
+   Number with an unused LUT:            15  out of     71    21%  
+   Number of fully used LUT-FF pairs:    28  out of     71    39%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                         153
+ Number of bonded IOBs:                 153  out of    232    65%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+lead_clk_10khz(lead_clk_10khz4:O)  | BUFG(*)(byte1_0)       | 29    |
+clk                                | BUFGP                  | 14    |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.171ns (Maximum Frequency: 239.754MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'lead_clk_10khz'
+  Clock period: 4.171ns (frequency: 239.754MHz)
+  Total number of paths / destination ports: 406 / 52
+-------------------------------------------------------------------------
+Delay:               4.171ns (Levels of Logic = 4)
+  Source:            state_FSM_FFd1 (FF)
+  Destination:       state_FSM_FFd5 (FF)
+  Source Clock:      lead_clk_10khz rising
+  Destination Clock: lead_clk_10khz rising
+
+  Data Path: state_FSM_FFd1 to state_FSM_FFd5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.447   1.277  state_FSM_FFd1 (state_FSM_FFd1)
+     LUT5:I0->O            6   0.203   0.745  state_state[4]_GND_1_o_equal_77_o1 (state[4]_GND_1_o_equal_77_o)
+     LUT6:I5->O            6   0.205   0.849  master_data_outLogicTrst3 (master_data_outLogicTrst2)
+     LUT6:I4->O            1   0.203   0.000  state_FSM_FFd5-In_G (N42)
+     MUXF7:I1->O           1   0.140   0.000  state_FSM_FFd5-In (state_FSM_FFd5-In)
+     FD:D                      0.102          state_FSM_FFd5
+    ----------------------------------------
+    Total                      4.171ns (1.300ns logic, 2.871ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.914ns (frequency: 255.480MHz)
+  Total number of paths / destination ports: 301 / 28
+-------------------------------------------------------------------------
+Delay:               3.914ns (Levels of Logic = 2)
+  Source:            cntr_10k_1 (FF)
+  Destination:       cntr_10k_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cntr_10k_1 to cntr_10k_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.864  cntr_10k_1 (cntr_10k_1)
+     LUT4:I0->O            1   0.203   0.808  cntr_10k[13]_PWR_1_o_LessThan_73_o_inv3 (cntr_10k[13]_PWR_1_o_LessThan_73_o_inv3)
+     LUT6:I3->O           14   0.205   0.957  cntr_10k[13]_PWR_1_o_LessThan_73_o_inv4 (cntr_10k[13]_PWR_1_o_LessThan_73_o_inv)
+     FDR:R                     0.430          cntr_10k_0
+    ----------------------------------------
+    Total                      3.914ns (1.285ns logic, 2.629ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'lead_clk_10khz'
+  Total number of paths / destination ports: 19 / 19
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            byte1_0 (FF)
+  Destination:       byte1<0> (PAD)
+  Source Clock:      lead_clk_10khz rising
+
+  Data Path: byte1_0 to byte1<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  byte1_0 (byte1_0)
+     OBUF:I->O                 2.571          byte1_0_OBUF (byte1<0>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.914|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock lead_clk_10khz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.523|         |         |         |
+lead_clk_10khz |    4.171|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.71 secs
+ 
+--> 
+
+Total memory usage is 328184 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  283 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

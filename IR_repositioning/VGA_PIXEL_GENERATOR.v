@@ -72,6 +72,10 @@ module VGA_PIXEL_GENERATOR(
 			tempColor <= req ? en ? seed[7:0] : BLACK : tempColor;
 	
 		// glyphs
+		else if(sw == 2'b10)
+		begin
+					tempColor <= en ? BLUE : BLACK;
+		end
 		else
 		begin
 			if(state == 2'b11)
