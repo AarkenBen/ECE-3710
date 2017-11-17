@@ -3,16 +3,16 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.53 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.63 secs
  
 --> Parameter xsthdpdir set to C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.54 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.64 secs
  
---> Reading design: core.prj
+--> Reading design: from_angle_to_pulse_length.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -39,20 +39,16 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\reg_manager.v" into library work
-Parsing module <reg_manager>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core.v" into library work
-Parsing module <core>.
-
-
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.67 secs
- 
+Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\from_angle_to_pulse_length.v" into library work
+Parsing module <from_angle_to_pulse_length>.
+ERROR:HDLCompiler:806 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\from_angle_to_pulse_length.v" Line 41: Syntax error near "else".
+ERROR:HDLCompiler:598 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\from_angle_to_pulse_length.v" Line 21: Module <from_angle_to_pulse_length> ignored due to previous errors.
+Verilog file C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\from_angle_to_pulse_length.v ignored due to errors
 --> 
 
 Total memory usage is 196740 kilobytes
 
-Number of errors   :    0 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

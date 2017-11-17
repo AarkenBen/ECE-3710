@@ -20,11 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 module core_top(		
 					input					 	clk,
-					input  		[1:0]		sw,
+					input  		[3:0]		sw,
 					
 					output 					hsync,
 					output 					vsync,
-					output [7:0] 			rgb
+					output [7:0] 			rgb,
+					
+					output servo_pwm
+					
 					//output reg[7:0] 		VGA_pad,
 					//output reg[7:0]		servo_pad//
 			    );
@@ -80,6 +83,22 @@ module core_top(
 											.vsync						(vsync),
 											.rgb							(rgb)
 										);
+										
+				reg [15:0] angle;
+				
+				servo_pwm servo(clk, angle, servo_pwm); 
+				
+				always@(*)
+				begin
+					if(sw[3:2] == 2'b00)
+						angle = 16'd0;
+					else if(sw[3:2] == 2'b01)
+						angle = 16'd90;
+					else if(sw[3:2] == 2'b10)
+						angle = 16'd135;
+					else
+						angle = 16'd180;
+				end
 
 				// INSTANTIATE CELL MEM
 

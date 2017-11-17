@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.53 secs
+Total CPU time to Xst completion: 0.43 secs
  
 --> Parameter xsthdpdir set to C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.54 secs
+Total CPU time to Xst completion: 0.44 secs
  
---> Reading design: core.prj
+--> Reading design: servo_pwm.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -39,14 +39,14 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\reg_manager.v" into library work
-Parsing module <reg_manager>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core.v" into library work
-Parsing module <core>.
+Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\from_angle_to_pulse_length.v" into library work
+Parsing module <from_angle_to_pulse_length>.
+Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\servo_pwm.v" into library work
+Parsing module <servo_pwm>.
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.67 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.47 secs
  
 --> 
 
