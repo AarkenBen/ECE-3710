@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c.v" Line 157: Assignment to <arg fmt="%s" index="1">PTAT_packet</arg> ignored, since the identifier is never used
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3212" delta="new" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">ndx</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram__n0512</arg>&gt; for implementation as read-only block RAM.
+<msg type="info" file="Xst" num="3212" delta="new" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">ndx</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram__n2713</arg>&gt; for implementation as read-only block RAM.
 </msg>
 
 </messages>

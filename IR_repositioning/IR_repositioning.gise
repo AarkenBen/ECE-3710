@@ -103,6 +103,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="i2c.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="i2c.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="i2c.xst"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="i2c_clk_div.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="i2c_clk_div.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="i2c_clk_div.tfi"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="i2c_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="i2c_isim_beh.exe"/>
@@ -136,6 +138,10 @@
     <transform xil_pn:end_ts="1511887781" xil_pn:in_ck="4583412476772172758" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1511887781">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="I2C_interface.v"/>
       <outfile xil_pn:name="VGA_GLPYH_TOP.v"/>
       <outfile xil_pn:name="VGA_PIXEL_GENERATOR.v"/>
@@ -169,6 +175,11 @@
     <transform xil_pn:end_ts="1511887807" xil_pn:in_ck="4583412476772172758" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1511887807">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="I2C_interface.v"/>
       <outfile xil_pn:name="VGA_GLPYH_TOP.v"/>
       <outfile xil_pn:name="VGA_PIXEL_GENERATOR.v"/>
@@ -188,6 +199,11 @@
     <transform xil_pn:end_ts="1511887811" xil_pn:in_ck="4927422996587841446" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="75483793422428359" xil_pn:start_ts="1511887807">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="i2c_test_beh.prj"/>
       <outfile xil_pn:name="i2c_test_isim_beh.exe"/>
@@ -195,9 +211,12 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1511887811" xil_pn:in_ck="-7017326530146372508" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5896921729936884502" xil_pn:start_ts="1511887811">
+    <transform xil_pn:end_ts="1511888270" xil_pn:in_ck="-7017326530146372508" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5896921729936884502" xil_pn:start_ts="1511888270">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="i2c_test_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -232,12 +251,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1511887765" xil_pn:in_ck="-4035707864112067505" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-8332992405884850191" xil_pn:start_ts="1511887751">
+    <transform xil_pn:end_ts="1511889115" xil_pn:in_ck="-4035707864112067505" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-8332992405884850191" xil_pn:start_ts="1511889102">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="I2C_interface.prj"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="i2c.lso"/>

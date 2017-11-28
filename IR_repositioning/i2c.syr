@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.06 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Reading design: i2c.prj
 
@@ -108,6 +108,8 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c_clk_div.v" into library work
+Parsing module <i2c_clk_div>.
 Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c.v" into library work
 Parsing module <i2c>.
 
@@ -116,7 +118,8 @@ Parsing module <i2c>.
 =========================================================================
 
 Elaborating module <i2c>.
-WARNING:HDLCompiler:1127 - "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c.v" Line 157: Assignment to PTAT_packet ignored, since the identifier is never used
+
+Elaborating module <i2c_clk_div>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -128,12 +131,165 @@ Synthesizing Unit <i2c>.
     Found 1-bit register for signal <sda_en>.
     Found 1-bit register for signal <sda_out>.
     Found 3-bit register for signal <ndx>.
+    Found 1-bit register for signal <valid>.
+    Found 1-bit register for signal <PTAT_packet<15>>.
+    Found 1-bit register for signal <PTAT_packet<14>>.
+    Found 1-bit register for signal <PTAT_packet<13>>.
+    Found 1-bit register for signal <PTAT_packet<12>>.
+    Found 1-bit register for signal <PTAT_packet<11>>.
+    Found 1-bit register for signal <PTAT_packet<10>>.
+    Found 1-bit register for signal <PTAT_packet<9>>.
+    Found 1-bit register for signal <PTAT_packet<8>>.
+    Found 1-bit register for signal <PTAT_packet<7>>.
+    Found 1-bit register for signal <PTAT_packet<6>>.
+    Found 1-bit register for signal <PTAT_packet<5>>.
+    Found 1-bit register for signal <PTAT_packet<4>>.
+    Found 1-bit register for signal <PTAT_packet<3>>.
+    Found 1-bit register for signal <PTAT_packet<2>>.
+    Found 1-bit register for signal <PTAT_packet<1>>.
+    Found 1-bit register for signal <PTAT_packet<0>>.
+    Found 1-bit register for signal <packet_0<15>>.
+    Found 1-bit register for signal <packet_0<14>>.
+    Found 1-bit register for signal <packet_0<13>>.
+    Found 1-bit register for signal <packet_0<12>>.
+    Found 1-bit register for signal <packet_0<11>>.
+    Found 1-bit register for signal <packet_0<10>>.
+    Found 1-bit register for signal <packet_0<9>>.
+    Found 1-bit register for signal <packet_0<8>>.
+    Found 1-bit register for signal <packet_0<7>>.
+    Found 1-bit register for signal <packet_0<6>>.
+    Found 1-bit register for signal <packet_0<5>>.
+    Found 1-bit register for signal <packet_0<4>>.
+    Found 1-bit register for signal <packet_0<3>>.
+    Found 1-bit register for signal <packet_0<2>>.
+    Found 1-bit register for signal <packet_0<1>>.
+    Found 1-bit register for signal <packet_0<0>>.
+    Found 1-bit register for signal <packet_1<15>>.
+    Found 1-bit register for signal <packet_1<14>>.
+    Found 1-bit register for signal <packet_1<13>>.
+    Found 1-bit register for signal <packet_1<12>>.
+    Found 1-bit register for signal <packet_1<11>>.
+    Found 1-bit register for signal <packet_1<10>>.
+    Found 1-bit register for signal <packet_1<9>>.
+    Found 1-bit register for signal <packet_1<8>>.
+    Found 1-bit register for signal <packet_1<7>>.
+    Found 1-bit register for signal <packet_1<6>>.
+    Found 1-bit register for signal <packet_1<5>>.
+    Found 1-bit register for signal <packet_1<4>>.
+    Found 1-bit register for signal <packet_1<3>>.
+    Found 1-bit register for signal <packet_1<2>>.
+    Found 1-bit register for signal <packet_1<1>>.
+    Found 1-bit register for signal <packet_1<0>>.
+    Found 1-bit register for signal <packet_2<15>>.
+    Found 1-bit register for signal <packet_2<14>>.
+    Found 1-bit register for signal <packet_2<13>>.
+    Found 1-bit register for signal <packet_2<12>>.
+    Found 1-bit register for signal <packet_2<11>>.
+    Found 1-bit register for signal <packet_2<10>>.
+    Found 1-bit register for signal <packet_2<9>>.
+    Found 1-bit register for signal <packet_2<8>>.
+    Found 1-bit register for signal <packet_2<7>>.
+    Found 1-bit register for signal <packet_2<6>>.
+    Found 1-bit register for signal <packet_2<5>>.
+    Found 1-bit register for signal <packet_2<4>>.
+    Found 1-bit register for signal <packet_2<3>>.
+    Found 1-bit register for signal <packet_2<2>>.
+    Found 1-bit register for signal <packet_2<1>>.
+    Found 1-bit register for signal <packet_2<0>>.
+    Found 1-bit register for signal <packet_3<15>>.
+    Found 1-bit register for signal <packet_3<14>>.
+    Found 1-bit register for signal <packet_3<13>>.
+    Found 1-bit register for signal <packet_3<12>>.
+    Found 1-bit register for signal <packet_3<11>>.
+    Found 1-bit register for signal <packet_3<10>>.
+    Found 1-bit register for signal <packet_3<9>>.
+    Found 1-bit register for signal <packet_3<8>>.
+    Found 1-bit register for signal <packet_3<7>>.
+    Found 1-bit register for signal <packet_3<6>>.
+    Found 1-bit register for signal <packet_3<5>>.
+    Found 1-bit register for signal <packet_3<4>>.
+    Found 1-bit register for signal <packet_3<3>>.
+    Found 1-bit register for signal <packet_3<2>>.
+    Found 1-bit register for signal <packet_3<1>>.
+    Found 1-bit register for signal <packet_3<0>>.
+    Found 1-bit register for signal <packet_4<15>>.
+    Found 1-bit register for signal <packet_4<14>>.
+    Found 1-bit register for signal <packet_4<13>>.
+    Found 1-bit register for signal <packet_4<12>>.
+    Found 1-bit register for signal <packet_4<11>>.
+    Found 1-bit register for signal <packet_4<10>>.
+    Found 1-bit register for signal <packet_4<9>>.
+    Found 1-bit register for signal <packet_4<8>>.
+    Found 1-bit register for signal <packet_4<7>>.
+    Found 1-bit register for signal <packet_4<6>>.
+    Found 1-bit register for signal <packet_4<5>>.
+    Found 1-bit register for signal <packet_4<4>>.
+    Found 1-bit register for signal <packet_4<3>>.
+    Found 1-bit register for signal <packet_4<2>>.
+    Found 1-bit register for signal <packet_4<1>>.
+    Found 1-bit register for signal <packet_4<0>>.
+    Found 1-bit register for signal <packet_5<15>>.
+    Found 1-bit register for signal <packet_5<14>>.
+    Found 1-bit register for signal <packet_5<13>>.
+    Found 1-bit register for signal <packet_5<12>>.
+    Found 1-bit register for signal <packet_5<11>>.
+    Found 1-bit register for signal <packet_5<10>>.
+    Found 1-bit register for signal <packet_5<9>>.
+    Found 1-bit register for signal <packet_5<8>>.
+    Found 1-bit register for signal <packet_5<7>>.
+    Found 1-bit register for signal <packet_5<6>>.
+    Found 1-bit register for signal <packet_5<5>>.
+    Found 1-bit register for signal <packet_5<4>>.
+    Found 1-bit register for signal <packet_5<3>>.
+    Found 1-bit register for signal <packet_5<2>>.
+    Found 1-bit register for signal <packet_5<1>>.
+    Found 1-bit register for signal <packet_5<0>>.
+    Found 1-bit register for signal <packet_6<15>>.
+    Found 1-bit register for signal <packet_6<14>>.
+    Found 1-bit register for signal <packet_6<13>>.
+    Found 1-bit register for signal <packet_6<12>>.
+    Found 1-bit register for signal <packet_6<11>>.
+    Found 1-bit register for signal <packet_6<10>>.
+    Found 1-bit register for signal <packet_6<9>>.
+    Found 1-bit register for signal <packet_6<8>>.
+    Found 1-bit register for signal <packet_6<7>>.
+    Found 1-bit register for signal <packet_6<6>>.
+    Found 1-bit register for signal <packet_6<5>>.
+    Found 1-bit register for signal <packet_6<4>>.
+    Found 1-bit register for signal <packet_6<3>>.
+    Found 1-bit register for signal <packet_6<2>>.
+    Found 1-bit register for signal <packet_6<1>>.
+    Found 1-bit register for signal <packet_6<0>>.
+    Found 1-bit register for signal <packet_7<15>>.
+    Found 1-bit register for signal <packet_7<14>>.
+    Found 1-bit register for signal <packet_7<13>>.
+    Found 1-bit register for signal <packet_7<12>>.
+    Found 1-bit register for signal <packet_7<11>>.
+    Found 1-bit register for signal <packet_7<10>>.
+    Found 1-bit register for signal <packet_7<9>>.
+    Found 1-bit register for signal <packet_7<8>>.
+    Found 1-bit register for signal <packet_7<7>>.
+    Found 1-bit register for signal <packet_7<6>>.
+    Found 1-bit register for signal <packet_7<5>>.
+    Found 1-bit register for signal <packet_7<4>>.
+    Found 1-bit register for signal <packet_7<3>>.
+    Found 1-bit register for signal <packet_7<2>>.
+    Found 1-bit register for signal <packet_7<1>>.
+    Found 1-bit register for signal <packet_7<0>>.
+    Found 1-bit register for signal <pec_data<7>>.
+    Found 1-bit register for signal <pec_data<6>>.
+    Found 1-bit register for signal <pec_data<5>>.
+    Found 1-bit register for signal <pec_data<4>>.
+    Found 1-bit register for signal <pec_data<3>>.
+    Found 1-bit register for signal <pec_data<2>>.
+    Found 1-bit register for signal <pec_data<1>>.
+    Found 1-bit register for signal <pec_data<0>>.
     Found 1-bit register for signal <scl_en>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 52                                             |
-    | Transitions        | 126                                            |
-    | Inputs             | 2                                              |
+    | Transitions        | 127                                            |
+    | Inputs             | 3                                              |
     | Outputs            | 61                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst (positive)                                 |
@@ -142,17 +298,31 @@ Synthesizing Unit <i2c>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit subtractor for signal <ndx[2]_GND_1_o_sub_12_OUT> created at line 204.
-    Found 8x2-bit Read Only RAM for signal <_n0512>
-    Found 1-bit tristate buffer for signal <SDA> created at line 121
+    Found 3-bit subtractor for signal <ndx[2]_GND_1_o_sub_14_OUT> created at line 215.
+    Found 5-bit adder for signal <n0624> created at line 307.
+    Found 8x2-bit Read Only RAM for signal <_n2713>
+    Found 1-bit tristate buffer for signal <SDA> created at line 128
+    Found 5-bit comparator greater for signal <n0037> created at line 307
     Summary:
 	inferred   1 RAM(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred   6 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 159 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 257 Multiplexer(s).
 	inferred   1 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <i2c> synthesized.
+
+Synthesizing Unit <i2c_clk_div>.
+    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c_clk_div.v".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit register for signal <cnt>.
+    Found 1-bit register for signal <i2c_clk>.
+    Found 10-bit adder for signal <cnt[9]_GND_2_o_add_2_OUT> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <i2c_clk_div> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -160,14 +330,23 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  8x2-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 1
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 1
  3-bit subtractor                                      : 1
-# Registers                                            : 4
- 1-bit register                                        : 3
+ 5-bit adder                                           : 1
+# Registers                                            : 17
+ 1-bit register                                        : 5
+ 10-bit register                                       : 1
+ 16-bit register                                       : 9
  3-bit register                                        : 1
-# Multiplexers                                         : 14
- 1-bit 2-to-1 multiplexer                              : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 257
+ 1-bit 2-to-1 multiplexer                              : 225
+ 16-bit 2-to-1 multiplexer                             : 18
  3-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 1
 # Tristates                                            : 1
  1-bit tristate buffer                                 : 1
 # FSMs                                                 : 1
@@ -180,7 +359,7 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <i2c>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <ndx> prevents it from being combined with the RAM <Mram__n0512> for implementation as read-only block RAM.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <ndx> prevents it from being combined with the RAM <Mram__n2713> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -193,19 +372,30 @@ INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the 
     -----------------------------------------------------------------------
 Unit <i2c> synthesized (advanced).
 
+Synthesizing (advanced) Unit <i2c_clk_div>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <i2c_clk_div> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
  8x2-bit single-port distributed Read Only RAM         : 1
-# Adders/Subtractors                                   : 1
+# Adders/Subtractors                                   : 2
  3-bit subtractor                                      : 1
-# Registers                                            : 6
- Flip-Flops                                            : 6
-# Multiplexers                                         : 14
- 1-bit 2-to-1 multiplexer                              : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 160
+ Flip-Flops                                            : 160
+# Comparators                                          : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 257
+ 1-bit 2-to-1 multiplexer                              : 225
+ 16-bit 2-to-1 multiplexer                             : 18
  3-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 
 =========================================================================
@@ -276,7 +466,9 @@ Optimizing unit <i2c> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block i2c, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block i2c, actual ratio is 3.
+FlipFlop ndx_0 has been replicated 1 time(s)
+FlipFlop ndx_1 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -284,8 +476,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 58
- Flip-Flops                                            : 58
+# Registers                                            : 224
+ Flip-Flops                                            : 224
 
 =========================================================================
 
@@ -308,24 +500,32 @@ Top Level Output File Name         : i2c.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 76
-#      INV                         : 1
-#      LUT2                        : 2
-#      LUT3                        : 5
-#      LUT4                        : 3
-#      LUT5                        : 51
-#      LUT6                        : 14
-# FlipFlops/Latches                : 58
-#      FD                          : 22
-#      FDR                         : 32
+# BELS                             : 272
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 9
+#      LUT2                        : 3
+#      LUT3                        : 14
+#      LUT4                        : 4
+#      LUT5                        : 121
+#      LUT6                        : 97
+#      MUXCY                       : 9
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 10
+# FlipFlops/Latches                : 224
+#      FD                          : 24
+#      FDR                         : 191
 #      FDR_1                       : 1
+#      FDRE                        : 5
 #      FDS                         : 3
-# Clock Buffers                    : 1
+# Clock Buffers                    : 2
 #      BUFG                        : 1
-# IO Buffers                       : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 157
 #      IBUF                        : 2
-#      OBUF                        : 1
-#      OBUFT                       : 1
+#      IOBUF                       : 1
+#      OBUF                        : 154
 
 Device utilization summary:
 ---------------------------
@@ -334,23 +534,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              58  out of  18224     0%  
- Number of Slice LUTs:                   76  out of   9112     0%  
-    Number used as Logic:                76  out of   9112     0%  
+ Number of Slice Registers:             224  out of  18224     1%  
+ Number of Slice LUTs:                  250  out of   9112     2%  
+    Number used as Logic:               250  out of   9112     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     83
-   Number with an unused Flip Flop:      25  out of     83    30%  
-   Number with an unused LUT:             7  out of     83     8%  
-   Number of fully used LUT-FF pairs:    51  out of     83    61%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:    257
+   Number with an unused Flip Flop:      33  out of    257    12%  
+   Number with an unused LUT:             7  out of    257     2%  
+   Number of fully used LUT-FF pairs:   217  out of    257    84%  
+   Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                           4
- Number of bonded IOBs:                   4  out of    232     1%  
+ Number of IOs:                         158
+ Number of bonded IOBs:                 158  out of    232    68%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -373,7 +573,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | IBUF+BUFG              | 58    |
+clk_div/i2c_clk                    | BUFG                   | 213   |
+ref_clk                            | BUFGP                  | 11    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -384,67 +585,90 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.578ns (Maximum Frequency: 218.436MHz)
-   Minimum input arrival time before clock: 3.252ns
+   Minimum period: 4.876ns (Maximum Frequency: 205.090MHz)
+   Minimum input arrival time before clock: 3.882ns
    Maximum output required time after clock: 4.484ns
-   Maximum combinational path delay: 5.157ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.578ns (frequency: 218.436MHz)
-  Total number of paths / destination ports: 586 / 58
+Timing constraint: Default period analysis for Clock 'clk_div/i2c_clk'
+  Clock period: 4.876ns (frequency: 205.090MHz)
+  Total number of paths / destination ports: 1663 / 218
 -------------------------------------------------------------------------
-Delay:               4.578ns (Levels of Logic = 4)
-  Source:            state_FSM_FFd31 (FF)
+Delay:               4.876ns (Levels of Logic = 3)
+  Source:            state_FSM_FFd33 (FF)
   Destination:       ndx_0 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
+  Source Clock:      clk_div/i2c_clk rising
+  Destination Clock: clk_div/i2c_clk rising
 
-  Data Path: state_FSM_FFd31 to ndx_0
+  Data Path: state_FSM_FFd33 to ndx_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.447   0.995  state_FSM_FFd31 (state_FSM_FFd31)
-     LUT5:I0->O            2   0.203   0.845  state__n0385<1>111 (state__n0385<1>111)
-     LUT5:I2->O            2   0.205   0.721  state__n0385<1>114 (state__n0385<1>11)
-     LUT6:I4->O            3   0.203   0.651  state__n0502_inv (_n0502_inv)
-     LUT4:I3->O            1   0.205   0.000  ndx_0_rstpot (ndx_0_rstpot)
-     FDR:D                     0.102          ndx_0
+     FDR:C->Q             11   0.447   1.227  state_FSM_FFd33 (state_FSM_FFd33)
+     LUT5:I0->O            1   0.203   0.808  state__n1557<1>111 (state__n1557<1>111)
+     LUT5:I2->O            6   0.205   0.745  state__n1557<1>114 (state__n1557<1>11)
+     LUT6:I5->O            5   0.205   0.714  state__n2637_inv1 (_n2637_inv)
+     FDRE:CE                   0.322          ndx_0
     ----------------------------------------
-    Total                      4.578ns (1.365ns logic, 3.213ns route)
-                                       (29.8% logic, 70.2% route)
+    Total                      4.876ns (1.382ns logic, 3.494ns route)
+                                       (28.3% logic, 71.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 58 / 58
+Timing constraint: Default period analysis for Clock 'ref_clk'
+  Clock period: 3.708ns (frequency: 269.658MHz)
+  Total number of paths / destination ports: 166 / 21
 -------------------------------------------------------------------------
-Offset:              3.252ns (Levels of Logic = 1)
-  Source:            rst (PAD)
-  Destination:       sda_out (FF)
-  Destination Clock: clk rising
+Delay:               3.708ns (Levels of Logic = 2)
+  Source:            clk_div/cnt_2 (FF)
+  Destination:       clk_div/cnt_0 (FF)
+  Source Clock:      ref_clk rising
+  Destination Clock: ref_clk rising
 
-  Data Path: rst to sda_out
+  Data Path: clk_div/cnt_2 to clk_div/cnt_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            58   1.222   1.600  rst_IBUF (rst_IBUF)
-     FDS:S                     0.430          sda_out
+     FDR:C->Q              2   0.447   0.961  clk_div/cnt_2 (clk_div/cnt_2)
+     LUT5:I0->O            1   0.203   0.580  clk_div/GND_2_o_GND_2_o_equal_2_o<9>_SW0 (N5)
+     LUT6:I5->O           11   0.205   0.882  clk_div/GND_2_o_GND_2_o_equal_2_o<9> (clk_div/GND_2_o_GND_2_o_equal_2_o)
+     FDR:R                     0.430          clk_div/cnt_0
     ----------------------------------------
-    Total                      3.252ns (1.652ns logic, 1.600ns route)
-                                       (50.8% logic, 49.2% route)
+    Total                      3.708ns (1.285ns logic, 2.423ns route)
+                                       (34.7% logic, 65.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 3 / 2
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_div/i2c_clk'
+  Total number of paths / destination ports: 367 / 366
+-------------------------------------------------------------------------
+Offset:              3.882ns (Levels of Logic = 2)
+  Source:            SDA (PAD)
+  Destination:       PTAT_packet_0 (FF)
+  Destination Clock: clk_div/i2c_clk rising
+
+  Data Path: SDA to PTAT_packet_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O         152   1.222   2.355  SDA_IOBUF (N13)
+     LUT5:I0->O            1   0.203   0.000  Mmux_state[8]_PTAT_packet[15]_select_203_OUT1011 (state[8]_PTAT_packet[15]_select_203_OUT<6>)
+     FDR:D                     0.102          PTAT_packet_6
+    ----------------------------------------
+    Total                      3.882ns (1.527ns logic, 2.355ns route)
+                                       (39.3% logic, 60.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_div/i2c_clk'
+  Total number of paths / destination ports: 156 / 155
 -------------------------------------------------------------------------
 Offset:              4.484ns (Levels of Logic = 2)
   Source:            scl_en (FF)
   Destination:       SCL (PAD)
-  Source Clock:      clk falling
+  Source Clock:      clk_div/i2c_clk falling
 
   Data Path: scl_en to SCL
                                 Gate     Net
@@ -458,46 +682,55 @@ Offset:              4.484ns (Levels of Logic = 2)
                                        (71.8% logic, 28.2% route)
 
 =========================================================================
-Timing constraint: Default path analysis
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ref_clk'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               5.157ns (Levels of Logic = 3)
-  Source:            clk (PAD)
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            clk_div/i2c_clk (FF)
   Destination:       SCL (PAD)
+  Source Clock:      ref_clk rising
 
-  Data Path: clk to SCL
+  Data Path: clk_div/i2c_clk to SCL
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.580  clk_IBUF (clk_IBUF)
+     FD:C->Q               2   0.447   0.617  clk_div/i2c_clk (clk_div/i2c_clk)
      LUT2:I1->O            1   0.205   0.579  Mmux_SCL11 (SCL_OBUF)
      OBUF:I->O                 2.571          SCL_OBUF (SCL)
     ----------------------------------------
-    Total                      5.157ns (3.998ns logic, 1.159ns route)
-                                       (77.5% logic, 22.5% route)
+    Total                      4.419ns (3.223ns logic, 1.196ns route)
+                                       (72.9% logic, 27.1% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk
+Clock to Setup on destination clock clk_div/i2c_clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.578|         |    1.697|         |
+clk_div/i2c_clk|    4.876|         |    1.773|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ref_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ref_clk        |    3.708|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.46 secs
+Total CPU time to Xst completion: 10.15 secs
  
 --> 
 
-Total memory usage is 312820 kilobytes
+Total memory usage is 329012 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

@@ -20,19 +20,36 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module i2c(
-		input  wire		clk,
+		input  wire		ref_clk,
 		input  wire		rst,
 		
-	//	input wire		en,
-		//input wire	[7:0]	data,
+		input  wire 	en,
 		
-		
+		output reg [15:0] PTAT_packet,
+		output reg [15:0] packet_0,
+		output reg [15:0] packet_1,
+		output reg [15:0] packet_2,
+		output reg [15:0] packet_3,
+		output reg [15:0] packet_4,
+		output reg [15:0] packet_5,
+		output reg [15:0] packet_6,
+		output reg [15:0] packet_7,
+		output reg [7:0] pec_data,
+	
 		output wire		SCL,
-		inout  wire		SDA
-		//output reg [7:0] 
-	//	output wire		valid
+		inout  wire		SDA,
+		
+		output reg		valid
     );
 
+	wire clk;
+	
+	i2c_clk_div clk_div(
+    .clk(ref_clk), 
+    .rst(rst), 
+    .i2c_clk(clk)
+    );
+	 
 	localparam 	idle = 0;
 	localparam 	start = 1;
 	localparam 	addr = 2;
@@ -104,16 +121,6 @@ module i2c(
 	reg [2:0] 	ndx;
 	reg 			scl_en = 0;
 	
-	reg [15:0] PTAT_packet;
-	reg [15:0] packet_0;
-	reg [15:0] packet_1;
-	reg [15:0] packet_2;
-	reg [15:0] packet_3;
-	reg [15:0] packet_4;
-	reg [15:0] packet_5;
-	reg [15:0] packet_6;
-	reg [15:0] packet_7;
-	reg [7:0]  pec_data;
 
 	wire [6:0] address = 7'h0A; // I/R sensor's address
 	wire [7:0] data = 8'h4c;
@@ -165,17 +172,18 @@ module i2c(
 			sda_en <= 1;
 			sda_out <= 1;
 			ndx <= 3'b0;
+			valid <= 0;
 			
-			PTAT_packet = 15'b0;
-			packet_0 = 15'b0;
-			packet_1 = 15'b0;
-			packet_2 = 15'b0;
-			packet_3 = 15'b0;
-			packet_4 = 15'b0;
-			packet_5 = 15'b0;
-			packet_6 = 15'b0;
-			packet_7 = 15'b0;
-			pec_data = 8'b0;
+			PTAT_packet <= 15'b0;
+			packet_0 <= 15'b0;
+			packet_1 <= 15'b0;
+			packet_2 <= 15'b0;
+			packet_3 <= 15'b0;
+			packet_4 <= 15'b0;
+			packet_5 <= 15'b0;
+			packet_6 <= 15'b0;
+			packet_7 <= 15'b0;
+			pec_data <= 8'b0;
 			
 		end // end if
 		else 
@@ -185,7 +193,10 @@ module i2c(
 				begin
 					sda_out <= 1;
 					sda_en <= 1;
-					state <= start;	
+					valid <= 0;
+					
+					if(en  == 1) 	state <= start;	
+					else				state <= idle;
 				end
 			
 			start: 
@@ -662,6 +673,7 @@ module i2c(
 	////////////////////////////////////////////////////////////////
 			stop:
 				begin
+					valid <= 1;
 					sda_out <= 1;
 					state <= idle;
 				end

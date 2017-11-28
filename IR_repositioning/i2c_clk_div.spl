@@ -1,0 +1,9 @@
+[Inputs]
+clk
+rst
+[Outputs]
+i2c_clk
+[BiDir]
+[ATTRIBUTES]
+VeriModel i2c_clk_div
+

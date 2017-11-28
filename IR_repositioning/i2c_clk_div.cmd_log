@@ -1,1 +1,4 @@
 vhdtdtfi -lang verilog -prj IR_repositioning -o C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c_clk_div.tfi -lib work C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning//i2c_clk_div.v -module i2c_clk_div -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c_clk_div.v -lang verilog -prj IR_repositioning -o i2c_clk_div.spl -module i2c_clk_div -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj IR_repositioning -o C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c_clk_div.tfi -lib work C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning//i2c_clk_div.v -module i2c_clk_div -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 i2c_clk_div.spl C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c_clk_div.sym 
