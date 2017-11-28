@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="error" file="HDLCompiler" num="661" delta="new" >"C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\from_angle_to_pulse_length.v" Line 22: Non-net port <arg fmt="%s" index="1">angle</arg> cannot be of mode <arg fmt="%s" index="2">input</arg>
 </msg>
 
-<msg type="info" file="Xst" num="3212" delta="new" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">ndx</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram__n2713</arg>&gt; for implementation as read-only block RAM.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\from_angle_to_pulse_length.v" Line 21: Module &lt;<arg fmt="%s" index="1">from_angle_to_pulse_length</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>

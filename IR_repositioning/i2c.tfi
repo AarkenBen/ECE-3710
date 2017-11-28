@@ -1,0 +1,24 @@
+
+
+
+// Instantiate the module
+i2c instance_name (
+    .ref_clk(ref_clk), 
+    .rst(rst), 
+    .en(en), 
+    .PTAT_packet(PTAT_packet), 
+    .packet_0(packet_0), 
+    .packet_1(packet_1), 
+    .packet_2(packet_2), 
+    .packet_3(packet_3), 
+    .packet_4(packet_4), 
+    .packet_5(packet_5), 
+    .packet_6(packet_6), 
+    .packet_7(packet_7), 
+    .pec_data(pec_data), 
+    .SCL(SCL), 
+    .SDA(SDA), 
+    .valid(valid)
+    );
+
+

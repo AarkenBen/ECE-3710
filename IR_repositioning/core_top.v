@@ -18,7 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module core_top(		
+module core_top(	
+					input						reset,
 					input					 	clk,
 					input  		[3:0]		sw,
 					
@@ -60,6 +61,7 @@ module core_top(
 
 				// Instantiate mem_manager
 				memory_manager mem_manager1(
+											.reset				(reset),
 											.clock1				(clk),
 											.clock2           (clk),
 											.addr_in_block1 	(core_mem_addr),						

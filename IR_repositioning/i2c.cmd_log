@@ -89,3 +89,9 @@ xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning
 xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.syr" 
 xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.syr" 
 xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.syr" 
+vhdtdtfi -lang verilog -prj IR_repositioning -o C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.tfi -lib work C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning//i2c.v -module i2c -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj IR_repositioning -o C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.tfi -lib work C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning//i2c.v -module i2c -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.xst" -ofn "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c.syr" 

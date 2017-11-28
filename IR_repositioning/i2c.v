@@ -117,7 +117,7 @@ module i2c(
 	
 	reg		 	sda_out;
 	reg			sda_en;
-	reg [8:0] 	state;
+	reg [8:0] 	state = 0;
 	reg [2:0] 	ndx;
 	reg 			scl_en = 0;
 	

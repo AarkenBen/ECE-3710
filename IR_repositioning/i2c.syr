@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: i2c.prj
 
@@ -295,12 +295,13 @@ Synthesizing Unit <i2c>.
     | Reset              | rst (positive)                                 |
     | Reset type         | synchronous                                    |
     | Reset State        | 000000000                                      |
+    | Power Up State     | 000000000                                      |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 3-bit subtractor for signal <ndx[2]_GND_1_o_sub_14_OUT> created at line 215.
     Found 5-bit adder for signal <n0624> created at line 307.
-    Found 8x2-bit Read Only RAM for signal <_n2713>
+    Found 8x2-bit Read Only RAM for signal <_n2699>
     Found 1-bit tristate buffer for signal <SDA> created at line 128
     Found 5-bit comparator greater for signal <n0037> created at line 307
     Summary:
@@ -359,7 +360,7 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <i2c>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <ndx> prevents it from being combined with the RAM <Mram__n2713> for implementation as read-only block RAM.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <ndx> prevents it from being combined with the RAM <Mram__n2699> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -600,16 +601,16 @@ Timing constraint: Default period analysis for Clock 'clk_div/i2c_clk'
   Total number of paths / destination ports: 1663 / 218
 -------------------------------------------------------------------------
 Delay:               4.876ns (Levels of Logic = 3)
-  Source:            state_FSM_FFd33 (FF)
+  Source:            state_FSM_FFd17 (FF)
   Destination:       ndx_0 (FF)
   Source Clock:      clk_div/i2c_clk rising
   Destination Clock: clk_div/i2c_clk rising
 
-  Data Path: state_FSM_FFd33 to ndx_0
+  Data Path: state_FSM_FFd17 to ndx_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             11   0.447   1.227  state_FSM_FFd33 (state_FSM_FFd33)
+     FDR:C->Q             11   0.447   1.227  state_FSM_FFd17 (state_FSM_FFd17)
      LUT5:I0->O            1   0.203   0.808  state__n1557<1>111 (state__n1557<1>111)
      LUT5:I2->O            6   0.205   0.745  state__n1557<1>114 (state__n1557<1>11)
      LUT6:I5->O            5   0.205   0.714  state__n2637_inv1 (_n2637_inv)
@@ -725,8 +726,8 @@ ref_clk        |    3.708|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.15 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.33 secs
  
 --> 
 

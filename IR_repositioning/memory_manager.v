@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module memory_manager(	
+						input				reset,
 						input				clock1,
 						input          clock2,
 						input[23:0] 		addr_in_block1,						
@@ -30,8 +31,11 @@ module memory_manager(
 						input				read_write1, // read write enable
 						input				read_write2, // read write enable
 						output reg[15:0]	data_out1,
-						output reg[15:0]	data_out2
-
+						output reg[15:0]	data_out2,
+						
+						output wire valid,
+						inout  wire SDA,
+						output wire SCL
 					    );
 
 
@@ -73,6 +77,29 @@ output [15 : 0] doutb;
 						.dinb(block_data_in2),
 						.doutb(block_data_out_2)
 					);
+
+
+	i2c instance_name (
+    .ref_clk(clk), 
+    .rst(reset), 
+    .en(en), // need to tie this into the core some where
+	 
+    .PTAT_packet(PTAT_packet), // might not need to store the reference temp
+    .packet_0(packet_0), 
+    .packet_1(packet_1), 
+    .packet_2(packet_2), 
+    .packet_3(packet_3), 
+    .packet_4(packet_4), 
+    .packet_5(packet_5), 
+    .packet_6(packet_6), 
+    .packet_7(packet_7), 
+    .pec_data(pec_data), 	// also don't need to store this error
+	 
+    .SCL(SCL), 
+    .SDA(SDA), 
+	 
+    .valid(valid) // this also needs to be tied into the core
+    );					
 
 
 	always @(*)
