@@ -1,0 +1,505 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.04 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.06 secs
+ 
+--> Reading design: i2c.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "i2c.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "i2c"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : i2c
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c.v" into library work
+Parsing module <i2c>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <i2c>.
+WARNING:HDLCompiler:1127 - "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c.v" Line 157: Assignment to PTAT_packet ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <i2c>.
+    Related source file is "C:\Users\User\Documents\GitHub\ECE-3710\IR_repositioning\i2c.v".
+    Found 9-bit register for signal <state>.
+    Found 1-bit register for signal <sda_en>.
+    Found 1-bit register for signal <sda_out>.
+    Found 3-bit register for signal <ndx>.
+    Found 1-bit register for signal <scl_en>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 52                                             |
+    | Transitions        | 126                                            |
+    | Inputs             | 2                                              |
+    | Outputs            | 61                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000000000                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit subtractor for signal <ndx[2]_GND_1_o_sub_12_OUT> created at line 204.
+    Found 8x2-bit Read Only RAM for signal <_n0512>
+    Found 1-bit tristate buffer for signal <SDA> created at line 121
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <i2c> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x2-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 1
+ 3-bit subtractor                                      : 1
+# Registers                                            : 4
+ 1-bit register                                        : 3
+ 3-bit register                                        : 1
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 13
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <i2c>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <ndx> prevents it from being combined with the RAM <Mram__n0512> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ndx>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <i2c> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x2-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 3-bit subtractor                                      : 1
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 13
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:52]> with one-hot encoding.
+-------------------------------------------------------------------
+ State     | Encoding
+-------------------------------------------------------------------
+ 000000000 | 0000000000000000000000000000000000000000000000000001
+ 000000001 | 0000000000000000000000000000000000000000000000000010
+ 000000010 | 0000000000000000000000000000000000000000000000000100
+ 000000011 | 0000000000000000000000000000000000000000000000001000
+ 000000100 | 0000000000000000000000000000000000000000000000010000
+ 000001000 | 0000000000000000000000000000000000000000000000100000
+ 000001001 | 0000000000000000000000000000000000000000000001000000
+ 000110010 | 0000000000000000000000000000000000000000000010000000
+ 000000111 | 0000000000000000000000000000000000000000000100000000
+ 000001010 | 0000000000000000000000000000000000000000001000000000
+ 000101000 | 0000000000000000000000000000000000000000010000000000
+ 000001011 | 0000000000000000000000000000000000000000100000000000
+ 000101001 | 0000000000000000000000000000000000000001000000000000
+ 000001100 | 0000000000000000000000000000000000000010000000000000
+ 000011101 | 0000000000000000000000000000000000000100000000000000
+ 000001101 | 0000000000000000000000000000000000001000000000000000
+ 000101010 | 0000000000000000000000000000000000010000000000000000
+ 000001110 | 0000000000000000000000000000000000100000000000000000
+ 000011110 | 0000000000000000000000000000000001000000000000000000
+ 000001111 | 0000000000000000000000000000000010000000000000000000
+ 000101011 | 0000000000000000000000000000000100000000000000000000
+ 000010000 | 0000000000000000000000000000001000000000000000000000
+ 000011111 | 0000000000000000000000000000010000000000000000000000
+ 000010001 | 0000000000000000000000000000100000000000000000000000
+ 000101100 | 0000000000000000000000000001000000000000000000000000
+ 000010010 | 0000000000000000000000000010000000000000000000000000
+ 000100000 | 0000000000000000000000000100000000000000000000000000
+ 000010011 | 0000000000000000000000001000000000000000000000000000
+ 000101101 | 0000000000000000000000010000000000000000000000000000
+ 000010100 | 0000000000000000000000100000000000000000000000000000
+ 000100001 | 0000000000000000000001000000000000000000000000000000
+ 000010101 | 0000000000000000000010000000000000000000000000000000
+ 000101110 | 0000000000000000000100000000000000000000000000000000
+ 000010110 | 0000000000000000001000000000000000000000000000000000
+ 000100010 | 0000000000000000010000000000000000000000000000000000
+ 000010111 | 0000000000000000100000000000000000000000000000000000
+ 000101111 | 0000000000000001000000000000000000000000000000000000
+ 000011000 | 0000000000000010000000000000000000000000000000000000
+ 000100011 | 0000000000000100000000000000000000000000000000000000
+ 000011001 | 0000000000001000000000000000000000000000000000000000
+ 000110000 | 0000000000010000000000000000000000000000000000000000
+ 000011010 | 0000000000100000000000000000000000000000000000000000
+ 000100100 | 0000000001000000000000000000000000000000000000000000
+ 000011011 | 0000000010000000000000000000000000000000000000000000
+ 000110001 | 0000000100000000000000000000000000000000000000000000
+ 000011100 | 0000001000000000000000000000000000000000000000000000
+ 000100101 | 0000010000000000000000000000000000000000000000000000
+ 000100110 | 0000100000000000000000000000000000000000000000000000
+ 000100111 | 0001000000000000000000000000000000000000000000000000
+ 000110011 | 0010000000000000000000000000000000000000000000000000
+ 000000101 | 0100000000000000000000000000000000000000000000000000
+ 000000110 | 1000000000000000000000000000000000000000000000000000
+-------------------------------------------------------------------
+
+Optimizing unit <i2c> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block i2c, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : i2c.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 76
+#      INV                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 5
+#      LUT4                        : 3
+#      LUT5                        : 51
+#      LUT6                        : 14
+# FlipFlops/Latches                : 58
+#      FD                          : 22
+#      FDR                         : 32
+#      FDR_1                       : 1
+#      FDS                         : 3
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      OBUF                        : 1
+#      OBUFT                       : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              58  out of  18224     0%  
+ Number of Slice LUTs:                   76  out of   9112     0%  
+    Number used as Logic:                76  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     83
+   Number with an unused Flip Flop:      25  out of     83    30%  
+   Number with an unused LUT:             7  out of     83     8%  
+   Number of fully used LUT-FF pairs:    51  out of     83    61%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUF+BUFG              | 58    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.578ns (Maximum Frequency: 218.436MHz)
+   Minimum input arrival time before clock: 3.252ns
+   Maximum output required time after clock: 4.484ns
+   Maximum combinational path delay: 5.157ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.578ns (frequency: 218.436MHz)
+  Total number of paths / destination ports: 586 / 58
+-------------------------------------------------------------------------
+Delay:               4.578ns (Levels of Logic = 4)
+  Source:            state_FSM_FFd31 (FF)
+  Destination:       ndx_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: state_FSM_FFd31 to ndx_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.995  state_FSM_FFd31 (state_FSM_FFd31)
+     LUT5:I0->O            2   0.203   0.845  state__n0385<1>111 (state__n0385<1>111)
+     LUT5:I2->O            2   0.205   0.721  state__n0385<1>114 (state__n0385<1>11)
+     LUT6:I4->O            3   0.203   0.651  state__n0502_inv (_n0502_inv)
+     LUT4:I3->O            1   0.205   0.000  ndx_0_rstpot (ndx_0_rstpot)
+     FDR:D                     0.102          ndx_0
+    ----------------------------------------
+    Total                      4.578ns (1.365ns logic, 3.213ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 58 / 58
+-------------------------------------------------------------------------
+Offset:              3.252ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       sda_out (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to sda_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            58   1.222   1.600  rst_IBUF (rst_IBUF)
+     FDS:S                     0.430          sda_out
+    ----------------------------------------
+    Total                      3.252ns (1.652ns logic, 1.600ns route)
+                                       (50.8% logic, 49.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Offset:              4.484ns (Levels of Logic = 2)
+  Source:            scl_en (FF)
+  Destination:       SCL (PAD)
+  Source Clock:      clk falling
+
+  Data Path: scl_en to SCL
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q            1   0.447   0.684  scl_en (scl_en)
+     LUT2:I0->O            1   0.203   0.579  Mmux_SCL11 (SCL_OBUF)
+     OBUF:I->O                 2.571          SCL_OBUF (SCL)
+    ----------------------------------------
+    Total                      4.484ns (3.221ns logic, 1.263ns route)
+                                       (71.8% logic, 28.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.157ns (Levels of Logic = 3)
+  Source:            clk (PAD)
+  Destination:       SCL (PAD)
+
+  Data Path: clk to SCL
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.580  clk_IBUF (clk_IBUF)
+     LUT2:I1->O            1   0.205   0.579  Mmux_SCL11 (SCL_OBUF)
+     OBUF:I->O                 2.571          SCL_OBUF (SCL)
+    ----------------------------------------
+    Total                      5.157ns (3.998ns logic, 1.159ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.578|         |    1.697|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.46 secs
+ 
+--> 
+
+Total memory usage is 312820 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

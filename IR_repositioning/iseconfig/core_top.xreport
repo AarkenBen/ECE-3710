@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-15T19:21:21</DateModified>
-  <ModuleName>I2C_interface</ModuleName>
-  <SummaryTimeStamp>2017-11-15T01:24:38</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Nickj/Documents/GitHub/Master/ECE-3710/IR_repositioning/iseconfig/core_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Nickj/Documents/GitHub/Master/ECE-3710/IR_repositioning\</ImplementationReportsDirectory>
-  <DateInitialized>2017-11-15T19:21:21</DateInitialized>
+  <DateModified>2017-11-25T15:26:31</DateModified>
+  <ModuleName>i2c</ModuleName>
+  <SummaryTimeStamp>2017-11-25T13:01:30</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/iseconfig/core_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning\</ImplementationReportsDirectory>
+  <DateInitialized>2017-11-25T09:51:32</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

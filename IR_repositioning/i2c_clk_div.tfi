@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+i2c_clk_div instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .i2c_clk(i2c_clk)
+    );
+
+

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj IR_repositioning -o C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c_clk_div.tfi -lib work C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning//i2c_clk_div.v -module i2c_clk_div -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
