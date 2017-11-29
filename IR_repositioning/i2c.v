@@ -140,6 +140,14 @@ module i2c(
 	*/
 	//assign valid = ((state == idle ) && (rst == 0))? 1'b1 : 1'b0;
 	
+	reg[13:0] cntr_10k = 14'd0;
+	wire clk_10khz = cntr_10k > 14'd4999;
+	wire lead_clk_10khz = (cntr_10k > 14'd3999) || (cntr_10k < 14'd500);
+	// 10khz clk 
+	always@(negedge ref_clk)  //10Khz => 100Mhz/10,000 = 10khz -> T = 100uS
+	begin
+		cntr_10k <= cntr_10k < 14'd9999 ? cntr_10k + 1'd1 : 14'd0; 
+	end
 	
 	always@(negedge clk)
 	begin
