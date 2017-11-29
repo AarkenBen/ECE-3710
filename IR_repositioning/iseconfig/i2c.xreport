@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-28T11:02:01</DateModified>
+  <DateModified>2017-11-29T11:51:17</DateModified>
   <ModuleName>core_top</ModuleName>
-  <SummaryTimeStamp>2017-11-28T10:28:27</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-11-28T11:02:15</SummaryTimeStamp>
   <SavedFilePath>C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/iseconfig/i2c.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning</ImplementationReportsDirectory>
   <DateInitialized>2017-11-28T11:02:00</DateInitialized>
