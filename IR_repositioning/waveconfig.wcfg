@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/basic_test1_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="basic_test1" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/basic_test1/hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync</obj_property>
+      <obj_property name="ObjectShortName">hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/rgb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rgb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rgb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/sw" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sw[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/uut/core1/w_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/uut/core1/reg_ndx_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg_ndx_2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_ndx_2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/uut/core1/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/uut/core1/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[23:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/uut/core1/current_instruction" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">current_instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/uut/core1/mem_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_addr[23:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basic_test1/uut/core1/data_from_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_from_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_from_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group23" type="group">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/basic_test1/uut/core1/rm/r0" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r0[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/rm/r1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/rm/r2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r2[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/rm/r3" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r3[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r3[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/rm/r4" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r4[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r4[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/rm/r5" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r5[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r5[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group29" type="group">
+      <obj_property name="label">Flags</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/basic_test1/uut/core1/zero" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">zero</obj_property>
+         <obj_property name="ObjectShortName">zero</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/sign" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">sign</obj_property>
+         <obj_property name="ObjectShortName">sign</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/carry" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">carry</obj_property>
+         <obj_property name="ObjectShortName">carry</obj_property>
+      </wvobject>
+      <wvobject fp_name="/basic_test1/uut/core1/overflow" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">overflow</obj_property>
+         <obj_property name="ObjectShortName">overflow</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
