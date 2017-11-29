@@ -19,9 +19,9 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module VGA_GLPYH_TOP(
-		input    				clk,
-		input  		[1:0]		sw,
-		input  		[15:0]	data_from_mem_to_vga,
+		input wire				clk,
+		input wire	[1:0]		sw,
+		input wire	[15:0]	data_from_mem_to_vga,
 		output	 	[23:0] 	vga_mem_addr,
 		output 					hsync,
 		output 					vsync,

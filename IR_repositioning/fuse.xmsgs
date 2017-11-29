@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_test.v" Line 49: Port <arg fmt="%s" index="1">PTAT_packet</arg> is not connected to this instance
+</msg>
+
 </messages>
 

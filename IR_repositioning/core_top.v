@@ -19,15 +19,19 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module core_top(	
-					input						reset,
-					input					 	clk,
-					input  		[3:0]		sw,
+					input	wire				reset,
+					input	wire			 	clk,
+					input wire[3:0]		sw,
 					
 					output 					hsync,
 					output 					vsync,
 					output [7:0] 			rgb,
 					
-					output servo_pwm
+					output servo_pwm,
+					
+						
+					inout wire SDA,
+					output wire SCL
 					
 					//output reg[7:0] 		VGA_pad,
 					//output reg[7:0]		servo_pad//
@@ -72,7 +76,9 @@ module core_top(
 											.read_write1		(write_en),
 											.read_write2      (1'b0),
 											.data_out1			(data_from_mem_to_core),
-											.data_out2			(data_from_mem_to_vga)
+											.data_out2			(data_from_mem_to_vga),
+											.SDA(SDA),
+											.SCL(SCL)
 											);
 											
 	

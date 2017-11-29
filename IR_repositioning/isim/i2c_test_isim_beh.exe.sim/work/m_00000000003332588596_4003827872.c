@@ -21,13 +21,13 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/User/Documents/GitHub/ECE-3710/IR_repositioning/i2c_test.v";
+static const char *ng0 = "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_test.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 
 
 
-static void Initial_59_0(char *t0)
+static void Initial_61_0(char *t0)
 {
     char t4[8];
     char *t1;
@@ -64,24 +64,28 @@ static void Initial_59_0(char *t0)
     char *t33;
     char *t34;
 
-LAB0:    t1 = (t0 + 2848U);
+LAB0:    t1 = (t0 + 3008U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(59, ng0);
+LAB2:    xsi_set_current_line(61, ng0);
 
-LAB4:    xsi_set_current_line(60, ng0);
+LAB4:    xsi_set_current_line(62, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 1768);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    xsi_set_current_line(62, ng0);
+    xsi_set_current_line(63, ng0);
+    t2 = ((char*)((ng1)));
+    t3 = (t0 + 2088);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
+    xsi_set_current_line(65, ng0);
 
-LAB5:    xsi_set_current_line(62, ng0);
+LAB5:    xsi_set_current_line(65, ng0);
 
-LAB6:    xsi_set_current_line(63, ng0);
+LAB6:    xsi_set_current_line(66, ng0);
     t2 = (t0 + 1768);
     t3 = (t2 + 56U);
     t5 = *((char **)t3);
@@ -115,7 +119,7 @@ LAB11:    t21 = *((unsigned int *)t4);
     *((unsigned int *)t4) = (t21 & 1U);
     t22 = *((unsigned int *)t13);
     *((unsigned int *)t13) = (t22 & 1U);
-    t23 = (t0 + 5064);
+    t23 = (t0 + 5264);
     memset(t23, 0, 8);
     t24 = 1U;
     t25 = t24;
@@ -129,7 +133,7 @@ LAB11:    t21 = *((unsigned int *)t4);
     *((unsigned int *)t23) = (t30 | t24);
     t31 = *((unsigned int *)t29);
     *((unsigned int *)t29) = (t31 | t25);
-    t32 = (t0 + 2656);
+    t32 = (t0 + 2816);
     xsi_process_wait(t32, 5000LL);
     *((char **)t1) = &&LAB13;
 
@@ -145,7 +149,7 @@ LAB12:    t17 = *((unsigned int *)t4);
     *((unsigned int *)t13) = (t19 | t20);
     goto LAB11;
 
-LAB13:    t33 = (t0 + 5064);
+LAB13:    t33 = (t0 + 5264);
     t34 = (t0 + 1768);
     xsi_vlogvar_assign_value(t34, t33, 0, 0, 1);
     goto LAB5;
@@ -154,52 +158,66 @@ LAB14:    goto LAB1;
 
 }
 
-static void Initial_67_1(char *t0)
+static void Initial_70_1(char *t0)
 {
     char *t1;
     char *t2;
     char *t3;
     char *t4;
 
-LAB0:    t1 = (t0 + 3096U);
+LAB0:    t1 = (t0 + 3256U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(67, ng0);
+LAB2:    xsi_set_current_line(70, ng0);
 
-LAB4:    xsi_set_current_line(71, ng0);
+LAB4:    xsi_set_current_line(74, ng0);
     t2 = ((char*)((ng2)));
     t3 = (t0 + 1928);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    xsi_set_current_line(72, ng0);
-    t2 = (t0 + 2904);
+    xsi_set_current_line(75, ng0);
+    t2 = (t0 + 3064);
     xsi_process_wait(t2, 10000000LL);
     *((char **)t1) = &&LAB5;
 
 LAB1:    return;
-LAB5:    xsi_set_current_line(76, ng0);
+LAB5:    xsi_set_current_line(79, ng0);
     t3 = ((char*)((ng1)));
     t4 = (t0 + 1928);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
-    xsi_set_current_line(78, ng0);
-    t2 = (t0 + 2904);
-    xsi_process_wait(t2, 200000000LL);
+    xsi_set_current_line(81, ng0);
+    t2 = (t0 + 3064);
+    xsi_process_wait(t2, 10000000LL);
     *((char **)t1) = &&LAB6;
     goto LAB1;
 
-LAB6:    xsi_set_current_line(79, ng0);
+LAB6:    xsi_set_current_line(83, ng0);
+    t3 = ((char*)((ng2)));
+    t4 = (t0 + 2088);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
+    xsi_set_current_line(85, ng0);
+    t2 = (t0 + 3064);
+    xsi_process_wait(t2, 10000000LL);
+    *((char **)t1) = &&LAB7;
+    goto LAB1;
+
+LAB7:    xsi_set_current_line(89, ng0);
+    t3 = ((char*)((ng1)));
+    t4 = (t0 + 2088);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
+    xsi_set_current_line(91, ng0);
     xsi_vlog_finish(1);
     goto LAB1;
 
 }
 
 
-extern void work_m_00000000002617419229_4003827872_init()
+extern void work_m_00000000003332588596_4003827872_init()
 {
-	static char *pe[] = {(void *)Initial_59_0,(void *)Initial_67_1};
-	xsi_register_didat("work_m_00000000002617419229_4003827872", "isim/i2c_test_isim_beh.exe.sim/work/m_00000000002617419229_4003827872.didat");
+	static char *pe[] = {(void *)Initial_61_0,(void *)Initial_70_1};
+	xsi_register_didat("work_m_00000000003332588596_4003827872", "isim/i2c_test_isim_beh.exe.sim/work/m_00000000003332588596_4003827872.didat");
 	xsi_register_executes(pe);
 }

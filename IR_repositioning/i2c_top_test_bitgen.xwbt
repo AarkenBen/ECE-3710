@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.ncd
+OUTFILE=C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning
+LICENSE=WebPack
+USER_INFO=202731971_0_0_553

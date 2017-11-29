@@ -27,6 +27,7 @@ module i2c_test;
 	// Inputs
 	reg clk;
 	reg rst;
+	reg en;
 	//reg [7:0] data;
 
 	// Outputs
@@ -38,19 +39,20 @@ module i2c_test;
 
 
 	// Instantiate the module
-	i2c_clk_div  instance_name (
-    .clk(clk), 
-    .rst(rst), 
-    .i2c_clk(i2c_clk)
-    );
+	//i2c_clk_div  instance_name (
+    //.clk(clk), 
+    //.rst(rst), 
+    //.i2c_clk(i2c_clk)
+    //);
 	 
 	// Instantiate the Unit Under Test (UUT)
 	i2c uut (
-		.clk(i2c_clk), 
+		.ref_clk(clk), 
 		.rst(rst), 
 		//.data(data), 
 		.SDA(SDA), 
-		.SCL(SCL)
+		.SCL_OUT(SCL),
+		.en(en)
 	);
 
 
@@ -58,6 +60,7 @@ module i2c_test;
 
 initial begin
 	clk = 0;
+	en = 0;
 	
 	forever begin
 		clk = #5 ~clk;
@@ -74,8 +77,17 @@ end
 		//data = 0;
 	
 		rst = 0;
+		
+		#10000
+		
+		en = 1;
+		
+		#10000
 		// Wait 100 ns for global reset to finish
-		#200000;
+		//#200000;
+		
+		en = 0;
+		
 		$finish;
         
 		

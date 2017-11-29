@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module from_angle_to_pulse_length(
-					input [15:0] angle, //UNSIGNED NUMBER!!!!
+					input wire [15:0] angle, //UNSIGNED NUMBER!!!!
 					output reg [17:0] pulse_length //Only need 17 bits since max number output is 210,000
     );
 

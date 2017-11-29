@@ -19,8 +19,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module core(	
-				input clk,
-				input      [15:0] data_from_mem,
+				input wire clk,
+				input wire [15:0] data_from_mem,
 				//input      [7:0]  servo_in,
 				//input      [7:0]  ir_in,
 				output reg [15:0] data_from_core_to_mem,
@@ -28,7 +28,6 @@ module core(
 				output reg        write_en
 				//output reg [7:0]  ir_out,
 				//output reg [7:0]  servo_out,
-
     		);
 
 	// current info

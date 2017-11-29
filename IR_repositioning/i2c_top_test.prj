@@ -1,0 +1,3 @@
+verilog work "i2c_clk_div.v"
+verilog work "i2c.v"
+verilog work "i2c_top_test.v"

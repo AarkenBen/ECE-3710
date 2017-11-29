@@ -19,8 +19,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module servo_pwm(
-					input clk,
-					input [15:0] angle,
+					input wire clk,
+					input wire [15:0] angle,
 					output reg pwm
     );
 

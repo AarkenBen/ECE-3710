@@ -1,0 +1,4 @@
+verilog work "i2c_clk_div.v"
+verilog work "ipcore_dir/block_mem.v"
+verilog work "i2c.v"
+verilog work "memory_manager.v"
