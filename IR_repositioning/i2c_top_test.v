@@ -26,18 +26,11 @@ module i2c_top_test(
 	 output wire [7:0] Led,
 	 output wire analysis_clk
     );
-	 
-	reg slwclk;
-	
-	always@(posedge clk)
-	begin
-		slwclk = ~slwclk;
-	end
 
 	wire [15:0] packet_4;
 	
 	i2c i2c_testing (
-    .ref_clk(slwclk), 
+    .ref_clk(clk), 
     .rst(0), 
     .en(enable), // need to tie this into the core some where
 	 
@@ -59,5 +52,5 @@ module i2c_top_test(
     //.valid(valid) // this also needs to be tied into the core
     );
 
-	assign Led = packet_4[7:0];
+	assign Led = packet_4[9:2];
 endmodule

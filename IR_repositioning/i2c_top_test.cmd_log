@@ -23,3 +23,57 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
 bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 
+xst -intstyle ise -ifn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.xst" -ofn "C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/i2c_top_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc i2c_testing.ucf -p xc6slx16-csg324-3 i2c_top_test.ngc i2c_top_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o i2c_top_test_map.ncd i2c_top_test.ngd i2c_top_test.pcf 
+par -w -intstyle ise -ol high -mt off i2c_top_test_map.ncd i2c_top_test.ncd i2c_top_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_top_test.twx i2c_top_test.ncd -o i2c_top_test.twr i2c_top_test.pcf -ucf i2c_testing.ucf 
+bitgen -intstyle ise -f i2c_top_test.ut i2c_top_test.ncd 

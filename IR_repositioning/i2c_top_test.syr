@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.81 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.81 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
  
 --> Reading design: i2c_top_test.prj
 
@@ -118,14 +118,14 @@ Parsing module <i2c_top_test>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" Line 39: Port PTAT_packet is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" Line 32: Port PTAT_packet is not connected to this instance
 
 Elaborating module <i2c_top_test>.
 
 Elaborating module <i2c>.
 
 Elaborating module <i2c_clk_div>.
-WARNING:HDLCompiler:189 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" Line 41: Size mismatch in connection of port <rst>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" Line 34: Size mismatch in connection of port <rst>. Formal port size is 1-bit while actual signal size is 32-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -133,19 +133,18 @@ WARNING:HDLCompiler:189 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repo
 
 Synthesizing Unit <i2c_top_test>.
     Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v".
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <PTAT_packet> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <packet_0> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <packet_1> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <packet_2> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <packet_3> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <packet_5> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <packet_6> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <packet_7> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <pec_data> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 39: Output port <valid> of the instance <i2c_testing> is unconnected or connected to loadless signal.
-    Found 1-bit register for signal <slwclk>.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <PTAT_packet> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <packet_0> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <packet_1> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <packet_2> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <packet_3> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <packet_5> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <packet_6> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <packet_7> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <pec_data> of the instance <i2c_testing> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" line 32: Output port <valid> of the instance <i2c_testing> is unconnected or connected to loadless signal.
     Summary:
-	inferred   1 D-type flip-flop(s).
+	no macro.
 Unit <i2c_top_test> synthesized.
 
 Synthesizing Unit <i2c>.
@@ -307,6 +306,8 @@ Synthesizing Unit <i2c>.
     Found 1-bit register for signal <sda_out>.
     Found 3-bit register for signal <ndx>.
     Found 1-bit register for signal <valid>.
+    Found 9-bit register for signal <last_state>.
+    Found 3-bit register for signal <last_ndx>.
     Found 1-bit register for signal <scl_en>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
@@ -319,16 +320,16 @@ Synthesizing Unit <i2c>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit subtractor for signal <ndx[2]_GND_2_o_sub_92_OUT> created at line 324.
-    Found 5-bit adder for signal <n0629> created at line 185.
-    Found 8x2-bit Read Only RAM for signal <_n1213>
-    Found 1-bit tristate buffer for signal <SDA> created at line 131
-    Found 1-bit tristate buffer for signal <SCL_OUT> created at line 133
-    Found 5-bit comparator greater for signal <n0028> created at line 185
+    Found 3-bit subtractor for signal <ndx[2]_GND_2_o_sub_92_OUT> created at line 328.
+    Found 5-bit adder for signal <n0634> created at line 187.
+    Found 8x2-bit Read Only RAM for signal <_n1214>
+    Found 1-bit tristate buffer for signal <SDA> created at line 133
+    Found 1-bit tristate buffer for signal <SCL_OUT> created at line 135
+    Found 5-bit comparator lessequal for signal <n0028> created at line 187
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred 159 D-type flip-flop(s).
+	inferred 171 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred 239 Multiplexer(s).
 	inferred   2 Tristate(s).
@@ -338,12 +339,12 @@ Unit <i2c> synthesized.
 Synthesizing Unit <i2c_clk_div>.
     Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_clk_div.v".
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 10-bit register for signal <cnt>.
+    Found 16-bit register for signal <cnt>.
     Found 1-bit register for signal <i2c_clk>.
-    Found 10-bit adder for signal <cnt[9]_GND_3_o_add_2_OUT> created at line 45.
+    Found 16-bit adder for signal <cnt[15]_GND_3_o_add_2_OUT> created at line 46.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  11 D-type flip-flop(s).
+	inferred  17 D-type flip-flop(s).
 Unit <i2c_clk_div> synthesized.
 
 =========================================================================
@@ -353,17 +354,17 @@ Macro Statistics
 # RAMs                                                 : 1
  8x2-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 3
- 10-bit adder                                          : 1
+ 16-bit adder                                          : 1
  3-bit subtractor                                      : 1
  5-bit adder                                           : 1
-# Registers                                            : 18
- 1-bit register                                        : 6
- 10-bit register                                       : 1
- 16-bit register                                       : 9
- 3-bit register                                        : 1
+# Registers                                            : 19
+ 1-bit register                                        : 5
+ 16-bit register                                       : 10
+ 3-bit register                                        : 2
  8-bit register                                        : 1
+ 9-bit register                                        : 1
 # Comparators                                          : 1
- 5-bit comparator greater                              : 1
+ 5-bit comparator lessequal                            : 1
 # Multiplexers                                         : 239
  1-bit 2-to-1 multiplexer                              : 225
  3-bit 2-to-1 multiplexer                              : 13
@@ -378,9 +379,11 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+INFO:Xst:2261 - The FF/Latch <last_state_6> in Unit <i2c_testing> is equivalent to the following 2 FFs/Latches, which will be removed : <last_state_7> <last_state_8> 
+WARNING:Xst:1293 - FF/Latch <last_state_6> has a constant value of 0 in block <i2c_testing>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <i2c>.
-INFO:Xst:3231 - The small RAM <Mram__n1213> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n1214> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -407,11 +410,11 @@ Macro Statistics
  3-bit subtractor                                      : 1
  5-bit adder                                           : 1
 # Counters                                             : 1
- 10-bit up counter                                     : 1
-# Registers                                            : 161
- Flip-Flops                                            : 161
+ 16-bit up counter                                     : 1
+# Registers                                            : 172
+ Flip-Flops                                            : 172
 # Comparators                                          : 1
- 5-bit comparator greater                              : 1
+ 5-bit comparator lessequal                            : 1
 # Multiplexers                                         : 239
  1-bit 2-to-1 multiplexer                              : 225
  3-bit 2-to-1 multiplexer                              : 13
@@ -423,6 +426,9 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <last_state_6> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <last_state_7> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <last_state_8> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <i2c_testing/FSM_0> on signal <state[1:52]> with one-hot encoding.
 -------------------------------------------------------------------
@@ -543,8 +549,8 @@ WARNING:Xst:2677 - Node <i2c_testing/packet_4_13> of sequential type is unconnec
 WARNING:Xst:2677 - Node <i2c_testing/packet_4_12> of sequential type is unconnected in block <i2c_top_test>.
 WARNING:Xst:2677 - Node <i2c_testing/packet_4_11> of sequential type is unconnected in block <i2c_top_test>.
 WARNING:Xst:2677 - Node <i2c_testing/packet_4_10> of sequential type is unconnected in block <i2c_top_test>.
-WARNING:Xst:2677 - Node <i2c_testing/packet_4_9> of sequential type is unconnected in block <i2c_top_test>.
-WARNING:Xst:2677 - Node <i2c_testing/packet_4_8> of sequential type is unconnected in block <i2c_top_test>.
+WARNING:Xst:2677 - Node <i2c_testing/packet_4_1> of sequential type is unconnected in block <i2c_top_test>.
+WARNING:Xst:2677 - Node <i2c_testing/packet_4_0> of sequential type is unconnected in block <i2c_top_test>.
 WARNING:Xst:2677 - Node <i2c_testing/packet_3_15> of sequential type is unconnected in block <i2c_top_test>.
 WARNING:Xst:2677 - Node <i2c_testing/packet_3_14> of sequential type is unconnected in block <i2c_top_test>.
 WARNING:Xst:2677 - Node <i2c_testing/packet_3_13> of sequential type is unconnected in block <i2c_top_test>.
@@ -639,8 +645,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 78
- Flip-Flops                                            : 78
+# Registers                                            : 92
+ Flip-Flops                                            : 92
 
 =========================================================================
 
@@ -663,23 +669,23 @@ Top Level Output File Name         : i2c_top_test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 127
+# BELS                             : 165
 #      GND                         : 1
 #      INV                         : 1
-#      LUT1                        : 9
+#      LUT1                        : 15
 #      LUT2                        : 7
-#      LUT3                        : 6
-#      LUT4                        : 26
-#      LUT5                        : 29
-#      LUT6                        : 28
-#      MUXCY                       : 9
+#      LUT3                        : 8
+#      LUT4                        : 28
+#      LUT5                        : 32
+#      LUT6                        : 41
+#      MUXCY                       : 15
 #      VCC                         : 1
-#      XORCY                       : 10
-# FlipFlops/Latches                : 78
-#      FD                          : 55
+#      XORCY                       : 16
+# FlipFlops/Latches                : 92
+#      FD                          : 64
 #      FD_1                        : 9
 #      FDE                         : 3
-#      FDR                         : 11
+#      FDR                         : 16
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
@@ -696,16 +702,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              78  out of  18224     0%  
- Number of Slice LUTs:                  106  out of   9112     1%  
-    Number used as Logic:               106  out of   9112     1%  
+ Number of Slice Registers:              92  out of  18224     0%  
+ Number of Slice LUTs:                  132  out of   9112     1%  
+    Number used as Logic:               132  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    112
-   Number with an unused Flip Flop:      34  out of    112    30%  
-   Number with an unused LUT:             6  out of    112     5%  
-   Number of fully used LUT-FF pairs:    72  out of    112    64%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    140
+   Number with an unused Flip Flop:      48  out of    140    34%  
+   Number with an unused LUT:             8  out of    140     5%  
+   Number of fully used LUT-FF pairs:    84  out of    140    60%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          13
@@ -732,14 +738,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+--------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)          | Load  |
------------------------------------+--------------------------------+-------+
-clk                                | BUFGP                          | 1     |
-i2c_testing/clk_div/i2c_clk        | BUFG                           | 66    |
-slwclk                             | NONE(i2c_testing/clk_div/cnt_9)| 11    |
------------------------------------+--------------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+i2c_testing/clk_div/i2c_clk        | BUFG                   | 75    |
+clk                                | BUFGP                  | 17    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -749,8 +753,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 7.477ns (Maximum Frequency: 133.749MHz)
-   Minimum input arrival time before clock: 3.525ns
+   Minimum period: 6.918ns (Maximum Frequency: 144.559MHz)
+   Minimum input arrival time before clock: 4.259ns
    Maximum output required time after clock: 4.521ns
    Maximum combinational path delay: No path found
 
@@ -759,93 +763,73 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 1.785ns (frequency: 560.287MHz)
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               1.785ns (Levels of Logic = 0)
-  Source:            slwclk (FF)
-  Destination:       slwclk (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: slwclk to slwclk
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q             12   0.447   0.908  slwclk (slwclk)
-     FDR:R                     0.430          slwclk
-    ----------------------------------------
-    Total                      1.785ns (0.877ns logic, 0.908ns route)
-                                       (49.1% logic, 50.9% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'i2c_testing/clk_div/i2c_clk'
-  Clock period: 7.477ns (frequency: 133.749MHz)
-  Total number of paths / destination ports: 794 / 69
+  Clock period: 6.918ns (frequency: 144.559MHz)
+  Total number of paths / destination ports: 849 / 78
 -------------------------------------------------------------------------
-Delay:               3.738ns (Levels of Logic = 3)
-  Source:            i2c_testing/state_FSM_FFd33 (FF)
+Delay:               3.459ns (Levels of Logic = 3)
+  Source:            i2c_testing/last_state_5 (FF)
   Destination:       i2c_testing/packet_4_7 (FF)
   Source Clock:      i2c_testing/clk_div/i2c_clk rising
   Destination Clock: i2c_testing/clk_div/i2c_clk falling
 
-  Data Path: i2c_testing/state_FSM_FFd33 to i2c_testing/packet_4_7
+  Data Path: i2c_testing/last_state_5 to i2c_testing/packet_4_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               4   0.447   1.048  i2c_testing/state_FSM_FFd33 (i2c_testing/state_FSM_FFd33)
-     LUT6:I0->O            4   0.203   0.912  i2c_testing/state[8]_GND_2_o_mux_81_OUT<12>1112 (i2c_testing/state[8]_GND_2_o_mux_81_OUT<12>1112)
-     LUT6:I3->O            2   0.205   0.617  i2c_testing/state[8]_GND_2_o_mux_81_OUT<8>111 (i2c_testing/state[8]_GND_2_o_mux_81_OUT<8>11)
-     LUT6:I5->O            1   0.205   0.000  i2c_testing/state[8]_GND_2_o_mux_81_OUT<8>1 (i2c_testing/state[8]_GND_2_o_mux_81_OUT<7>)
-     FD_1:D                    0.102          i2c_testing/packet_4_7
+     FD:C->Q               3   0.447   0.898  i2c_testing/last_state_5 (i2c_testing/last_state_5)
+     LUT5:I1->O            5   0.203   0.715  i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<6>211 (i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<6>21)
+     LUT3:I2->O            4   0.205   0.684  i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<10>21 (i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<10>2)
+     LUT6:I5->O            1   0.205   0.000  i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<11>1 (i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<4>)
+     FD_1:D                    0.102          i2c_testing/packet_4_4
     ----------------------------------------
-    Total                      3.738ns (1.162ns logic, 2.576ns route)
-                                       (31.1% logic, 68.9% route)
+    Total                      3.459ns (1.162ns logic, 2.297ns route)
+                                       (33.6% logic, 66.4% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'slwclk'
-  Clock period: 3.708ns (frequency: 269.658MHz)
-  Total number of paths / destination ports: 166 / 21
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.235ns (frequency: 236.133MHz)
+  Total number of paths / destination ports: 409 / 33
 -------------------------------------------------------------------------
-Delay:               3.708ns (Levels of Logic = 2)
-  Source:            i2c_testing/clk_div/cnt_2 (FF)
-  Destination:       i2c_testing/clk_div/cnt_9 (FF)
-  Source Clock:      slwclk rising
-  Destination Clock: slwclk rising
+Delay:               4.235ns (Levels of Logic = 2)
+  Source:            i2c_testing/clk_div/cnt_0 (FF)
+  Destination:       i2c_testing/clk_div/cnt_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: i2c_testing/clk_div/cnt_2 to i2c_testing/clk_div/cnt_9
+  Data Path: i2c_testing/clk_div/cnt_0 to i2c_testing/clk_div/cnt_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.447   0.961  i2c_testing/clk_div/cnt_2 (i2c_testing/clk_div/cnt_2)
-     LUT5:I0->O            1   0.203   0.580  i2c_testing/clk_div/GND_3_o_GND_3_o_equal_2_o<9>_SW0 (N01)
-     LUT6:I5->O           11   0.205   0.882  i2c_testing/clk_div/GND_3_o_GND_3_o_equal_2_o<9> (i2c_testing/clk_div/GND_3_o_GND_3_o_equal_2_o)
+     FDR:C->Q              2   0.447   0.981  i2c_testing/clk_div/cnt_0 (i2c_testing/clk_div/cnt_0)
+     LUT6:I0->O            1   0.203   0.944  i2c_testing/clk_div/GND_3_o_GND_3_o_equal_2_o<15>1 (i2c_testing/clk_div/GND_3_o_GND_3_o_equal_2_o<15>)
+     LUT6:I0->O           17   0.203   1.027  i2c_testing/clk_div/GND_3_o_GND_3_o_equal_2_o<15>3 (i2c_testing/clk_div/GND_3_o_GND_3_o_equal_2_o)
      FDR:R                     0.430          i2c_testing/clk_div/cnt_0
     ----------------------------------------
-    Total                      3.708ns (1.285ns logic, 2.423ns route)
-                                       (34.7% logic, 65.3% route)
+    Total                      4.235ns (1.283ns logic, 2.952ns route)
+                                       (30.3% logic, 69.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'i2c_testing/clk_div/i2c_clk'
   Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
-Offset:              3.525ns (Levels of Logic = 3)
+Offset:              4.259ns (Levels of Logic = 4)
   Source:            SDA (PAD)
-  Destination:       i2c_testing/packet_4_6 (FF)
+  Destination:       i2c_testing/packet_4_7 (FF)
   Destination Clock: i2c_testing/clk_div/i2c_clk falling
 
-  Data Path: SDA to i2c_testing/packet_4_6
+  Data Path: SDA to i2c_testing/packet_4_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           4   1.222   0.912  SDA_IOBUF (N10)
-     LUT3:I0->O            3   0.205   0.879  i2c_testing/state[8]_GND_2_o_mux_81_OUT<11>21 (i2c_testing/state[8]_GND_2_o_mux_81_OUT<11>2)
-     LUT6:I3->O            1   0.205   0.000  i2c_testing/state[8]_GND_2_o_mux_81_OUT<13>1 (i2c_testing/state[8]_GND_2_o_mux_81_OUT<2>)
-     FD_1:D                    0.102          i2c_testing/packet_4_2
+     IOBUF:IO->O           1   1.222   0.924  SDA_IOBUF (N12)
+     LUT5:I0->O            5   0.203   0.715  i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<6>211 (i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<6>21)
+     LUT3:I2->O            4   0.205   0.684  i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<10>21 (i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<10>2)
+     LUT6:I5->O            1   0.205   0.000  i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<11>1 (i2c_testing/last_state[8]_GND_2_o_mux_81_OUT<4>)
+     FD_1:D                    0.102          i2c_testing/packet_4_4
     ----------------------------------------
-    Total                      3.525ns (1.734ns logic, 1.791ns route)
-                                       (49.2% logic, 50.8% route)
+    Total                      4.259ns (1.937ns logic, 2.322ns route)
+                                       (45.5% logic, 54.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'i2c_testing/clk_div/i2c_clk'
@@ -868,13 +852,13 @@ Offset:              4.521ns (Levels of Logic = 2)
                                        (71.2% logic, 28.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'slwclk'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Offset:              4.453ns (Levels of Logic = 2)
   Source:            i2c_testing/clk_div/i2c_clk (FF)
   Destination:       SCL (PAD)
-  Source Clock:      slwclk rising
+  Source Clock:      clk rising
 
   Data Path: i2c_testing/clk_div/i2c_clk to SCL
                                 Gate     Net
@@ -897,7 +881,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.785|         |         |         |
+clk            |    4.235|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock i2c_testing/clk_div/i2c_clk
@@ -905,28 +889,20 @@ Clock to Setup on destination clock i2c_testing/clk_div/i2c_clk
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-i2c_testing/clk_div/i2c_clk|    5.475|         |    3.738|         |
+i2c_testing/clk_div/i2c_clk|    5.303|         |    3.459|         |
 ---------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock slwclk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-slwclk         |    3.708|         |         |         |
----------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 42.00 secs
-Total CPU time to Xst completion: 41.32 secs
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 30.23 secs
  
 --> 
 
 Total memory usage is 283176 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  148 (   0 filtered)
+Number of warnings :  152 (   0 filtered)
 Number of infos    :   12 (   0 filtered)
 

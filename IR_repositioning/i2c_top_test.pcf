@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 29 11:09:39 2017
+// Written by: Map P.20131013 on Wed Nov 29 21:20:41 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,7 +16,16 @@ COMP "Led<0>" LOCATE = SITE "U16" LEVEL 1;
 COMP "analysis_clk" LOCATE = SITE "F11" LEVEL 1;
 COMP "Led<1>" LOCATE = SITE "V16" LEVEL 1;
 COMP "Led<2>" LOCATE = SITE "U15" LEVEL 1;
-TIMEGRP sys_clk_pin = BEL "slwclk" BEL "clk_BUFGP/BUFG";
+TIMEGRP sys_clk_pin = BEL "i2c_testing/clk_div/cnt_15" BEL
+        "i2c_testing/clk_div/cnt_14" BEL "i2c_testing/clk_div/cnt_13" BEL
+        "i2c_testing/clk_div/cnt_12" BEL "i2c_testing/clk_div/cnt_11" BEL
+        "i2c_testing/clk_div/cnt_10" BEL "i2c_testing/clk_div/cnt_9" BEL
+        "i2c_testing/clk_div/cnt_8" BEL "i2c_testing/clk_div/cnt_7" BEL
+        "i2c_testing/clk_div/cnt_6" BEL "i2c_testing/clk_div/cnt_5" BEL
+        "i2c_testing/clk_div/cnt_4" BEL "i2c_testing/clk_div/cnt_3" BEL
+        "i2c_testing/clk_div/cnt_2" BEL "i2c_testing/clk_div/cnt_1" BEL
+        "i2c_testing/clk_div/cnt_0" BEL "i2c_testing/clk_div/i2c_clk" BEL
+        "clk_BUFGP/BUFG";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

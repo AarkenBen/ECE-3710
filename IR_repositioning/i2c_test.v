@@ -88,7 +88,7 @@ end
 		
 		en = 0;
 		
-		$finish;
+
         
 		
 		// Add stimulus here

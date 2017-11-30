@@ -5,5 +5,497 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" Line 32: Port <arg fmt="%s" index="1">PTAT_packet</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v" Line 34: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">rst</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">PTAT_packet</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">packet_0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">packet_1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">packet_2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">packet_3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">packet_5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">packet_6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">packet_7</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">pec_data</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_top_test.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">valid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_testing</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">last_state_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_testing</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;last_state_7&gt; &lt;last_state_8&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_testing</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n1214</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/pec_data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_7_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_6_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_5_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_4_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_3_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_1_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/packet_0_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/PTAT_packet_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">i2c_testing/valid</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_top_test</arg>&gt;.
+</msg>
+
 </messages>
 

@@ -119,7 +119,7 @@ LAB11:    t21 = *((unsigned int *)t4);
     *((unsigned int *)t4) = (t21 & 1U);
     t22 = *((unsigned int *)t13);
     *((unsigned int *)t13) = (t22 & 1U);
-    t23 = (t0 + 5164);
+    t23 = (t0 + 5160);
     memset(t23, 0, 8);
     t24 = 1U;
     t25 = t24;
@@ -149,7 +149,7 @@ LAB12:    t17 = *((unsigned int *)t4);
     *((unsigned int *)t13) = (t19 | t20);
     goto LAB11;
 
-LAB13:    t33 = (t0 + 5164);
+LAB13:    t33 = (t0 + 5160);
     t34 = (t0 + 1768);
     xsi_vlogvar_assign_value(t34, t33, 0, 0, 1);
     goto LAB5;
@@ -208,8 +208,6 @@ LAB7:    xsi_set_current_line(89, ng0);
     t3 = ((char*)((ng1)));
     t4 = (t0 + 2088);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
-    xsi_set_current_line(91, ng0);
-    xsi_vlog_finish(1);
     goto LAB1;
 
 }
