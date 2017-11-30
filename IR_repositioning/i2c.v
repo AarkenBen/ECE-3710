@@ -39,10 +39,11 @@ module i2c(
 		inout wire 	SCL_OUT,
 		inout  wire		SDA,
 		
-		output reg		valid
+		output reg		valid,
+		output wire clk
     );
 
-	wire clk;
+	//wire clk;
 	wire SCL;
 	
 	i2c_clk_div clk_div(
