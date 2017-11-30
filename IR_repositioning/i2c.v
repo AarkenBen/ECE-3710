@@ -164,9 +164,6 @@ module i2c(
 				scl_en <= 1;
 			end
 			
-			case(state)
-			
-			endcase
 		end
 	
 	end
