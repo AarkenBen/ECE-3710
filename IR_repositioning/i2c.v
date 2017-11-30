@@ -39,11 +39,10 @@ module i2c(
 		inout wire 	SCL_OUT,
 		inout  wire		SDA,
 		
-		output reg		valid,
-		output wire clk //For analysis purposes
+		output reg		valid
     );
 
-	//wire clk;
+	wire clk;
 	wire SCL;
 	
 	i2c_clk_div clk_div(
@@ -151,17 +150,7 @@ module i2c(
 		if(rst)
 		begin
 			scl_en <= 0;
-
-			PTAT_packet <= 15'b0;
-			packet_0 <= 15'b0;
-			packet_1 <= 15'b0;
-			packet_2 <= 15'b0;
-			packet_3 <= 15'b0;
-			packet_4 <= 15'b0;
-			packet_5 <= 15'b0;
-			packet_6 <= 15'b0;
-			packet_7 <= 15'b0;
-			pec_data <= 8'b0;
+	
 		end
 		else
 		begin
@@ -175,108 +164,11 @@ module i2c(
 			end
 			
 			case(state)
-			PTAT_lo:
-				begin
-					PTAT_packet[ndx] <= SDA;
-				end
-				
-			PTAT_hi:
-				begin
-					PTAT_packet[8+ndx] <= SDA;
-				end
-	
-			state_pack_0_lo:
-				begin
-					packet_0[ndx] <= SDA;
-				end
-				
-			state_pack_0_hi:
-				begin
-					packet_0[ndx+8] <= SDA;
-				end	
 			
-			state_pack_1_lo:
-				begin
-					packet_1[ndx] <= SDA;
-				end
-				
-			state_pack_1_hi:
-				begin
-					packet_1[ndx+8] <= SDA;
-				end	
-			
-			state_pack_2_lo:
-				begin
-					packet_2[ndx] <= SDA;
-				end
-				
-			state_pack_2_hi:
-				begin
-					packet_2[ndx+8] <= SDA;
-				end	
-	
-			state_pack_3_lo:
-				begin
-					packet_3[ndx] <= SDA;
-				end
-				
-			state_pack_3_hi:
-				begin
-					packet_3[ndx+8] <= SDA;
-				end	
-			
-			state_pack_4_lo:
-				begin
-					packet_4[ndx] <= SDA;
-				end
-				
-			state_pack_4_hi:
-				begin
-					packet_4[ndx+8] <= SDA;
-				end	
-	
-			state_pack_5_lo:
-				begin
-					packet_5[ndx] <= SDA;
-				end
-				
-			state_pack_5_hi:
-				begin
-					packet_5[ndx+8] <= SDA;
-				end	
-			
-			state_pack_6_lo:
-				begin
-					packet_6[ndx] <= SDA;
-				end
-
-				
-			state_pack_6_hi:
-				begin
-					packet_6[ndx+8] <= SDA;
-				end	
-			
-			state_pack_7_lo:
-				begin
-					packet_7[ndx] <= SDA;
-				end
-				
-			state_pack_7_hi:
-				begin
-					packet_7[ndx+8] <= SDA;
-				end	
-			
-			
-			PEC:
-				begin
-					pec_data[ndx] <= SDA;
-				end
 			endcase
 		end
 	
 	end
-	
-	
 	always@(posedge clk)
 	begin
 		
@@ -287,12 +179,19 @@ module i2c(
 			state <= 0;
 			sda_en <= 1;
 			sda_out <= 1;
-			
-						
 			ndx <= 3'b0;
 			valid <= 0;
 			
-
+			PTAT_packet <= 15'b0;
+			packet_0 <= 15'b0;
+			packet_1 <= 15'b0;
+			packet_2 <= 15'b0;
+			packet_3 <= 15'b0;
+			packet_4 <= 15'b0;
+			packet_5 <= 15'b0;
+			packet_6 <= 15'b0;
+			packet_7 <= 15'b0;
+			pec_data <= 8'b0;
 			
 		end // end if
 		else 
@@ -393,7 +292,7 @@ module i2c(
 			PTAT_lo:
 				begin
 					sda_en <= 0;
-					//PTAT_packet[ndx] <= SDA;
+					PTAT_packet[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_ptat_lo;
 					else 				
 						begin
@@ -413,7 +312,7 @@ module i2c(
 			PTAT_hi:
 				begin
 					sda_en <= 0;
-					//PTAT_packet[8+ndx] <= SDA;
+					PTAT_packet[8+ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_ptat_hi;
 					else 				
 						begin
@@ -433,7 +332,7 @@ module i2c(
 			state_pack_0_lo:
 				begin
 					sda_en <= 0;
-					//packet_0[ndx] <= SDA;
+					packet_0[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_0_lo;
 					else 				
 						begin
@@ -453,7 +352,7 @@ module i2c(
 			state_pack_0_hi:
 				begin
 					sda_en <= 0;
-					//packet_0[ndx+8] <= SDA;
+					packet_0[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_0_hi;
 					else 				
 						begin
@@ -474,7 +373,7 @@ module i2c(
 			state_pack_1_lo:
 				begin
 					sda_en <= 0;
-					//packet_1[ndx] <= SDA;
+					packet_1[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_1_lo;
 					else 				
 						begin
@@ -494,7 +393,7 @@ module i2c(
 			state_pack_1_hi:
 				begin
 					sda_en <= 0;
-					//packet_1[ndx+8] <= SDA;
+					packet_1[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_1_hi;
 					else 				
 						begin
@@ -514,7 +413,7 @@ module i2c(
 			state_pack_2_lo:
 				begin
 					sda_en <= 0;
-					//packet_2[ndx] <= SDA;
+					packet_2[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_2_lo;
 					else 				
 						begin
@@ -534,7 +433,7 @@ module i2c(
 			state_pack_2_hi:
 				begin
 					sda_en <= 0;
-					//packet_2[ndx+8] <= SDA;
+					packet_2[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_2_hi;
 					else 				
 						begin
@@ -554,7 +453,7 @@ module i2c(
 			state_pack_3_lo:
 				begin
 					sda_en <= 0;
-					//packet_3[ndx] <= SDA;
+					packet_3[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_3_lo;
 					else 				
 						begin
@@ -574,7 +473,7 @@ module i2c(
 			state_pack_3_hi:
 				begin
 					sda_en <= 0;
-					//packet_3[ndx+8] <= SDA;
+					packet_3[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_3_hi;
 					else 				
 						begin
@@ -594,7 +493,7 @@ module i2c(
 			state_pack_4_lo:
 				begin
 					sda_en <= 0;
-					//packet_4[ndx] <= SDA;
+					packet_4[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_4_lo;
 					else 				
 						begin
@@ -614,7 +513,7 @@ module i2c(
 			state_pack_4_hi:
 				begin
 					sda_en <= 0;
-					//packet_4[ndx+8] <= SDA;
+					packet_4[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_4_hi;
 					else 				
 						begin
@@ -634,7 +533,7 @@ module i2c(
 			state_pack_5_lo:
 				begin
 					sda_en <= 0;
-					//packet_5[ndx] <= SDA;
+					packet_5[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_5_lo;
 					else 				
 						begin	
@@ -654,7 +553,7 @@ module i2c(
 			state_pack_5_hi:
 				begin
 					sda_en <= 0;
-					//packet_5[ndx+8] <= SDA;
+					packet_5[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_5_hi;
 					else 				
 						begin
@@ -674,7 +573,7 @@ module i2c(
 			state_pack_6_lo:
 				begin
 					sda_en <= 0;
-					//packet_6[ndx] <= SDA;
+					packet_6[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_6_lo;
 					else 				
 						begin
@@ -694,7 +593,7 @@ module i2c(
 			state_pack_6_hi:
 				begin
 					sda_en <= 0;
-					//packet_6[ndx+8] <= SDA;
+					packet_6[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_6_hi;
 					else 				
 						begin
@@ -714,7 +613,7 @@ module i2c(
 			state_pack_7_lo:
 				begin
 					sda_en <= 0;
-					//packet_7[ndx] <= SDA;
+					packet_7[ndx] <= SDA;
 					if(ndx == 0) 	state <= r_ack_7_lo;
 					else 				
 						begin
@@ -734,7 +633,7 @@ module i2c(
 			state_pack_7_hi:
 				begin
 					sda_en <= 0;
-					//packet_7[ndx+8] <= SDA;
+					packet_7[ndx+8] <= SDA;
 					if(ndx == 0) 	state <= r_ack_7_hi;
 					else 				
 						begin
@@ -755,7 +654,7 @@ module i2c(
 			PEC:
 				begin
 					sda_en <= 0;
-					//pec_data[ndx] <= SDA;
+					pec_data[ndx] <= SDA;
 					if(ndx == 0) 	state <= NACK;
 					else 				
 						begin
