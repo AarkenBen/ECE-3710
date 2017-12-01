@@ -22,10 +22,10 @@ module VGA_GLPYH_TOP(
 		input wire				clk,
 		input wire	[1:0]		sw,
 		input wire	[15:0]	data_from_mem_to_vga,
-		output	 	[23:0] 	vga_mem_addr,
-		output 					hsync,
-		output 					vsync,
-		output [7:0] 			rgb
+		output wire[23:0] 	vga_mem_addr,
+		output wire				hsync,
+		output wire				vsync,
+		output wire[7:0] 		rgb
     );
 
 	VGA_PIXEL_GENERATOR vpg(clk, sw, rgb, hsync, vsync, data_from_mem_to_vga, vga_mem_addr);

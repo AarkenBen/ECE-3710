@@ -23,15 +23,18 @@ module core_top(
 					input	wire			 	clk,
 					input wire[3:0]		sw,
 					
-					output 					hsync,
-					output 					vsync,
-					output [7:0] 			rgb,
+					output wire				hsync,
+					output wire				vsync,
+					output wire[7:0] 		rgb,
 					
-					output servo_pwm,
+					output wire				servo_pwm,
 					
 						
 					inout wire SDA,
-					output wire SCL
+					output wire SCL,
+					
+					output wire[7:0] Led,
+					input wire enable
 					
 					//output reg[7:0] 		VGA_pad,
 					//output reg[7:0]		servo_pad//
@@ -78,13 +81,15 @@ module core_top(
 											.data_out1			(data_from_mem_to_core),
 											.data_out2			(data_from_mem_to_vga),
 											.SDA(SDA),
-											.SCL(SCL)
+											.SCL(SCL),
+											.temp_3_testing(Led),
+											.enable_temps(enable)
 											);
 											
 	
 				VGA_GLPYH_TOP vga(
 											.clk							(clk),
-											.sw							(sw),
+											.sw							(sw[1:0]),
 											.data_from_mem_to_vga	(data_from_mem_to_vga),
 											.vga_mem_addr				(vga_mem_addr),
 											.hsync						(hsync),

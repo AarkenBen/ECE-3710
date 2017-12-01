@@ -1,16 +1,60 @@
+Start: 
  xor r0 r0
  xor r1 r1
  xor r2 r2
  xor r3 r3
- addui 0x41 r0
- addui 0x42 r1
- addui 0x5 r2
- addui 0xA r3
- cmp r2 r3
- jmpa PRINTA
- write r1 0x0
- jmp Unstart
-PRINTA:
- write r0 0x0
-Unstart:
- jmp Unstart
+ xor r4 r4
+ addui 0xF r0 //Masking lowest 4 bits
+ addui 0x30 r1 //Character 0
+ addui 0x37 r2 //Character A (minus ten so i don't have to subtract that when r5 > 0x9)
+ addui 0x9 r3 //Threshold between letters/nums
+ load r4 0x2403 //Load sensor data
+Dig3:
+ xor r5 r5
+ or r4 r5 //Copy data to r5
+ and r0 r5 //Mask low 4 bits
+ cmp r3 r5 //Compare to threshold
+ jmpa LETTER3
+ addu r1 r5
+ jmp Dig2
+LETTER3:
+ addu r2 r5
+Dig2:
+ write r5 0x3
+ xor r5 r5
+ or r4 r5
+ shiftrli 0x4 r5
+ and r0 r5
+ cmp r3 r5
+ jmpa LETTER2
+ addu r1 r5
+ jmp Dig1
+LETTER2:
+ addu r2 r5
+Dig1:
+ write r5 0x2
+ xor r5 r5
+ or r4 r5
+ shiftrli 0x8 r5
+ and r0 r5
+ cmp r3 r5
+ jmpa LETTER1
+ addu r1 r5
+ jmp Dig0
+LETTER1:
+ addu r2 r5
+Dig0:
+ write r5 0x1
+ xor r5 r5
+ or r4 r5
+ shiftrli 0xC r5
+ and r0 r5
+ cmp r3 r5
+ jmpa LETTER0
+ addu r1 r5
+ jmp DONE
+LETTER0:
+ addu r2 r5
+DONE:
+ write r5 0x0
+ jmp Start

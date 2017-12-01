@@ -144,13 +144,9 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="i2c_top_test_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="i2c_top_test_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="i2c_top_test_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="i2c_top_test_map.xrpt"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="i2c_top_test_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="i2c_top_test_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="i2c_top_test_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="i2c_top_test_par.xrpt"/>
-    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="i2c_top_test_summary.xml"/>
-    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="i2c_top_test_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="i2c_top_test_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="i2c_xst.xrpt"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
@@ -211,6 +207,11 @@
     <transform xil_pn:end_ts="1512014400" xil_pn:in_ck="4133381688502488312" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3629750055276425293" xil_pn:start_ts="1512014399">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ipcore_dir/block_mem.ngc"/>
       <outfile xil_pn:name="ipcore_dir/block_mem.v"/>
     </transform>
@@ -269,109 +270,116 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512014862" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7518512863016813380" xil_pn:start_ts="1512014862">
+    <transform xil_pn:end_ts="1512020524" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3888590973766924464" xil_pn:start_ts="1512020524">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512014863" xil_pn:in_ck="4133381688502488312" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3629750055276425293" xil_pn:start_ts="1512014862">
+    <transform xil_pn:end_ts="1512028053" xil_pn:in_ck="4133381688502488312" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5785008394158019009" xil_pn:start_ts="1512028052">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/block_mem.ngc"/>
       <outfile xil_pn:name="ipcore_dir/block_mem.v"/>
     </transform>
-    <transform xil_pn:end_ts="1512014863" xil_pn:in_ck="4438629286611771350" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1512014863">
+    <transform xil_pn:end_ts="1512020525" xil_pn:in_ck="4438629286611771350" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1512020525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512014863" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-481048588537784762" xil_pn:start_ts="1512014863">
+    <transform xil_pn:end_ts="1512020525" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6003451116195277138" xil_pn:start_ts="1512020525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512014863" xil_pn:in_ck="4438629286611771350" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1512014863">
+    <transform xil_pn:end_ts="1512020525" xil_pn:in_ck="4438629286611771350" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1512020525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512014863" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3143603654155100605" xil_pn:start_ts="1512014863">
+    <transform xil_pn:end_ts="1512020525" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3841790279081194679" xil_pn:start_ts="1512020525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512015601" xil_pn:in_ck="-5941816235079418174" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-5498356887861657566" xil_pn:start_ts="1512015565">
+    <transform xil_pn:end_ts="1512060083" xil_pn:in_ck="-5941816235079418174" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="1366265255199681838" xil_pn:start_ts="1512059945">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="core.ngr"/>
+      <outfile xil_pn:name="core_top.lso"/>
+      <outfile xil_pn:name="core_top.ngc"/>
+      <outfile xil_pn:name="core_top.ngr"/>
+      <outfile xil_pn:name="core_top.prj"/>
+      <outfile xil_pn:name="core_top.stx"/>
+      <outfile xil_pn:name="core_top.syr"/>
+      <outfile xil_pn:name="core_top.xst"/>
+      <outfile xil_pn:name="core_top_stx_beh.prj"/>
+      <outfile xil_pn:name="core_top_xst.xrpt"/>
       <outfile xil_pn:name="i2c.ngr"/>
-      <outfile xil_pn:name="i2c_top_test.lso"/>
-      <outfile xil_pn:name="i2c_top_test.ngc"/>
-      <outfile xil_pn:name="i2c_top_test.ngr"/>
-      <outfile xil_pn:name="i2c_top_test.prj"/>
-      <outfile xil_pn:name="i2c_top_test.stx"/>
-      <outfile xil_pn:name="i2c_top_test.syr"/>
-      <outfile xil_pn:name="i2c_top_test.xst"/>
-      <outfile xil_pn:name="i2c_top_test_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1511978909" xil_pn:in_ck="81988880450419352" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-7722033213996953103" xil_pn:start_ts="1511978909">
+    <transform xil_pn:end_ts="1512026641" xil_pn:in_ck="81988880450419352" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4784893507933854461" xil_pn:start_ts="1512026641">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512015620" xil_pn:in_ck="2933563792143705673" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5384571096663510420" xil_pn:start_ts="1512015601">
+    <transform xil_pn:end_ts="1512060146" xil_pn:in_ck="2933563792143705673" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4793926170896458080" xil_pn:start_ts="1512060083">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="i2c_top_test.bld"/>
-      <outfile xil_pn:name="i2c_top_test.ngd"/>
-      <outfile xil_pn:name="i2c_top_test_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="core_top.bld"/>
+      <outfile xil_pn:name="core_top.ngd"/>
+      <outfile xil_pn:name="core_top_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1512015644" xil_pn:in_ck="-5096007300850520112" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1512015620">
+    <transform xil_pn:end_ts="1512060392" xil_pn:in_ck="-5096007300850520112" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1512060146">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="i2c_top_test.pcf"/>
-      <outfile xil_pn:name="i2c_top_test_map.map"/>
-      <outfile xil_pn:name="i2c_top_test_map.mrp"/>
-      <outfile xil_pn:name="i2c_top_test_map.ncd"/>
-      <outfile xil_pn:name="i2c_top_test_map.ngm"/>
-      <outfile xil_pn:name="i2c_top_test_map.xrpt"/>
-      <outfile xil_pn:name="i2c_top_test_summary.xml"/>
-      <outfile xil_pn:name="i2c_top_test_usage.xml"/>
+      <outfile xil_pn:name="core_top.pcf"/>
+      <outfile xil_pn:name="core_top_map.map"/>
+      <outfile xil_pn:name="core_top_map.mrp"/>
+      <outfile xil_pn:name="core_top_map.ncd"/>
+      <outfile xil_pn:name="core_top_map.ngm"/>
+      <outfile xil_pn:name="core_top_map.xrpt"/>
+      <outfile xil_pn:name="core_top_summary.xml"/>
+      <outfile xil_pn:name="core_top_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1512015684" xil_pn:in_ck="-8960880175471005470" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1512015644">
+    <transform xil_pn:end_ts="1512060483" xil_pn:in_ck="-8960880175471005470" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1512060392">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="i2c_top_test.ncd"/>
-      <outfile xil_pn:name="i2c_top_test.pad"/>
-      <outfile xil_pn:name="i2c_top_test.par"/>
-      <outfile xil_pn:name="i2c_top_test.ptwx"/>
-      <outfile xil_pn:name="i2c_top_test.unroutes"/>
-      <outfile xil_pn:name="i2c_top_test.xpi"/>
-      <outfile xil_pn:name="i2c_top_test_pad.csv"/>
-      <outfile xil_pn:name="i2c_top_test_pad.txt"/>
-      <outfile xil_pn:name="i2c_top_test_par.xrpt"/>
+      <outfile xil_pn:name="core_top.ncd"/>
+      <outfile xil_pn:name="core_top.pad"/>
+      <outfile xil_pn:name="core_top.par"/>
+      <outfile xil_pn:name="core_top.ptwx"/>
+      <outfile xil_pn:name="core_top.unroutes"/>
+      <outfile xil_pn:name="core_top.xpi"/>
+      <outfile xil_pn:name="core_top_pad.csv"/>
+      <outfile xil_pn:name="core_top_pad.txt"/>
+      <outfile xil_pn:name="core_top_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1512015715" xil_pn:in_ck="7649253936066404080" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1512015684">
+    <transform xil_pn:end_ts="1512028558" xil_pn:in_ck="5179110971756568958" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1512028503">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="i2c_top_test.bgn"/>
-      <outfile xil_pn:name="i2c_top_test.bit"/>
-      <outfile xil_pn:name="i2c_top_test.drc"/>
-      <outfile xil_pn:name="i2c_top_test.ut"/>
+      <outfile xil_pn:name="core_top.bgn"/>
+      <outfile xil_pn:name="core_top.bit"/>
+      <outfile xil_pn:name="core_top.drc"/>
+      <outfile xil_pn:name="core_top.ut"/>
       <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1512015684" xil_pn:in_ck="7134123832421572424" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1512015669">
+    <transform xil_pn:end_ts="1512060525" xil_pn:in_ck="-6401148103537266218" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1512060483">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="i2c_top_test.twr"/>
-      <outfile xil_pn:name="i2c_top_test.twx"/>
+      <outfile xil_pn:name="core_top.twr"/>
+      <outfile xil_pn:name="core_top.twx"/>
     </transform>
   </transforms>
 

@@ -36,7 +36,9 @@ module memory_manager(
 						inout wire SDA,
 						output wire SCL,
 						
-						output reg[15:0] servo_angle
+						output reg[15:0] servo_angle,
+						output wire[7:0] temp_3_testing,
+						input wire enable_temps
 					    );
 
 
@@ -108,7 +110,7 @@ output [15 : 0] doutb;
 
 	i2c instance_name (
     .ref_clk(clock1), 
-    .rst(0), 
+    .rst(1'b0), 
     .en(en), // need to tie this into the core some where
 	 
     //.PTAT_packet(PTAT_packet), // might not need to store the reference temp
@@ -128,6 +130,8 @@ output [15 : 0] doutb;
     .valid(valid) // this also needs to be tied into the core
     );					
 
+   assign temp_3_testing = packet_3[7:0];
+	
 	//Storing/reading values from temp sensor
 	always@(posedge clock1)
 	begin
@@ -144,7 +148,7 @@ output [15 : 0] doutb;
 			temp_7 <= packet_7;
 		end
 		else
-			en <= 1;
+			en <= enable_temps;
 	end
 
 
