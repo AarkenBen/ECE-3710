@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core_top.ncd
-OUTFILE=C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core_top.bit
+INFILE=C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core_top.ncd
+OUTFILE=C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core_top.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning
+WORKINGDIR=C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning
 LICENSE=WebPack
-USER_INFO=202731971_0_0_553
+USER_INFO=211140541_0_0_377

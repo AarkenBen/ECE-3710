@@ -25,9 +25,32 @@ module VGA_GLPYH_TOP(
 		output wire[23:0] 	vga_mem_addr,
 		output wire				hsync,
 		output wire				vsync,
-		output wire[7:0] 		rgb
+		output wire[7:0] 		rgb,
+		input wire[15:0]		temp_0_16,
+		input wire[15:0]		temp_1_16,
+		input wire[15:0]		temp_2_16,
+		input wire[15:0]		temp_3_16,
+		input wire[15:0]		temp_4_16,
+		input wire[15:0]		temp_5_16,
+		input wire[15:0]		temp_6_16,
+		input wire[15:0]		temp_7_16
     );
 
-	VGA_PIXEL_GENERATOR vpg(clk, sw, rgb, hsync, vsync, data_from_mem_to_vga, vga_mem_addr);
+	VGA_PIXEL_GENERATOR vpg(		 	clk,
+									 	sw,
+									 	rgb,
+									 	hsync,
+									 	vsync,
+									 	data_from_mem_to_vga,
+									 	vga_mem_addr, 
+										temp_0_16,
+										temp_1_16,
+										temp_2_16,
+										temp_3_16,
+										temp_4_16,
+										temp_5_16,
+										temp_6_16,
+										temp_7_16
+							);
 	
 endmodule

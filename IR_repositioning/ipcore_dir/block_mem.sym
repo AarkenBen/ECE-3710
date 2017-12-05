@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="block_mem">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-11-30T7:46:44</timestamp>
+    <timestamp>2017-12-5T18:15:3</timestamp>
     <pin polarity="Input" x="0" y="80" name="addra[15:0]" />
     <pin polarity="Input" x="0" y="112" name="dina[15:0]" />
     <pin polarity="Input" x="0" y="208" name="wea[0:0]" />

@@ -19,12 +19,12 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module memory_manager(	
-						input	wire		reset,
+						//input	wire		reset,
 						input	wire		clock1,
 						input wire     clock2,
 						input wire[23:0] 		addr_in_block1,						
 						input wire[23:0] 		addr_in_block2,
-//						input[23:0] 		addr_in_cell,						
+						//input[23:0] 		addr_in_cell,						
 						input wire[15:0]			data_in1,
 						input wire[15:0]			data_in2,
 						input	wire					req,
@@ -38,6 +38,14 @@ module memory_manager(
 						
 						output reg[15:0] servo_angle,
 						output wire[7:0] temp_3_testing,
+						output wire[15:0] temp_0_testing16,
+						output wire[15:0] temp_1_testing16,
+						output wire[15:0] temp_2_testing16,
+						output wire[15:0] temp_3_testing16,
+						output wire[15:0] temp_4_testing16,
+						output wire[15:0] temp_5_testing16,
+						output wire[15:0] temp_6_testing16,
+						output wire[15:0] temp_7_testing16,
 						input wire enable_temps
 					    );
 
@@ -48,7 +56,14 @@ module memory_manager(
 	wire[15:0] block_data_out_1;
 	wire[15:0] block_data_out_2;
 
-
+	assign temp_0_testing16 =  temp_0; //packet_0;
+	assign temp_1_testing16 =  temp_1; //packet_1;
+	assign temp_2_testing16 =  temp_2; //packet_2;
+	assign temp_3_testing16 =  temp_3; //packet_3;
+	assign temp_4_testing16 =  temp_4; //packet_4;
+	assign temp_5_testing16 =  temp_5; //packet_5;
+	assign temp_6_testing16 =  temp_6; //packet_6;
+	assign temp_7_testing16 =  temp_7; //packet_7;
 
 
 
@@ -91,6 +106,7 @@ output [15 : 0] doutb;
 	reg [15:0] temp_5;
 	reg [15:0] temp_6;
 	reg [15:0] temp_7;
+	reg [15:0] val;
 	
    //synthesis attribute box_type block_mem "black_box"
 	block_mem b_mem(
@@ -135,20 +151,7 @@ output [15 : 0] doutb;
 	//Storing/reading values from temp sensor
 	always@(posedge clock1)
 	begin
-		en <= 0;
-		if(valid)
-		begin
-			temp_0 <= packet_0;
-			temp_1 <= packet_1;
-			temp_2 <= packet_2;
-			temp_3 <= packet_3;
-			temp_4 <= packet_4;
-			temp_5 <= packet_5;
-			temp_6 <= packet_6;
-			temp_7 <= packet_7;
-		end
-		else
-			en <= enable_temps;
+
 	end
 
 
@@ -168,6 +171,8 @@ output [15 : 0] doutb;
 				24'h002405: data_out1 = temp_5;
 				24'h002406: data_out1 = temp_6;
 				24'h002407: data_out1 = temp_7;
+				24'h002408: data_out1 = val;
+				24'h002409: data_out1 = servo_angle;
 			endcase
 		end
 	
@@ -200,21 +205,45 @@ output [15 : 0] doutb;
 	begin
 		io_read <= 0;
 		io_addr <= 0;
+		en <= 0;
+
+
+
+		if(valid)
+		begin
+			temp_0 <= packet_0;
+			temp_1 <= packet_1;
+			temp_2 <= packet_2;
+			temp_3 <= packet_3;
+			temp_4 <= packet_4;
+			temp_5 <= packet_5;
+			temp_6 <= packet_6;
+			temp_7 <= packet_7;
+			val <= 16'd1;
+		end
+		else
+			en <= enable_temps;
+
+
+
 	
 		if(read_write1)  //Writing reroute
 		begin
 			case(addr_in_block1)
-				24'h002408: servo_angle <= data_in1; //Servo address
+				24'h002409: servo_angle <= data_in1; //Servo address
+				24'h002408: val <= data_in1;
 			endcase
 		end
 		else
 		begin			//Reading reroute (have to output on next cycle to stay consistent.....)
-			if(addr_in_block1 >= 24'h002400 && addr_in_block1 <= 24'h002407)
+			if(addr_in_block1 >= 24'h002400 && addr_in_block1 <= 24'h002409)
 			begin
 				io_read <= 1;
 				io_addr <= addr_in_block1;
 			end
 		end
+
+
 	end
 
 endmodule

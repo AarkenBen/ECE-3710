@@ -20,19 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 module VGA_PIXEL_GENERATOR(
 		input clk,
-		input [1:0]sw,
-		output reg[7:0] color,
+		input       [1:0]sw,
+		output reg  [7:0] color,
 		output hs, vs,
 		input  		[15:0]	data_from_mem_to_vga,
-		output	 	[23:0] 	vga_mem_addr
-
-
-		
+		output  	[23:0]vga_mem_addr,
+		input 		[15:0]temp_0_16,
+		input 		[15:0]temp_1_16,
+		input 		[15:0]temp_2_16,
+		input 		[15:0]temp_3_16,
+		input 		[15:0]temp_4_16,
+		input 		[15:0]temp_5_16,
+		input 		[15:0]temp_6_16,
+		input 		[15:0]temp_7_16
     );
 		parameter BLACK = 8'b00000000;
 		parameter WHITE = 8'b11111111;
 		parameter RED = 8'b11111100; //changed because latch issues. 
 		parameter BLUE = 8'b11111111;
+		parameter X = 8'b11011100;
+		parameter Y = 8'b10101011;
+		parameter Z = 8'b00001011;
 	 
 	 // state for ram access
 	 reg[1:0] state;
@@ -47,15 +55,76 @@ module VGA_PIXEL_GENERATOR(
 	 //assign drawAbleRange =  (col > 10'd47 && col < 10'd687 && row > 10'd32 && row < 10'd512);
 	 
 	 assign checker = row[4]^col[4];
+
+	 // Temperature Grid
+	 assign temp_grid_view = (trow >= 360 && trow < 480);
+	 reg [7:0]TemperatureColr = 8'd0;
+
+	localparam IR_addr0 = 24'h002400;
+	localparam IR_addr1 = 24'h002401;
+	localparam IR_addr2 = 24'h002402;
+	localparam IR_addr3 = 24'h002403;
+	localparam IR_addr4 = 24'h002404;
+	localparam IR_addr5 = 24'h002405;
+	localparam IR_addr6 = 24'h002406;
+	localparam IR_addr7 = 24'h002407;
+
+	 reg[15:0] color_i_temp = 7'd0;
+
+	 always@(*)
+	 begin
+	 	if(tcol >= 0 && tcol < 80) color_i_temp = temp_0_16;
+	 	else if(tcol >= 80 && tcol< 160 )   color_i_temp = temp_1_16;
+	 	else if(tcol >= 160 && tcol < 240)  color_i_temp = temp_2_16;
+	 	else if(tcol >= 240 && tcol < 320)  color_i_temp = temp_3_16;
+	 	else if(tcol >= 320 && tcol < 400)  color_i_temp = temp_4_16;
+	 	else if(tcol >= 400 && tcol < 480)  color_i_temp = temp_5_16;
+	 	else if(tcol >= 480 && tcol < 560)  color_i_temp = temp_6_16;
+	 	else if(tcol >= 560 && tcol < 640)  color_i_temp = temp_7_16;
+	 	else 
+		begin
+			 	color_i_temp = temp_0_16;
+	    end	 
+	 	 
+	 end
+
+	reg[2:0] red = 3'd0;
+	reg[2:0] green = 3'd0;
+	reg[1:0] blue = 3'd0;
+
+	 always@(*)
+	 begin
+		if(color_i_temp >= 16'd0 && color_i_temp < 16'd25_0)//1
+		begin
+			red = 3'd0;
+			green = 3'd0;
+			blue = 2'd0;
+		end
+		else if(color_i_temp >= 16'd25_0 && color_i_temp < 16'd28_0)//2
+		begin
+			red = 3'd0;
+			green = 3'd0;
+			blue = 2'd1;
+		end
+		else if(color_i_temp >= 16'd28_0 && color_i_temp < 16'd30_0)//3
+		begin
+			red = 3'd0;
+			green = 3'd0;
+			blue = 2'd0;
+		end
+		else
+		begin
+			red = 3'd7;
+			green = 3'd0;
+			blue = 2'd0;
+		end
+	 end
 	 
 	 always@(posedge clk)
 	 begin
-	 
 			tcol <= tcol;
 			trow <= trow;
-	 
-	 
-	 
+		 
 		// advance the state
 		state <= state + 1'b1;
 		
@@ -66,31 +135,26 @@ module VGA_PIXEL_GENERATOR(
 		if(sw == 2'b00)
 			tempColor <= req ? en ? checker ? RED : BLUE : BLACK : tempColor;
 		
-		
 		// snow
 		else if(sw == 2'b01)
 			tempColor <= req ? en ? seed[7:0] : BLACK : tempColor;
-	
 		// glyphs
 		else if(sw == 2'b10)
 		begin
-					tempColor <= en ? BLUE : BLACK;
+			//tempColor <= req ? en ? temp_grid_view ? TemperatureColr : RED : seed[7:0] : tempColor; 
+			tempColor <= en ? temp_grid_view ? {red, green, blue} : RED : BLACK;
 		end
 		else
 		begin
 			if(state == 2'b11)
-					tempColor <= en ? trow[0] ? DOUTA[tcol[2:0]]? WHITE:BLACK : DOUTA[tcol[2:0] + 4'd8] ? WHITE : BLACK : BLACK;
+			tempColor <= en ? trow[0] ? DOUTA[tcol[2:0]]? WHITE:BLACK : DOUTA[tcol[2:0] + 4'd8] ? WHITE : BLACK : BLACK;
 		end
-		
-		
-		
-		
+
 		if(state == 2'b0)
 		begin
 			tcol <= col - 6'd48;
 			trow <= row - 6'd33;
 		end
-		
 		
 		color <= tempColor;
 					
@@ -115,8 +179,6 @@ module VGA_PIXEL_GENERATOR(
 	
 	 end
 	 
-	 
-	 
 		reg [9:0] tcol;	// logical column counter
 		reg [9:0] trow;	// logical row counter
 		wire [9:0] col;	// column counter
@@ -133,7 +195,11 @@ module VGA_PIXEL_GENERATOR(
 	// 
 	//VGA_RAM_1 r(.clka(clk), .wea(1'b0), .addra(ADDRA), .dina(16'b0), .douta(DOUTA));
 	
-	assign vga_mem_addr = {10'd0 ,ADDRA};
+	assign vga_mem_addr = {10'd0 , ADDRA};
 	assign DOUTA = data_from_mem_to_vga;
+
+	
+
+	
 		
 endmodule

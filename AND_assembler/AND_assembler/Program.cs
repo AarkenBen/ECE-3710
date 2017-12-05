@@ -22,7 +22,7 @@ namespace AND_assembler
 
             bool bigendian = true;
 
-            currentPath = @"..\..\";
+            currentPath = @"C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\AND_assembler\";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
@@ -207,7 +207,7 @@ namespace AND_assembler
                                     break; // 1000
 
                                 case "jmpb":
-                                    pc_for_label = immediate_helper(str_pc[instruction[2]].ToString("X"), 24);
+                                    pc_for_label = immediate_helper(str_pc[instruction[4]].ToString("X"), 24);
 
                                     toWrite = "010110" + "00" + pc_for_label; // register_helper(instruction[1]) + register_helper(instruction[2]) + immediate_helper_16(instruction[3]);
                                     break; // 1000

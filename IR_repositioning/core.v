@@ -139,6 +139,12 @@ module core(
 							reg_ndx_2 <= {1'd0, data_from_mem[11:8]};
 							state <= fetch2;
 						end
+						else if(data_from_mem[15:12] == loadH || data_from_mem[15:12] == writeH)
+						begin
+							reg_ndx_1 <= 5'd0;
+							reg_ndx_2 <= {1'd1, data_from_mem[11:8]};
+							state <= fetch2;
+						end
 						else if(data_from_mem[15:10] == jmp
 						     || data_from_mem[15:10] == jmpb
 							  || data_from_mem[15:10] == jmpbe
@@ -190,10 +196,10 @@ module core(
 							//state <= fetch1;
 						//end
 						
-						else if(current_op_code[5:2] == loadL) //Because loadL is only highest 4 bits of opcode 
+						else if(current_op_code[5:2] == loadL || current_op_code[5:2] == loadH) //Because loadL is only highest 4 bits of opcode 
 							state <= load1;
 							
-						else if(current_op_code[5:2] == writeL) //Same as above comment
+						else if(current_op_code[5:2] == writeL || current_op_code[5:2] == writeH) //Same as above comment
 							state <= store;
 							
 						else if(current_op_code == jmp) 

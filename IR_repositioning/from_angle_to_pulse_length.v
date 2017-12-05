@@ -23,6 +23,7 @@ module from_angle_to_pulse_length(
 					output reg [17:0] pulse_length //Only need 17 bits since max number output is 210,000
     );
 
+
 	// Min lengths is .6ms and max is 2.1ms
 	//100,000 cycles per ms (on a 100MHz clock rate)
 	localparam min_pulse_length = 18'd60000, max_pulse_length = 18'd210000, 
@@ -30,9 +31,6 @@ module from_angle_to_pulse_length(
 	
 	
 	// 210000 = x(180) + 60000 // 150000 = 180x // x = 150000/180
-	
-	
-	
 	
 	always@(*)
 	begin
