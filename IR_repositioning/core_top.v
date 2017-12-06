@@ -103,7 +103,9 @@ module core_top(
 											.temp_7_testing16       (temp_7_testing16_wire), // output
 											.enable_temps			(enable)
 											);
-											
+				
+				
+				wire [15:0] angle;							
 	
 				VGA_GLPYH_TOP vga(
 											.clk					(clk),
@@ -123,7 +125,7 @@ module core_top(
 											.temp_7_16              (temp_7_testing16_wire)
 										);
 										
-				wire [15:0] angle;
+
 				
 				servo_pwm servo(clk, angle, servo_pwm); 
 				

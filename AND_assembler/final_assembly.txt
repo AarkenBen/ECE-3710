@@ -1,11 +1,15 @@
+ xor r1 r1
+ addui 0x5A r1
+ write r1 0x002409 //Initialize servo to 90 degrees
 find_angle:
- load r0 0x002408
+ load r0 0x002408  //Check that data is valid, otherwise loop until
  xor r1 r1
  addui 0x1 r1
  cmp r1 r0
  jmpne find_angle
 initialize:
  xor r22 r22
+ write r22 0x002408 //Write 0 to say data invalid now
  xor r29 r29
  xor r31 r31                
  xor r28 r28
@@ -94,26 +98,26 @@ new_angle:
  cmp r30 r28
  jmpe B7
 B0:
- addui 0x0 r29  
+ addui 0x27 r29  
  jmp WriteTemp
 B1:
- addui 0x0 r29
+ addui 0x20 r29
  jmp WriteTemp
 B2:
- addui 0x0 r29
+ addui 0x12 r29
  jmp WriteTemp
 B3:
  jmp WriteTemp
 B4:
  jmp WriteTemp
 B5:
- subui 0x0 r29
+ subui 0x12 r29
  jmp WriteTemp
 B6:
- subui 0x0 r29
+ subui 0x20 r29
  jmp WriteTemp
 B7:
- subui 0x0 r29
+ subui 0x27 r29
  jmp WriteTemp
 WriteTemp:
  xor r30 r30
