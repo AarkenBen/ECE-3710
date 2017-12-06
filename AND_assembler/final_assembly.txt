@@ -8,36 +8,36 @@ find_angle:
  cmp r1 r0
  jmpne find_angle
 initialize:
- xor r22 r22
+ xor r22 r22		//Current Index
  write r22 0x002408 //Write 0 to say data invalid now
- xor r29 r29
- xor r31 r31                
- xor r28 r28
- load r31 0x002400 
+ xor r29 r29		//Current Temp
+ xor r31 r31        //Max Temp   
+ xor r28 r28		//Max Index
+ load r31 0x002400  //max temp = p0
 P1:
- addu 0x01 r22
- load r29 0x002401
- jmpb r31 r29 P2
- xor r28 r28
- addu r22 r28
- xor r31 r31
- addu r29 r31
+ addu 0x01 r22      //Current Index = 1
+ load r29 0x002401  //Current temp @ p1
+ jmpb r31 r29 P2    //If r29 is below max_temp, try next
+ xor r28 r28		//clear max_index
+ addu r22 r28		//set max_index = 1
+ xor r31 r31		//clear max_temp
+ addu r29 r31       //set max_temp = p1
 P2:
- addu 0x01 r22
- load r29 0x002402
- jmpb r31 r29 P3
- xor r28 r28
- addu r22 r28
- xor r31 r31
- addu r29 r31
+ addu 0x01 r22		//Current Index = 2
+ load r29 0x002402  //Current temp @ p2
+ jmpb r31 r29 P3    //If r29 is below max_temp, try next
+ xor r28 r28        //clear max_index
+ addu r22 r28       //set max_index = 2
+ xor r31 r31        //clear max_temp
+ addu r29 r31       //set max_temp = p2
 P3:
- addu 0x01 r22
- load r29 0x002403
- jmpb r31 r29 P4
- xor r28 r28
- addu r22 r28
- xor r31 r31
- addu r29 r31
+ addu 0x01 r22		//Current Index = 3
+ load r29 0x002403  //Current temp @ p3
+ jmpb r31 r29 P4    //If r29 is below max_temp, try next
+ xor r28 r28        //clear max_index
+ addu r22 r28       //set max_index = 3
+ xor r31 r31        //clear max_temp
+ addu r29 r31       //set max_temp = p3
 P4:
  addu 0x01 r22
  load r29 0x002404
@@ -72,52 +72,76 @@ P7:
  addu r29 r31
 new_angle:
  xor r29 r29
- load r29 0x002409
+ load r29 0x002409		//Load servo position
  xor r30 r30
- cmp r30 r28
- jmpe B0
+ cmp r30 r28		
+ jmpe B0				//Jump if max_index = 0
  addui 0x1 r30
  cmp r30 r28
- jmpe B1
+ jmpe B1				//Jump if max_index = 1
  addui 0x1 r30
  cmp r30 r28
- jmpe B2
+ jmpe B2				//Jump if max_index = 2
  addui 0x1 r30
  cmp r30 r28
- jmpe B3
+ jmpe B3				//Jump if max_index = 3
  addui 0x1 r30
  cmp r30 r28
- jmpe B4
+ jmpe B4				//Jump if max_index = 4
  addui 0x1 r30
  cmp r30 r28
- jmpe B5
+ jmpe B5				//Jump if max_index = 5
  addui 0x1 r30
  cmp r30 r28
- jmpe B6
+ jmpe B6				//Jump if max_index = 6
  addui 0x1 r30
  cmp r30 r28
- jmpe B7
+ jmpe B7				//Jump if max_index = 7
 B0:
- addui 0x27 r29  
+ addui 0x27 r29
+ xor r0 r0
+ addui 0x30 r0
+ write r0 0x0 //print 0 for debug
  jmp WriteTemp
 B1:
  addui 0x20 r29
+ xor r0 r0
+ addui 0x31 r0
+ write r0 0x0 //print 1 for debug
  jmp WriteTemp
 B2:
  addui 0x12 r29
+ xor r0 r0
+ addui 0x32 r0
+ write r0 0x0 //print 2 for debug
  jmp WriteTemp
 B3:
+ xor r0 r0
+ addui 0x33 r0
+ write r0 0x0 //print 3 for debug
  jmp WriteTemp
 B4:
+ xor r0 r0
+ addui 0x34 r0
+ write r0 0x0 //print 4 for debug
  jmp WriteTemp
 B5:
  subui 0x12 r29
+ xor r0 r0
+ addui 0x35 r0
+ write r0 0x0 //print 5 for debug
  jmp WriteTemp
 B6:
  subui 0x20 r29
+ xor r0 r0
+ addui 0x36 r0
+ write r0 0x0 //print 6 for debug
  jmp WriteTemp
 B7:
  subui 0x27 r29
+ xor r0 r0
+ addui 0x37 r0
+ write r0 0x0 //print 7 for debug
  jmp WriteTemp
 WriteTemp:
  xor r30 r30
@@ -125,6 +149,9 @@ WriteTemp:
  cmp r30 r29
  jmpbe Final  //If our angle wasn't greater than 180, skip to Final
  xor r29 r29
+ xor r0 r0
+ addui 0x31 r0
+ write r0 0x5
  addui 0x84 r29 //Default it to 180
 Final:
  write r29 0x002409 //Write to servo

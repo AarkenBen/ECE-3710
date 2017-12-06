@@ -22,7 +22,7 @@ namespace AND_assembler
 
             bool bigendian = true;
 
-            currentPath = @"C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\AND_assembler\";
+            currentPath = @"..\..\..\";
             outFileName = "Error";
 
             str_pc = new Dictionary<string, int>();
