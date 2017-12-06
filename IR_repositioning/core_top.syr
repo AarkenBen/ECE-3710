@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: core_top.prj
 
@@ -611,9 +611,9 @@ Unit <servo_pwm> synthesized.
 
 Synthesizing Unit <from_angle_to_pulse_length>.
     Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\from_angle_to_pulse_length.v".
-    Found 18-bit adder for signal <PWR_17_o_GND_16_o_add_2_OUT> created at line 43.
-    Found 10x16-bit multiplier for signal <n0006> created at line 43.
-    Found 16-bit comparator greater for signal <GND_16_o_angle[15]_LessThan_1_o> created at line 39
+    Found 18-bit adder for signal <PWR_17_o_GND_16_o_add_2_OUT> created at line 41.
+    Found 10x16-bit multiplier for signal <n0006> created at line 41.
+    Found 16-bit comparator greater for signal <GND_16_o_angle[15]_LessThan_1_o> created at line 37
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
@@ -1247,12 +1247,12 @@ mem_manager1/instance_name/clk_div/i2c_clk|    5.687|         |    3.903|       
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.88 secs
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 29.95 secs
  
 --> 
 
-Total memory usage is 366760 kilobytes
+Total memory usage is 398096 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   51 (   0 filtered)

@@ -223,10 +223,6 @@ utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path block_mem.ng
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type ngc
 incr fcount
 
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path block_mem.sym
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type symbol
-incr fcount
-
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path block_mem.v
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type verilog
 incr fcount

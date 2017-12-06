@@ -4,7 +4,6 @@ block_mem.asy
 block_mem.gise
 block_mem.mif
 block_mem.ngc
-block_mem.sym
 block_mem.v
 block_mem.veo
 block_mem.xco
