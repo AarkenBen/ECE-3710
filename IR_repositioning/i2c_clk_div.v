@@ -27,7 +27,7 @@ module i2c_clk_div(
 
 
 	//reg [9:0]cnt = 0;
-	reg [18:0]cnt = 0;
+	reg [23:0]cnt = 0;
 	initial i2c_clk = 0;
 	
 	// count down timer
@@ -36,7 +36,7 @@ module i2c_clk_div(
 		
 			// 0 - 499
 			//if(cnt == 32768)
-			if(cnt == 524287)
+			if(cnt == 16777215)
 			//if(cnt == 499)
 				begin
 					i2c_clk = ~i2c_clk;
