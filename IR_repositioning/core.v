@@ -218,7 +218,7 @@ module core(
 						begin
 							state<= fetch1;
 							
-							if(carry == 1 && zero == 1)
+							if(carry == 1 || zero == 1)
 								pc = {current_instruction[23:16], data_from_mem[15:0]};
 						end
 						else if(current_op_code == jmpa)
