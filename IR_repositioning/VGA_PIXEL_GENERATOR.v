@@ -36,7 +36,7 @@ module VGA_PIXEL_GENERATOR(
     );
 		parameter BLACK = 8'b00000000;
 		parameter WHITE = 8'b11111111;
-		parameter RED = 8'b11111100; //changed because latch issues. 
+		parameter RED = 8'b11100000; //changed because latch issues. 
 		parameter BLUE = 8'b11111111;
 		parameter X = 8'b11011100;
 		parameter Y = 8'b10101011;
@@ -94,27 +94,45 @@ module VGA_PIXEL_GENERATOR(
 
 	 always@(*)
 	 begin
-		if(color_i_temp >= 16'd0 && color_i_temp < 16'd25_0)//1
-		begin
-			red = 3'd0;
-			green = 3'd0;
-			blue = 2'd0;
-		end
-		else if(color_i_temp >= 16'd25_0 && color_i_temp < 16'd28_0)//2
+		if(color_i_temp >= 16'd0 && color_i_temp < 16'd25_0)//1   Dark Blue
 		begin
 			red = 3'd0;
 			green = 3'd0;
 			blue = 2'd1;
 		end
-		else if(color_i_temp >= 16'd28_0 && color_i_temp < 16'd30_0)//3
+		else if(color_i_temp >= 16'd25_0 && color_i_temp < 16'd27_0)//2  Light Teal
 		begin
 			red = 3'd0;
+			green = 3'd5;
+			blue = 2'd2;
+		end
+		else if(color_i_temp >= 16'd27_0 && color_i_temp < 16'd29_0)//3  Mystery Inbetween Color
+		begin
+			red = 3'd4;
+			green = 3'd5;
+			blue = 2'd3;
+		end
+		else if(color_i_temp >= 16'd29_0 && color_i_temp < 16'd31_0)//4  Yellow
+		begin
+			red = 3'd7;
+			green = 3'd7;
+			blue = 2'd0;
+		end
+		else if(color_i_temp >= 16'd31_0 && color_i_temp < 16'd33_0)//5 Orange
+		begin
+			red = 3'd7;
+			green = 3'd3;
+			blue = 2'd0;
+		end
+		else if(color_i_temp >= 16'd33_0 && color_i_temp < 16'd35_0)//6 Bright Red
+		begin
+			red = 3'd7;
 			green = 3'd0;
 			blue = 2'd0;
 		end
 		else
-		begin
-			red = 3'd7;
+		begin																			//7 Dark Red
+			red = 3'd2;
 			green = 3'd0;
 			blue = 2'd0;
 		end
@@ -142,7 +160,7 @@ module VGA_PIXEL_GENERATOR(
 		else if(sw == 2'b10)
 		begin
 			//tempColor <= req ? en ? temp_grid_view ? TemperatureColr : RED : seed[7:0] : tempColor; 
-			tempColor <= en ? temp_grid_view ? {red, green, blue} : RED : BLACK;
+			tempColor <= en ? temp_grid_view ? {red, green, blue} : BLACK : BLACK;
 		end
 		else
 		begin

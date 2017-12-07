@@ -11,13 +11,10 @@
 <msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;block_mem&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;block_mem&apos; already exists in the project. Output products for this core may be overwritten.</arg>
-</msg>
-
 <msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;block_mem&apos;...</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file C:/Users/Nickj/Documents/GitHub/Master/ECE-3710/IR_repositioning/ipcore_dir/tmp/_cg/block_mem/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/ipcore_dir/tmp/_cg/block_mem/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
 </msg>
 
 <msg type="info" file="sim" num="949" delta="old" >Finished generation of ASY schematic symbol.
