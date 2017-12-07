@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Dec 06 16:12:27 2017
+// Written by: Map P.20131013 on Thu Dec 07 10:35:16 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -454,17 +454,19 @@ TIMEGRP sys_clk_pin = PIN "servo/converter/Maddsub_n0006_pins<92>" BEL
         "mem_manager1/temp_1_6" BEL "mem_manager1/temp_1_5" BEL
         "mem_manager1/temp_1_4" BEL "mem_manager1/temp_1_3" BEL
         "mem_manager1/temp_1_2" BEL "mem_manager1/temp_1_1" BEL
-        "mem_manager1/temp_1_0" BEL "mem_manager1/io_addr_13" BEL
-        "mem_manager1/io_addr_3" BEL "mem_manager1/io_addr_2" BEL
-        "mem_manager1/io_addr_1" BEL "mem_manager1/io_addr_0" BEL
-        "mem_manager1/servo_angle_15" BEL "mem_manager1/servo_angle_14" BEL
-        "mem_manager1/servo_angle_13" BEL "mem_manager1/servo_angle_12" BEL
-        "mem_manager1/servo_angle_11" BEL "mem_manager1/servo_angle_10" BEL
-        "mem_manager1/servo_angle_9" BEL "mem_manager1/servo_angle_8" BEL
-        "mem_manager1/servo_angle_7" BEL "mem_manager1/servo_angle_6" BEL
-        "mem_manager1/servo_angle_5" BEL "mem_manager1/servo_angle_4" BEL
-        "mem_manager1/servo_angle_3" BEL "mem_manager1/servo_angle_2" BEL
-        "mem_manager1/servo_angle_1" BEL "mem_manager1/servo_angle_0" BEL
+        "mem_manager1/temp_1_0" BEL "mem_manager1/last_valid" BEL
+        "mem_manager1/io_addr_13" BEL "mem_manager1/io_addr_3" BEL
+        "mem_manager1/io_addr_2" BEL "mem_manager1/io_addr_1" BEL
+        "mem_manager1/io_addr_0" BEL "mem_manager1/servo_angle_15" BEL
+        "mem_manager1/servo_angle_14" BEL "mem_manager1/servo_angle_13" BEL
+        "mem_manager1/servo_angle_12" BEL "mem_manager1/servo_angle_11" BEL
+        "mem_manager1/servo_angle_10" BEL "mem_manager1/servo_angle_9" BEL
+        "mem_manager1/servo_angle_8" BEL "mem_manager1/servo_angle_7" BEL
+        "mem_manager1/servo_angle_6" BEL "mem_manager1/servo_angle_5" BEL
+        "mem_manager1/servo_angle_4" BEL "mem_manager1/servo_angle_3" BEL
+        "mem_manager1/servo_angle_2" BEL "mem_manager1/servo_angle_1" BEL
+        "mem_manager1/servo_angle_0" BEL
+        "mem_manager1/instance_name/clk_div/cnt_16" BEL
         "mem_manager1/instance_name/clk_div/cnt_15" BEL
         "mem_manager1/instance_name/clk_div/cnt_14" BEL
         "mem_manager1/instance_name/clk_div/cnt_13" BEL
@@ -695,36 +697,39 @@ TIMEGRP sys_clk_pin = PIN "servo/converter/Maddsub_n0006_pins<92>" BEL
         "vga/vpg/vsg/vCnt_8" BEL "vga/vpg/vsg/vCnt_7" BEL "vga/vpg/vsg/vCnt_6"
         BEL "vga/vpg/vsg/vCnt_5" BEL "vga/vpg/vsg/vCnt_4" BEL
         "vga/vpg/vsg/vCnt_3" BEL "vga/vpg/vsg/vCnt_2" BEL "vga/vpg/vsg/vCnt_1"
-        BEL "vga/vpg/vsg/vCnt_0" BEL "vga/vpg/state_1" BEL "vga/vpg/state_0"
-        BEL "vga/vpg/color_7" BEL "vga/vpg/color_6" BEL "vga/vpg/color_5" BEL
-        "vga/vpg/color_4" BEL "vga/vpg/color_3" BEL "vga/vpg/color_2" BEL
-        "vga/vpg/color_1" BEL "vga/vpg/color_0" BEL "vga/vpg/tempColor_7" BEL
-        "vga/vpg/tempColor_6" BEL "vga/vpg/tempColor_5" BEL
-        "vga/vpg/tempColor_4" BEL "vga/vpg/tempColor_3" BEL
-        "vga/vpg/tempColor_2" BEL "vga/vpg/tempColor_1" BEL
-        "vga/vpg/tempColor_0" BEL "vga/vpg/trow_9" BEL "vga/vpg/trow_8" BEL
-        "vga/vpg/trow_7" BEL "vga/vpg/trow_6" BEL "vga/vpg/trow_5" BEL
-        "vga/vpg/trow_4" BEL "vga/vpg/trow_3" BEL "vga/vpg/trow_2" BEL
-        "vga/vpg/trow_1" BEL "vga/vpg/trow_0" BEL "vga/vpg/tcol_9" BEL
-        "vga/vpg/tcol_8" BEL "vga/vpg/tcol_7" BEL "vga/vpg/tcol_6" BEL
+        BEL "vga/vpg/vsg/vCnt_0" BEL "vga/vpg/color_7" BEL "vga/vpg/color_6"
+        BEL "vga/vpg/color_5" BEL "vga/vpg/color_4" BEL "vga/vpg/color_3" BEL
+        "vga/vpg/color_2" BEL "vga/vpg/color_1" BEL "vga/vpg/color_0" BEL
+        "vga/vpg/tempColor_7" BEL "vga/vpg/tempColor_6" BEL
+        "vga/vpg/tempColor_5" BEL "vga/vpg/tempColor_4" BEL
+        "vga/vpg/tempColor_3" BEL "vga/vpg/tempColor_2" BEL
+        "vga/vpg/tempColor_1" BEL "vga/vpg/tempColor_0" BEL "vga/vpg/tcol_9"
+        BEL "vga/vpg/tcol_8" BEL "vga/vpg/tcol_7" BEL "vga/vpg/tcol_6" BEL
         "vga/vpg/tcol_5" BEL "vga/vpg/tcol_4" BEL "vga/vpg/tcol_3" BEL
         "vga/vpg/tcol_2" BEL "vga/vpg/tcol_1" BEL "vga/vpg/tcol_0" BEL
-        "vga/vpg/vsg/hsync" BEL "vga/vpg/vsg/vsync" BEL "vga/vpg/vsg/col_9"
-        BEL "vga/vpg/vsg/col_8" BEL "vga/vpg/vsg/col_7" BEL
-        "vga/vpg/vsg/col_6" BEL "vga/vpg/vsg/col_5" BEL "vga/vpg/vsg/col_4"
-        BEL "vga/vpg/vsg/col_3" BEL "vga/vpg/vsg/col_2" BEL
-        "vga/vpg/vsg/col_1" BEL "vga/vpg/vsg/col_0" BEL "vga/vpg/vsg/row_9"
-        BEL "vga/vpg/vsg/row_8" BEL "vga/vpg/vsg/row_7" BEL
-        "vga/vpg/vsg/row_6" BEL "vga/vpg/vsg/row_5" BEL "vga/vpg/vsg/row_4"
-        BEL "vga/vpg/vsg/row_3" BEL "vga/vpg/vsg/row_2" BEL
-        "vga/vpg/vsg/row_1" BEL "vga/vpg/vsg/row_0" BEL "vga/vpg/seed_30" BEL
-        "vga/vpg/seed_29" BEL "vga/vpg/seed_7" BEL "vga/vpg/seed_6" BEL
+        "vga/vpg/trow_9" BEL "vga/vpg/trow_8" BEL "vga/vpg/trow_7" BEL
+        "vga/vpg/trow_6" BEL "vga/vpg/trow_5" BEL "vga/vpg/trow_4" BEL
+        "vga/vpg/trow_3" BEL "vga/vpg/trow_2" BEL "vga/vpg/trow_1" BEL
+        "vga/vpg/trow_0" BEL "vga/vpg/vsg/hsync" BEL "vga/vpg/vsg/vsync" BEL
+        "vga/vpg/vsg/col_9" BEL "vga/vpg/vsg/col_8" BEL "vga/vpg/vsg/col_7"
+        BEL "vga/vpg/vsg/col_6" BEL "vga/vpg/vsg/col_5" BEL
+        "vga/vpg/vsg/col_4" BEL "vga/vpg/vsg/col_3" BEL "vga/vpg/vsg/col_2"
+        BEL "vga/vpg/vsg/col_1" BEL "vga/vpg/vsg/col_0" BEL
+        "vga/vpg/vsg/row_9" BEL "vga/vpg/vsg/row_8" BEL "vga/vpg/vsg/row_7"
+        BEL "vga/vpg/vsg/row_6" BEL "vga/vpg/vsg/row_5" BEL
+        "vga/vpg/vsg/row_4" BEL "vga/vpg/vsg/row_3" BEL "vga/vpg/vsg/row_2"
+        BEL "vga/vpg/vsg/row_1" BEL "vga/vpg/vsg/row_0" BEL "vga/vpg/seed_30"
+        BEL "vga/vpg/seed_29" BEL "vga/vpg/seed_7" BEL "vga/vpg/seed_6" BEL
         "vga/vpg/seed_5" BEL "vga/vpg/seed_4" BEL "vga/vpg/seed_3" BEL
         "vga/vpg/seed_2" BEL "vga/vpg/seed_1" BEL "vga/vpg/seed_0" BEL
         "vga/vpg/vsg/en" BEL "servo/pwm" BEL "mem_manager1/en" BEL
         "mem_manager1/instance_name/clk_div/i2c_clk" BEL "vga/vpg/vsg/req" BEL
-        "clk_BUFGP/BUFG" BEL "vga/vpg/Mshreg_seed_28" BEL "vga/vpg/seed_28"
-        BEL "vga/vpg/Mshreg_seed_27" BEL "vga/vpg/seed_27" BEL
+        "core1/reg_ndx_2_1_1" BEL "core1/reg_ndx_2_1_2" BEL
+        "core1/reg_ndx_2_1_3" BEL "core1/reg_ndx_2_1_4" BEL
+        "core1/reg_ndx_2_0_1" BEL "core1/reg_ndx_2_0_2" BEL
+        "core1/reg_ndx_2_0_3" BEL "core1/reg_ndx_2_0_4" BEL "clk_BUFGP/BUFG"
+        BEL "vga/vpg/Mshreg_seed_28" BEL "vga/vpg/seed_28" BEL
+        "vga/vpg/Mshreg_seed_27" BEL "vga/vpg/seed_27" BEL
         "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_0"
         BEL
         "mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_1"

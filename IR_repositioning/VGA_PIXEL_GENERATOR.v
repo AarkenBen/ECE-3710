@@ -100,7 +100,7 @@ module VGA_PIXEL_GENERATOR(
 			green = 3'd0;
 			blue = 2'd1;
 		end
-		else if(color_i_temp >= 16'd25_0 && color_i_temp < 16'd27_0)//2  Light Teal
+		else if(color_i_temp >= 16'd25_0 && color_i_temp < 16'd27_0)//2  Light Blue
 		begin
 			red = 3'd0;
 			green = 3'd5;
