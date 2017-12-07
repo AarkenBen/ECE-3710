@@ -1,5 +1,5 @@
  xor r15 r15
- addui 0x0 r15 		//0x5A r15
+ addui 0x5A r15 		//0x5A r15
  write r15 0x002409 //Initialize servo to 90 degrees
 find_angle:
  load r0 0x002408  //Check that data is valid, otherwise loop until
@@ -152,15 +152,14 @@ B7:
  jmp WriteTemp
 WriteTemp:
  xor r30 r30
- addui 0x84 r30  
+ addui 0xB4 r30  
  cmp r30 r29
  jmpbe Final  //If our angle wasn't greater than 180, skip to Final
  xor r29 r29
  xor r0 r0
  addui 0x31 r0
  write r0 0x5 //Print 1 if overflowed over 180
- addui 0x84 r29 //Default it to 180
+ addui 0xB4 r29 //Default it to 180
 Final:
- addui 0x5 r15
- write r15 0x002409 //Write to servo
+ write r29 0x002409 //Write to servo
  jmp find_angle
