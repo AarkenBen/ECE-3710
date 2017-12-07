@@ -95,6 +95,7 @@ output [15 : 0] doutb;
 	
 	reg en;
 	wire valid;
+	reg last_valid;
 	reg io_read;
 	reg [24:0] io_addr;
 	
@@ -107,6 +108,7 @@ output [15 : 0] doutb;
 	reg [15:0] temp_6;
 	reg [15:0] temp_7;
 	reg [15:0] val;
+
 	
    //synthesis attribute box_type block_mem "black_box"
 	block_mem b_mem(
@@ -148,11 +150,6 @@ output [15 : 0] doutb;
 
    assign temp_3_testing = packet_3[7:0];
 	
-	//Storing/reading values from temp sensor
-	always@(posedge clock1)
-	begin
-
-	end
 
 
 	always @(*)
@@ -206,10 +203,11 @@ output [15 : 0] doutb;
 		io_read <= 0;
 		io_addr <= 0;
 		en <= 0;
+		last_valid <= valid;
+		
 
 
-
-		if(valid)
+		if(valid== 1 && last_valid == 0)
 		begin
 			temp_0 <= packet_0;
 			temp_1 <= packet_1;
