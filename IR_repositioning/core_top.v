@@ -21,7 +21,7 @@
 module core_top(	
 					//input	wire				reset,
 					input	wire			clk,
-					input wire[3:0]			sw,
+					input wire[1:0]			sw,
 					
 					output wire				hsync,
 					output wire				vsync,

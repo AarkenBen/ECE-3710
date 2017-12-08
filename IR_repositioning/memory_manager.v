@@ -97,7 +97,7 @@ output [15 : 0] doutb;
 	wire valid;
 	reg last_valid;
 	reg io_read;
-	reg [24:0] io_addr;
+	reg [23:0] io_addr;
 	
 	reg [15:0] temp_0;
 	reg [15:0] temp_1;
@@ -201,6 +201,16 @@ output [15 : 0] doutb;
 	always @(posedge clock1)
 	begin
 		io_read <= 0;
+		
+		if(en)
+		begin
+			io_addr <=24'b1111_1111_1111_1111_1111_1111;
+		end
+		else
+			io_addr <=24'd0;
+		begin
+		
+		end
 		io_addr <= 0;
 		en <= 0;
 		last_valid <= valid;
