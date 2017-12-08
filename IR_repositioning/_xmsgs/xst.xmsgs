@@ -5,25 +5,42 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v" Line 129: Port <arg fmt="%s" index="1">PTAT_packet</arg> is not connected to this instance
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">addr_in_block2&lt;23:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr_in_block2&lt;23:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v</arg>&quot; line <arg fmt="%s" index="2">129</arg>: Output port &lt;<arg fmt="%s" index="3">PTAT_packet</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">instance_name</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">last_state_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">instance_name</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;last_state_7&gt; &lt;last_state_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v</arg>&quot; line <arg fmt="%s" index="2">129</arg>: Output port &lt;<arg fmt="%s" index="3">pec_data</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">instance_name</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">instance_name</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v</arg>&quot; line <arg fmt="%s" index="2">129</arg>: Output port &lt;<arg fmt="%s" index="3">clk</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">instance_name</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n1084</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">last_state_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2146" delta="new" >In block &lt;<arg fmt="%s" index="1">VGA_PIXEL_GENERATOR</arg>&gt;, <arg fmt="%s" index="2">Counter</arg> &lt;<arg fmt="%s" index="3">state</arg>&gt; </msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mem_manager1/io_addr_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">core_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mem_manager1/io_addr_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mem_manager1/io_addr_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">core_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">17 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mem_manager1/io_addr_22&gt; &lt;mem_manager1/io_addr_21&gt; &lt;mem_manager1/io_addr_20&gt; &lt;mem_manager1/io_addr_19&gt; &lt;mem_manager1/io_addr_18&gt; &lt;mem_manager1/io_addr_17&gt; &lt;mem_manager1/io_addr_16&gt; &lt;mem_manager1/io_addr_15&gt; &lt;mem_manager1/io_addr_14&gt; &lt;mem_manager1/io_addr_12&gt; &lt;mem_manager1/io_addr_11&gt; &lt;mem_manager1/io_addr_9&gt; &lt;mem_manager1/io_addr_8&gt; &lt;mem_manager1/io_addr_7&gt; &lt;mem_manager1/io_addr_6&gt; &lt;mem_manager1/io_addr_5&gt; &lt;mem_manager1/io_addr_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mem_manager1/instance_name/clk_div/cnt_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">core_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga/vpg/state_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mem_manager1/instance_name/clk_div/cnt_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">core_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga/vpg/state_1&gt; </arg>
 </msg>
 
 </messages>

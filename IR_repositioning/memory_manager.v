@@ -97,7 +97,7 @@ output [15 : 0] doutb;
 	wire valid;
 	reg last_valid;
 	reg io_read;
-	reg [23:0] io_addr;
+	reg [23:0] io_addr = 0;
 	
 	reg [15:0] temp_0;
 	reg [15:0] temp_1;
@@ -128,7 +128,7 @@ output [15 : 0] doutb;
 
 	i2c instance_name (
     .ref_clk(clock1), 
-    .rst(1'b0), 
+    //.rst(1'b0), 
     .en(en), // need to tie this into the core some where
 	 
     //.PTAT_packet(PTAT_packet), // might not need to store the reference temp
@@ -139,7 +139,7 @@ output [15 : 0] doutb;
     .packet_4(packet_4), 
     .packet_5(packet_5), 
     .packet_6(packet_6), 
-    .packet_7(packet_7), 
+    .packet_7(packet_7),
     //.pec_data(pec_data), 	// also don't need to store this error
 	 
     .SCL_OUT(SCL), 
@@ -202,15 +202,7 @@ output [15 : 0] doutb;
 	begin
 		io_read <= 0;
 		
-		if(en)
-		begin
-			io_addr <=24'b1111_1111_1111_1111_1111_1111;
-		end
-		else
-			io_addr <=24'd0;
-		begin
 		
-		end
 		io_addr <= 0;
 		en <= 0;
 		last_valid <= valid;
@@ -248,6 +240,17 @@ output [15 : 0] doutb;
 			begin
 				io_read <= 1;
 				io_addr <= addr_in_block1;
+			end
+			else if(addr_in_block1 < 24'h002400) //These last two cases are to get rid of latch errors
+			begin
+				
+				io_read <= 0;
+				io_addr <= 24'd0;
+			end
+			else
+			begin
+				io_read <= 0;
+				io_addr <= 24'hFFFFFF;
 			end
 		end
 

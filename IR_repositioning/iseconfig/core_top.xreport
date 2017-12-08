@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-12-08T09:29:59</DateModified>
+  <DateModified>2017-12-08T10:32:53</DateModified>
   <ModuleName>core_top</ModuleName>
   <SummaryTimeStamp>2017-12-01T16:54:06</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning/iseconfig/core_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Derek/Documents/GitHub/ECE-3710-MAIN/IR_repositioning\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Nickj/Documents/GitHub/Master/ECE-3710/IR_repositioning/iseconfig/core_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Nickj/Documents/GitHub/Master/ECE-3710/IR_repositioning\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-29T22:41:46</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

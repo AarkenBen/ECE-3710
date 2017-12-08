@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.43 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: core_top.prj
 
@@ -108,29 +108,29 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\VGA_SIGNAL_GENERATOR.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v" into library work
 Parsing module <VGA_SIGNAL_GENERATOR>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_clk_div.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\i2c_clk_div.v" into library work
 Parsing module <i2c_clk_div>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\VGA_PIXEL_GENERATOR.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v" into library work
 Parsing module <VGA_PIXEL_GENERATOR>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\reg_manager.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\reg_manager.v" into library work
 Parsing module <reg_manager>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\ipcore_dir\block_mem.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\ipcore_dir\block_mem.v" into library work
 Parsing module <block_mem>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\i2c.v" into library work
 Parsing module <i2c>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\from_angle_to_pulse_length.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\from_angle_to_pulse_length.v" into library work
 Parsing module <from_angle_to_pulse_length>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\VGA_GLPYH_TOP.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v" into library work
 Parsing module <VGA_GLPYH_TOP>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\servo_pwm.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\servo_pwm.v" into library work
 Parsing module <servo_pwm>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\memory_manager.v" into library work
 Parsing module <memory_manager>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core.v" into library work
 Parsing module <core>.
-Analyzing Verilog file "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core_top.v" into library work
+Analyzing Verilog file "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core_top.v" into library work
 Parsing module <core_top>.
 
 =========================================================================
@@ -142,7 +142,6 @@ Elaborating module <core_top>.
 Elaborating module <core>.
 
 Elaborating module <reg_manager>.
-WARNING:HDLCompiler:1016 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v" Line 129: Port PTAT_packet is not connected to this instance
 
 Elaborating module <memory_manager>.
 
@@ -167,13 +166,13 @@ Elaborating module <from_angle_to_pulse_length>.
 =========================================================================
 
 Synthesizing Unit <core_top>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core_top.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core_top.v".
     Summary:
 	no macro.
 Unit <core_top> synthesized.
 
 Synthesizing Unit <core>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\core.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\core.v".
     Found 1-bit register for signal <zero>.
     Found 1-bit register for signal <carry>.
     Found 1-bit register for signal <current_instruction<25>>.
@@ -240,7 +239,7 @@ Synthesizing Unit <core>.
 Unit <core> synthesized.
 
 Synthesizing Unit <reg_manager>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\reg_manager.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\reg_manager.v".
     Found 16-bit register for signal <r30>.
     Found 16-bit register for signal <r29>.
     Found 16-bit register for signal <r28>.
@@ -281,11 +280,8 @@ Synthesizing Unit <reg_manager>.
 Unit <reg_manager> synthesized.
 
 Synthesizing Unit <memory_manager>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\memory_manager.v".
 WARNING:Xst:647 - Input <addr_in_block2<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v" line 129: Output port <PTAT_packet> of the instance <instance_name> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v" line 129: Output port <pec_data> of the instance <instance_name> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\memory_manager.v" line 129: Output port <clk> of the instance <instance_name> is unconnected or connected to loadless signal.
     Found 24-bit register for signal <io_addr>.
     Found 1-bit register for signal <en>.
     Found 1-bit register for signal <last_valid>.
@@ -300,9 +296,9 @@ INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\
     Found 16-bit register for signal <val>.
     Found 16-bit register for signal <servo_angle>.
     Found 1-bit register for signal <io_read>.
-    Found 16-bit 12-to-1 multiplexer for signal <_n0174> created at line 162.
-    Found 24-bit comparator lessequal for signal <n0050> created at line 247
-    Found 24-bit comparator lessequal for signal <n0052> created at line 247
+    Found 16-bit 12-to-1 multiplexer for signal <_n0177> created at line 162.
+    Found 24-bit comparator lessequal for signal <n0050> created at line 239
+    Found 24-bit comparator lessequal for signal <n0052> created at line 239
     Summary:
 	inferred 187 D-type flip-flop(s).
 	inferred   2 Comparator(s).
@@ -310,23 +306,7 @@ INFO:Xst:3210 - "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\
 Unit <memory_manager> synthesized.
 
 Synthesizing Unit <i2c>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c.v".
-    Found 1-bit register for signal <PTAT_packet<15>>.
-    Found 1-bit register for signal <PTAT_packet<14>>.
-    Found 1-bit register for signal <PTAT_packet<13>>.
-    Found 1-bit register for signal <PTAT_packet<12>>.
-    Found 1-bit register for signal <PTAT_packet<11>>.
-    Found 1-bit register for signal <PTAT_packet<10>>.
-    Found 1-bit register for signal <PTAT_packet<9>>.
-    Found 1-bit register for signal <PTAT_packet<8>>.
-    Found 1-bit register for signal <PTAT_packet<7>>.
-    Found 1-bit register for signal <PTAT_packet<6>>.
-    Found 1-bit register for signal <PTAT_packet<5>>.
-    Found 1-bit register for signal <PTAT_packet<4>>.
-    Found 1-bit register for signal <PTAT_packet<3>>.
-    Found 1-bit register for signal <PTAT_packet<2>>.
-    Found 1-bit register for signal <PTAT_packet<1>>.
-    Found 1-bit register for signal <PTAT_packet<0>>.
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\i2c.v".
     Found 1-bit register for signal <packet_0<15>>.
     Found 1-bit register for signal <packet_0<14>>.
     Found 1-bit register for signal <packet_0<13>>.
@@ -455,21 +435,13 @@ Synthesizing Unit <i2c>.
     Found 1-bit register for signal <packet_7<2>>.
     Found 1-bit register for signal <packet_7<1>>.
     Found 1-bit register for signal <packet_7<0>>.
-    Found 1-bit register for signal <pec_data<7>>.
-    Found 1-bit register for signal <pec_data<6>>.
-    Found 1-bit register for signal <pec_data<5>>.
-    Found 1-bit register for signal <pec_data<4>>.
-    Found 1-bit register for signal <pec_data<3>>.
-    Found 1-bit register for signal <pec_data<2>>.
-    Found 1-bit register for signal <pec_data<1>>.
-    Found 1-bit register for signal <pec_data<0>>.
-    Found 9-bit register for signal <state>.
-    Found 1-bit register for signal <sda_en>.
-    Found 1-bit register for signal <sda_out>.
-    Found 3-bit register for signal <ndx>.
-    Found 1-bit register for signal <valid>.
     Found 9-bit register for signal <last_state>.
     Found 3-bit register for signal <last_ndx>.
+    Found 1-bit register for signal <sda_out>.
+    Found 1-bit register for signal <sda_en>.
+    Found 1-bit register for signal <valid>.
+    Found 9-bit register for signal <state>.
+    Found 3-bit register for signal <ndx>.
     Found 1-bit register for signal <scl_en>.
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
@@ -482,41 +454,40 @@ Synthesizing Unit <i2c>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit subtractor for signal <ndx[2]_GND_8_o_sub_92_OUT> created at line 328.
-    Found 5-bit adder for signal <n0634> created at line 187.
-    Found 8x2-bit Read Only RAM for signal <_n1213>
-    Found 1-bit tristate buffer for signal <SDA> created at line 133
-    Found 1-bit tristate buffer for signal <SCL_OUT> created at line 135
-    Found 5-bit comparator lessequal for signal <n0028> created at line 187
+    Found 3-bit subtractor for signal <ndx[2]_GND_8_o_sub_82_OUT> created at line 329.
+    Found 5-bit adder for signal <n0546> created at line 198.
+    Found 8x2-bit Read Only RAM for signal <_n1084>
+    Found 1-bit tristate buffer for signal <SDA> created at line 134
+    Found 1-bit tristate buffer for signal <SCL_OUT> created at line 136
+    Found 5-bit comparator lessequal for signal <n0030> created at line 198
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred 171 D-type flip-flop(s).
+	inferred 147 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred 239 Multiplexer(s).
+	inferred 206 Multiplexer(s).
 	inferred   2 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <i2c> synthesized.
 
 Synthesizing Unit <i2c_clk_div>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\i2c_clk_div.v".
-WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 19-bit register for signal <cnt>.
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\i2c_clk_div.v".
+    Found 17-bit register for signal <cnt>.
     Found 1-bit register for signal <i2c_clk>.
-    Found 19-bit adder for signal <cnt[18]_GND_9_o_add_2_OUT> created at line 47.
+    Found 17-bit adder for signal <cnt[16]_GND_9_o_add_2_OUT> created at line 47.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  20 D-type flip-flop(s).
+	inferred  18 D-type flip-flop(s).
 Unit <i2c_clk_div> synthesized.
 
 Synthesizing Unit <VGA_GLPYH_TOP>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\VGA_GLPYH_TOP.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_GLPYH_TOP.v".
     Summary:
 	no macro.
 Unit <VGA_GLPYH_TOP> synthesized.
 
 Synthesizing Unit <VGA_PIXEL_GENERATOR>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\VGA_PIXEL_GENERATOR.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_PIXEL_GENERATOR.v".
         BLACK = 8'b00000000
         WHITE = 8'b11111111
         RED = 8'b11100000
@@ -565,7 +536,7 @@ Synthesizing Unit <VGA_PIXEL_GENERATOR>.
 Unit <VGA_PIXEL_GENERATOR> synthesized.
 
 Synthesizing Unit <VGA_SIGNAL_GENERATOR>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\VGA_SIGNAL_GENERATOR.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\VGA_SIGNAL_GENERATOR.v".
         frameWidth = 799
         frameHeight = 524
         hfp = 16
@@ -601,7 +572,7 @@ Synthesizing Unit <VGA_SIGNAL_GENERATOR>.
 Unit <VGA_SIGNAL_GENERATOR> synthesized.
 
 Synthesizing Unit <servo_pwm>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\servo_pwm.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\servo_pwm.v".
     Found 1-bit register for signal <pwm>.
     Found 21-bit register for signal <current_count>.
     Found 21-bit adder for signal <current_count[20]_GND_15_o_add_4_OUT> created at line 47.
@@ -613,7 +584,7 @@ Synthesizing Unit <servo_pwm>.
 Unit <servo_pwm> synthesized.
 
 Synthesizing Unit <from_angle_to_pulse_length>.
-    Related source file is "C:\Users\Derek\Documents\GitHub\ECE-3710-MAIN\IR_repositioning\from_angle_to_pulse_length.v".
+    Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\from_angle_to_pulse_length.v".
     Found 18-bit adder for signal <PWR_17_o_GND_16_o_add_2_OUT> created at line 41.
     Found 10x16-bit multiplier for signal <n0006> created at line 41.
     Found 16-bit comparator greater for signal <GND_16_o_angle[15]_LessThan_1_o> created at line 37
@@ -637,19 +608,19 @@ Macro Statistics
  10-bit subtractor                                     : 2
  14-bit adder                                          : 2
  16-bit addsub                                         : 1
+ 17-bit adder                                          : 1
  18-bit adder                                          : 1
- 19-bit adder                                          : 1
  2-bit adder                                           : 2
  21-bit adder                                          : 1
  24-bit adder                                          : 1
  3-bit subtractor                                      : 1
  4-bit adder                                           : 1
  5-bit adder                                           : 1
-# Registers                                            : 112
+# Registers                                            : 110
  1-bit register                                        : 37
  10-bit register                                       : 6
- 16-bit register                                       : 52
- 19-bit register                                       : 1
+ 16-bit register                                       : 51
+ 17-bit register                                       : 1
  2-bit register                                        : 2
  21-bit register                                       : 1
  24-bit register                                       : 2
@@ -658,7 +629,7 @@ Macro Statistics
  4-bit register                                        : 1
  5-bit register                                        : 2
  6-bit register                                        : 1
- 8-bit register                                        : 3
+ 8-bit register                                        : 2
  9-bit register                                        : 1
 # Comparators                                          : 33
  10-bit comparator greater                             : 15
@@ -668,9 +639,9 @@ Macro Statistics
  21-bit comparator lessequal                           : 1
  24-bit comparator lessequal                           : 2
  5-bit comparator lessequal                            : 1
-# Multiplexers                                         : 342
+# Multiplexers                                         : 309
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 248
+ 1-bit 2-to-1 multiplexer                              : 216
  1-bit 8-to-1 multiplexer                              : 1
  14-bit 2-to-1 multiplexer                             : 6
  16-bit 12-to-1 multiplexer                            : 1
@@ -680,7 +651,7 @@ Macro Statistics
  24-bit 2-to-1 multiplexer                             : 7
  3-bit 2-to-1 multiplexer                              : 16
  5-bit 2-to-1 multiplexer                              : 8
- 8-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 12
  8-bit 4-to-1 multiplexer                              : 1
 # Logic shifters                                       : 2
  16-bit shifter logical left                           : 1
@@ -700,3 +671,520 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 =========================================================================
 
 Reading core <ipcore_dir/block_mem.ngc>.
+Loading core <block_mem> for timing and area information for instance <b_mem>.
+INFO:Xst:2261 - The FF/Latch <last_state_6> in Unit <instance_name> is equivalent to the following 2 FFs/Latches, which will be removed : <last_state_7> <last_state_8> 
+WARNING:Xst:1293 - FF/Latch <last_state_6> has a constant value of 0 in block <instance_name>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <VGA_PIXEL_GENERATOR>.
+The following registers are absorbed into counter <state>: 1 register on signal <state>.
+Unit <VGA_PIXEL_GENERATOR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_SIGNAL_GENERATOR>.
+The following registers are absorbed into counter <hCnt>: 1 register on signal <hCnt>.
+The following registers are absorbed into counter <vCnt>: 1 register on signal <vCnt>.
+The following registers are absorbed into counter <pCnt>: 1 register on signal <pCnt>.
+Unit <VGA_SIGNAL_GENERATOR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <core>.
+The following registers are absorbed into counter <pc>: 1 register on signal <pc>.
+Unit <core> synthesized (advanced).
+
+Synthesizing (advanced) Unit <from_angle_to_pulse_length>.
+	Multiplier <Mmult_n0006> in block <from_angle_to_pulse_length> and adder/subtractor <Madd_PWR_17_o_GND_16_o_add_2_OUT> in block <from_angle_to_pulse_length> are combined into a MAC<Maddsub_n0006>.
+Unit <from_angle_to_pulse_length> synthesized (advanced).
+
+Synthesizing (advanced) Unit <i2c>.
+INFO:Xst:3231 - The small RAM <Mram__n1084> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ndx>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <i2c> synthesized (advanced).
+
+Synthesizing (advanced) Unit <i2c_clk_div>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <i2c_clk_div> synthesized (advanced).
+
+Synthesizing (advanced) Unit <servo_pwm>.
+The following registers are absorbed into counter <current_count>: 1 register on signal <current_count>.
+Unit <servo_pwm> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x2-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 16x10-to-18-bit MAC                                   : 1
+# Adders/Subtractors                                   : 10
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 14-bit adder                                          : 2
+ 16-bit addsub                                         : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 7
+ 10-bit up counter                                     : 2
+ 17-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 21-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 999
+ Flip-Flops                                            : 999
+# Comparators                                          : 33
+ 10-bit comparator greater                             : 15
+ 10-bit comparator lessequal                           : 3
+ 16-bit comparator equal                               : 2
+ 16-bit comparator greater                             : 9
+ 21-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 2
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 353
+ 1-bit 12-to-1 multiplexer                             : 16
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 216
+ 1-bit 32-to-1 multiplexer                             : 32
+ 1-bit 8-to-1 multiplexer                              : 1
+ 14-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 37
+ 18-bit 2-to-1 multiplexer                             : 1
+ 24-bit 2-to-1 multiplexer                             : 6
+ 3-bit 2-to-1 multiplexer                              : 16
+ 5-bit 2-to-1 multiplexer                              : 8
+ 8-bit 2-to-1 multiplexer                              : 12
+ 8-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# FSMs                                                 : 2
+# Xors                                                 : 4
+ 1-bit xor2                                            : 3
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <last_state_6> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <last_state_7> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <last_state_8> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2146 - In block <VGA_PIXEL_GENERATOR>, Counter <state> <vsg/pCnt> are equivalent, XST will keep only <state>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <core1/FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 001   | 001
+ 111   | 111
+ 101   | 101
+ 110   | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <mem_manager1/instance_name/FSM_1> on signal <state[1:52]> with one-hot encoding.
+-------------------------------------------------------------------
+ State     | Encoding
+-------------------------------------------------------------------
+ 000000000 | 0000000000000000000000000000000000000000000000000001
+ 000000001 | 0000000000000000000000000000000000000000000000000010
+ 000000010 | 0000000000000000000000000000000000000000000000000100
+ 000000011 | 0000000000000000000000000000000000000000000000001000
+ 000000100 | 0000000000000000000000000000000000000000000000010000
+ 000001000 | 0000000000000000000000000000000000000000000000100000
+ 000001001 | 0000000000000000000000000000000000000000000001000000
+ 000110010 | 0000000000000000000000000000000000000000000010000000
+ 000000111 | 0000000000000000000000000000000000000000000100000000
+ 000001010 | 0000000000000000000000000000000000000000001000000000
+ 000101000 | 0000000000000000000000000000000000000000010000000000
+ 000001011 | 0000000000000000000000000000000000000000100000000000
+ 000101001 | 0000000000000000000000000000000000000001000000000000
+ 000001100 | 0000000000000000000000000000000000000010000000000000
+ 000011101 | 0000000000000000000000000000000000000100000000000000
+ 000001101 | 0000000000000000000000000000000000001000000000000000
+ 000101010 | 0000000000000000000000000000000000010000000000000000
+ 000001110 | 0000000000000000000000000000000000100000000000000000
+ 000011110 | 0000000000000000000000000000000001000000000000000000
+ 000001111 | 0000000000000000000000000000000010000000000000000000
+ 000101011 | 0000000000000000000000000000000100000000000000000000
+ 000010000 | 0000000000000000000000000000001000000000000000000000
+ 000011111 | 0000000000000000000000000000010000000000000000000000
+ 000010001 | 0000000000000000000000000000100000000000000000000000
+ 000101100 | 0000000000000000000000000001000000000000000000000000
+ 000010010 | 0000000000000000000000000010000000000000000000000000
+ 000100000 | 0000000000000000000000000100000000000000000000000000
+ 000010011 | 0000000000000000000000001000000000000000000000000000
+ 000101101 | 0000000000000000000000010000000000000000000000000000
+ 000010100 | 0000000000000000000000100000000000000000000000000000
+ 000100001 | 0000000000000000000001000000000000000000000000000000
+ 000010101 | 0000000000000000000010000000000000000000000000000000
+ 000101110 | 0000000000000000000100000000000000000000000000000000
+ 000010110 | 0000000000000000001000000000000000000000000000000000
+ 000100010 | 0000000000000000010000000000000000000000000000000000
+ 000010111 | 0000000000000000100000000000000000000000000000000000
+ 000101111 | 0000000000000001000000000000000000000000000000000000
+ 000011000 | 0000000000000010000000000000000000000000000000000000
+ 000100011 | 0000000000000100000000000000000000000000000000000000
+ 000011001 | 0000000000001000000000000000000000000000000000000000
+ 000110000 | 0000000000010000000000000000000000000000000000000000
+ 000011010 | 0000000000100000000000000000000000000000000000000000
+ 000100100 | 0000000001000000000000000000000000000000000000000000
+ 000011011 | 0000000010000000000000000000000000000000000000000000
+ 000110001 | 0000000100000000000000000000000000000000000000000000
+ 000011100 | 0000001000000000000000000000000000000000000000000000
+ 000100101 | 0000010000000000000000000000000000000000000000000000
+ 000100110 | 0000100000000000000000000000000000000000000000000000
+ 000100111 | 0001000000000000000000000000000000000000000000000000
+ 000110011 | 0010000000000000000000000000000000000000000000000000
+ 000000101 | 0100000000000000000000000000000000000000000000000000
+ 000000110 | 1000000000000000000000000000000000000000000000000000
+-------------------------------------------------------------------
+
+Optimizing unit <core_top> ...
+
+Optimizing unit <VGA_PIXEL_GENERATOR> ...
+
+Optimizing unit <core> ...
+
+Optimizing unit <reg_manager> ...
+INFO:Xst:2261 - The FF/Latch <mem_manager1/io_addr_13> in Unit <core_top> is equivalent to the following FF/Latch, which will be removed : <mem_manager1/io_addr_10> 
+INFO:Xst:2261 - The FF/Latch <mem_manager1/io_addr_23> in Unit <core_top> is equivalent to the following 17 FFs/Latches, which will be removed : <mem_manager1/io_addr_22> <mem_manager1/io_addr_21> <mem_manager1/io_addr_20> <mem_manager1/io_addr_19> <mem_manager1/io_addr_18> <mem_manager1/io_addr_17> <mem_manager1/io_addr_16> <mem_manager1/io_addr_15> <mem_manager1/io_addr_14> <mem_manager1/io_addr_12> <mem_manager1/io_addr_11> <mem_manager1/io_addr_9> <mem_manager1/io_addr_8> <mem_manager1/io_addr_7> <mem_manager1/io_addr_6> <mem_manager1/io_addr_5> <mem_manager1/io_addr_4> 
+INFO:Xst:2261 - The FF/Latch <mem_manager1/instance_name/clk_div/cnt_0> in Unit <core_top> is equivalent to the following FF/Latch, which will be removed : <vga/vpg/state_0> 
+INFO:Xst:2261 - The FF/Latch <mem_manager1/instance_name/clk_div/cnt_1> in Unit <core_top> is equivalent to the following FF/Latch, which will be removed : <vga/vpg/state_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block core_top, actual ratio is 25.
+FlipFlop core1/reg_ndx_2_0 has been replicated 4 time(s)
+FlipFlop core1/reg_ndx_2_1 has been replicated 4 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <core_top> :
+	Found 11-bit shift register for signal <vga/vpg/seed_28>.
+	Found 10-bit shift register for signal <vga/vpg/seed_27>.
+Unit <core_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1102
+ Flip-Flops                                            : 1102
+# Shift Registers                                      : 2
+ 10-bit shift register                                 : 1
+ 11-bit shift register                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : core_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1903
+#      GND                         : 2
+#      INV                         : 9
+#      LUT1                        : 56
+#      LUT2                        : 46
+#      LUT3                        : 131
+#      LUT4                        : 151
+#      LUT5                        : 247
+#      LUT6                        : 947
+#      MUXCY                       : 146
+#      MUXF7                       : 56
+#      VCC                         : 2
+#      XORCY                       : 110
+# FlipFlops/Latches                : 1116
+#      FD                          : 121
+#      FD_1                        : 129
+#      FDE                         : 801
+#      FDR                         : 44
+#      FDRE                        : 20
+#      FDS                         : 1
+# RAMS                             : 34
+#      RAMB16BWER                  : 30
+#      RAMB8BWER                   : 4
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 3
+#      IOBUF                       : 1
+#      OBUF                        : 19
+#      OBUFT                       : 1
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1116  out of  18224     6%  
+ Number of Slice LUTs:                 1589  out of   9112    17%  
+    Number used as Logic:              1587  out of   9112    17%  
+    Number used as Memory:                2  out of   2176     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2249
+   Number with an unused Flip Flop:    1133  out of   2249    50%  
+   Number with an unused LUT:           660  out of   2249    29%  
+   Number of fully used LUT-FF pairs:   456  out of   2249    20%  
+   Number of unique control sets:        53
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               32  out of     32   100%  
+    Number using Block RAM only:         32
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------+------------------------+-------+
+Clock Signal                              | Clock buffer(FF name)  | Load  |
+------------------------------------------+------------------------+-------+
+clk                                       | BUFGP                  | 957   |
+mem_manager1/instance_name/clk_div/i2c_clk| BUFG                   | 196   |
+------------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.667ns (Maximum Frequency: 103.442MHz)
+   Minimum input arrival time before clock: 6.792ns
+   Maximum output required time after clock: 4.521ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.667ns (frequency: 103.442MHz)
+  Total number of paths / destination ports: 1461648 / 2869
+-------------------------------------------------------------------------
+Delay:               9.667ns (Levels of Logic = 8)
+  Source:            mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_3 (FF)
+  Destination:       core1/reg_ndx_2_4 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mem_manager1/b_mem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_3 to core1/reg_ndx_2_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             58   0.447   1.829  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_3 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe<3>)
+     LUT3:I0->O           18   0.205   1.394  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux1181 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux118)
+     LUT6:I1->O            1   0.203   0.924  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux78 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux77)
+     LUT6:I1->O            2   0.203   0.617  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux79 (douta<11>)
+     end scope: 'mem_manager1/b_mem:douta<11>'
+     LUT6:I5->O            9   0.205   1.194  mem_manager1/Mmux_data_out13 (data_from_mem_to_core<11>)
+     LUT6:I0->O            1   0.203   0.684  core1/_n0617_inv1 (core1/_n0617_inv1)
+     LUT5:I3->O           18   0.203   1.050  core1/_n0617_inv2_rstpot (core1/_n0617_inv2_rstpot)
+     LUT3:I2->O            1   0.205   0.000  core1/reg_ndx_2_4_dpot (core1/reg_ndx_2_4_dpot)
+     FDE:D                     0.102          core1/reg_ndx_2_4
+    ----------------------------------------
+    Total                      9.667ns (1.976ns logic, 7.691ns route)
+                                       (20.4% logic, 79.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem_manager1/instance_name/clk_div/i2c_clk'
+  Clock period: 7.578ns (frequency: 131.954MHz)
+  Total number of paths / destination ports: 3205 / 199
+-------------------------------------------------------------------------
+Delay:               3.789ns (Levels of Logic = 2)
+  Source:            mem_manager1/instance_name/last_state_0 (FF)
+  Destination:       mem_manager1/instance_name/packet_5_15 (FF)
+  Source Clock:      mem_manager1/instance_name/clk_div/i2c_clk rising
+  Destination Clock: mem_manager1/instance_name/clk_div/i2c_clk falling
+
+  Data Path: mem_manager1/instance_name/last_state_0 to mem_manager1/instance_name/packet_5_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              28   0.447   1.599  mem_manager1/instance_name/last_state_0 (mem_manager1/instance_name/last_state_0)
+     LUT6:I0->O           16   0.203   1.233  mem_manager1/instance_name/_n11311 (mem_manager1/instance_name/_n1131)
+     LUT6:I3->O            1   0.205   0.000  mem_manager1/instance_name/last_state[8]_packet_5[15]_select_72_OUT<15>1 (mem_manager1/instance_name/last_state[8]_packet_5[15]_select_72_OUT<0>)
+     FD_1:D                    0.102          mem_manager1/instance_name/packet_5_0
+    ----------------------------------------
+    Total                      3.789ns (0.957ns logic, 2.832ns route)
+                                       (25.3% logic, 74.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem_manager1/instance_name/clk_div/i2c_clk'
+  Total number of paths / destination ports: 128 / 128
+-------------------------------------------------------------------------
+Offset:              3.842ns (Levels of Logic = 2)
+  Source:            SDA (PAD)
+  Destination:       mem_manager1/instance_name/packet_5_15 (FF)
+  Destination Clock: mem_manager1/instance_name/clk_div/i2c_clk falling
+
+  Data Path: SDA to mem_manager1/instance_name/packet_5_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O         128   1.222   2.315  SDA_IOBUF (N73)
+     LUT6:I0->O            1   0.203   0.000  mem_manager1/instance_name/last_state[8]_packet_2[15]_select_69_OUT<7>1 (mem_manager1/instance_name/last_state[8]_packet_2[15]_select_69_OUT<8>)
+     FD_1:D                    0.102          mem_manager1/instance_name/packet_2_8
+    ----------------------------------------
+    Total                      3.842ns (1.527ns logic, 2.315ns route)
+                                       (39.7% logic, 60.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 75 / 9
+-------------------------------------------------------------------------
+Offset:              6.792ns (Levels of Logic = 6)
+  Source:            sw<0> (PAD)
+  Destination:       vga/vpg/tempColor_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<0> to vga/vpg/tempColor_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   1.222   1.180  sw_0_IBUF (sw_0_IBUF)
+     LUT5:I1->O            1   0.203   0.944  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT193_SW0 (N63)
+     LUT6:I0->O            6   0.203   0.992  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT193 (vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT193)
+     LUT4:I0->O            3   0.203   0.651  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT1221 (vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT122)
+     LUT6:I5->O            1   0.205   0.684  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT122 (vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT121)
+     LUT3:I1->O            1   0.203   0.000  vga/vpg/Mmux_tempColor[7]_tempColor[7]_mux_73_OUT123 (vga/vpg/tempColor[7]_tempColor[7]_mux_73_OUT<3>)
+     FD:D                      0.102          vga/vpg/tempColor_3
+    ----------------------------------------
+    Total                      6.792ns (2.341ns logic, 4.451ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            mem_manager1/instance_name/clk_div/i2c_clk (FF)
+  Destination:       SCL (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mem_manager1/instance_name/clk_div/i2c_clk to SCL
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.617  mem_manager1/instance_name/clk_div/i2c_clk (mem_manager1/instance_name/clk_div/i2c_clk)
+     LUT2:I1->O            1   0.205   0.579  mem_manager1/instance_name/Mmux_SCL11 (mem_manager1/instance_name/SCL)
+     OBUFT:T->O                2.571          SCL_OBUFT (SCL)
+    ----------------------------------------
+    Total                      4.419ns (3.223ns logic, 1.196ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mem_manager1/instance_name/clk_div/i2c_clk'
+  Total number of paths / destination ports: 11 / 10
+-------------------------------------------------------------------------
+Offset:              4.521ns (Levels of Logic = 2)
+  Source:            mem_manager1/instance_name/sda_out (FF)
+  Destination:       SDA (PAD)
+  Source Clock:      mem_manager1/instance_name/clk_div/i2c_clk rising
+
+  Data Path: mem_manager1/instance_name/sda_out to SDA
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.721  mem_manager1/instance_name/sda_out (mem_manager1/instance_name/sda_out)
+     LUT2:I0->O            1   0.203   0.579  mem_manager1/instance_name/sda_en_GND_8_o_AND_18_o_inv1 (mem_manager1/instance_name/sda_en_GND_8_o_AND_18_o_inv)
+     IOBUF:T->IO               2.571          SDA_IOBUF (SDA)
+    ----------------------------------------
+    Total                      4.521ns (3.221ns logic, 1.300ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+------------------------------------------+---------+---------+---------+---------+
+                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------+---------+---------+---------+---------+
+clk                                       |    9.667|         |         |         |
+mem_manager1/instance_name/clk_div/i2c_clk|    3.639|    1.199|         |         |
+------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mem_manager1/instance_name/clk_div/i2c_clk
+------------------------------------------+---------+---------+---------+---------+
+                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------+---------+---------+---------+---------+
+clk                                       |    1.473|         |         |         |
+mem_manager1/instance_name/clk_div/i2c_clk|    5.687|         |    3.789|         |
+------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.38 secs
+ 
+--> 
+
+Total memory usage is 366836 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

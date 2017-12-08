@@ -21,11 +21,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 module i2c(
 		input wire 		ref_clk,
-		input wire		rst,
 		
 		input wire  	en,
 		
-		output reg [15:0] PTAT_packet,
+		//output reg [15:0] PTAT_packet,
 		output reg [15:0] packet_0,
 		output reg [15:0] packet_1,
 		output reg [15:0] packet_2,
@@ -34,21 +33,23 @@ module i2c(
 		output reg [15:0] packet_5,
 		output reg [15:0] packet_6,
 		output reg [15:0] packet_7,
-		output reg [7:0] pec_data,
+		//	output reg [7:0] pec_data,
 	
 		inout wire 	SCL_OUT,
 		inout  wire		SDA,
 		
-		output reg		valid,
-		output wire clk //For analysis purposes
+		output reg		valid
     );
 
-	//wire clk;
+	reg [15:0]PTAT_packet = 16'd0;
+	reg [15:0]pec_data = 16'd0;
+
+	wire clk;
 	wire SCL;
 	
 	i2c_clk_div clk_div(
     .clk(ref_clk), 
-    .rst(rst), 
+    //.rst(rst), 
     .i2c_clk(clk)
     );
 	 
@@ -123,7 +124,7 @@ module i2c(
 	reg [8:0]	last_state = 0;
 	reg [2:0] 	ndx;
 	reg [2:0]	last_ndx;
-	reg 			scl_en = 0;
+	reg 		scl_en = 0;
 	
 
 	wire [6:0] address = 7'h0A; // I/R sensor's address
@@ -150,7 +151,7 @@ module i2c(
 	
 	always@(negedge clk)
 	begin
-		if(rst)
+		/*if(rst)
 		begin
 			scl_en <= 0;
 
@@ -166,7 +167,7 @@ module i2c(
 			pec_data <= 8'b0;
 		end
 		else
-		begin
+		begin*/
 			if((state == idle) || (state == start) || (state == stop) || (state == start_2_2)) //(state == start_2_1) ||
 			begin
 				scl_en <= 0;
@@ -274,7 +275,7 @@ module i2c(
 					pec_data[last_ndx] <= SDA;
 				end
 			endcase
-		end
+		//end
 	
 	end
 	
@@ -283,7 +284,7 @@ module i2c(
 	begin
 		
 		// reset the state machine
-		if(rst)
+		/*if(rst)
 		begin
 		
 			state <= 0;
@@ -298,7 +299,7 @@ module i2c(
 			
 		end // end if
 		else 
-		begin
+		begin */
 			last_state <= state;
 			last_ndx <= ndx;
 			case(state)
@@ -792,7 +793,7 @@ module i2c(
 				end
 		endcase
 			
-		end // end else
+		//end // end else
 		
 	end // end always	
 endmodule
