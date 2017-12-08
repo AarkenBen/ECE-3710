@@ -121,7 +121,7 @@ module i2c(
 	reg		 	sda_out;
 	reg			sda_en;
 	reg [8:0] 	state = 0;
-	reg [8:0]	last_state = 0;
+	reg [5:0]	last_state = 0;
 	reg [2:0] 	ndx;
 	reg [2:0]	last_ndx;
 	reg 		scl_en = 0;
@@ -300,7 +300,7 @@ module i2c(
 		end // end if
 		else 
 		begin */
-			last_state <= state;
+			last_state <= state[5:0];
 			last_ndx <= ndx;
 			case(state)
 			idle: 			

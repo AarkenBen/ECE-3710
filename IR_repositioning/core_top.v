@@ -43,7 +43,7 @@ module core_top(
 
 	// VGA
 	wire [15:0] data_from_mem_to_vga;
-	wire [23:0] vga_mem_addr;
+	wire [15:0] vga_mem_addr;
 	
 	// CORE
 	wire [15:0] data_from_mem_to_core;

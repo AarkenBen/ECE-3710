@@ -24,7 +24,7 @@ module VGA_PIXEL_GENERATOR(
 		output reg  [7:0] color,
 		output hs, vs,
 		input  		[15:0]	data_from_mem_to_vga,
-		output  	[23:0]vga_mem_addr,
+		output  	[15:0]vga_mem_addr,
 		input 		[15:0]temp_0_16,
 		input 		[15:0]temp_1_16,
 		input 		[15:0]temp_2_16,
@@ -213,7 +213,7 @@ module VGA_PIXEL_GENERATOR(
 	// 
 	//VGA_RAM_1 r(.clka(clk), .wea(1'b0), .addra(ADDRA), .dina(16'b0), .douta(DOUTA));
 	
-	assign vga_mem_addr = {10'd0 , ADDRA};
+	assign vga_mem_addr = {2'd0 , ADDRA};
 	assign DOUTA = data_from_mem_to_vga;
 
 	

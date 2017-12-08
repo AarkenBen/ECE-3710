@@ -23,7 +23,7 @@ module memory_manager(
 						input	wire		clock1,
 						input wire     clock2,
 						input wire[23:0] 		addr_in_block1,						
-						input wire[23:0] 		addr_in_block2,
+						input wire[15:0] 		addr_in_block2,
 						//input[23:0] 		addr_in_cell,						
 						input wire[15:0]			data_in1,
 						input wire[15:0]			data_in2,

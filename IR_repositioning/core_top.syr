@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: core_top.prj
 
@@ -281,7 +281,6 @@ Unit <reg_manager> synthesized.
 
 Synthesizing Unit <memory_manager>.
     Related source file is "C:\Users\Nickj\Documents\GitHub\Master\ECE-3710\IR_repositioning\memory_manager.v".
-WARNING:Xst:647 - Input <addr_in_block2<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 24-bit register for signal <io_addr>.
     Found 1-bit register for signal <en>.
     Found 1-bit register for signal <last_valid>.
@@ -435,7 +434,7 @@ Synthesizing Unit <i2c>.
     Found 1-bit register for signal <packet_7<2>>.
     Found 1-bit register for signal <packet_7<1>>.
     Found 1-bit register for signal <packet_7<0>>.
-    Found 9-bit register for signal <last_state>.
+    Found 6-bit register for signal <last_state>.
     Found 3-bit register for signal <last_ndx>.
     Found 1-bit register for signal <sda_out>.
     Found 1-bit register for signal <sda_en>.
@@ -463,7 +462,7 @@ Synthesizing Unit <i2c>.
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred 147 D-type flip-flop(s).
+	inferred 144 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred 206 Multiplexer(s).
 	inferred   2 Tristate(s).
@@ -628,9 +627,8 @@ Macro Statistics
  31-bit register                                       : 1
  4-bit register                                        : 1
  5-bit register                                        : 2
- 6-bit register                                        : 1
+ 6-bit register                                        : 2
  8-bit register                                        : 2
- 9-bit register                                        : 1
 # Comparators                                          : 33
  10-bit comparator greater                             : 15
  10-bit comparator lessequal                           : 3
@@ -672,8 +670,6 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 
 Reading core <ipcore_dir/block_mem.ngc>.
 Loading core <block_mem> for timing and area information for instance <b_mem>.
-INFO:Xst:2261 - The FF/Latch <last_state_6> in Unit <instance_name> is equivalent to the following 2 FFs/Latches, which will be removed : <last_state_7> <last_state_8> 
-WARNING:Xst:1293 - FF/Latch <last_state_6> has a constant value of 0 in block <instance_name>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <VGA_PIXEL_GENERATOR>.
 The following registers are absorbed into counter <state>: 1 register on signal <state>.
@@ -737,8 +733,8 @@ Macro Statistics
  2-bit up counter                                      : 2
  21-bit up counter                                     : 1
  24-bit up counter                                     : 1
-# Registers                                            : 999
- Flip-Flops                                            : 999
+# Registers                                            : 996
+ Flip-Flops                                            : 996
 # Comparators                                          : 33
  10-bit comparator greater                             : 15
  10-bit comparator lessequal                           : 3
@@ -774,9 +770,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <last_state_6> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <last_state_7> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <last_state_8> has a constant value of 0 in block <i2c>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2146 - In block <VGA_PIXEL_GENERATOR>, Counter <state> <vsg/pCnt> are equivalent, XST will keep only <state>.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <core1/FSM_0> on signal <state[1:3]> with user encoding.
@@ -1061,7 +1054,7 @@ Delay:               3.789ns (Levels of Logic = 2)
     ----------------------------------------  ------------
      FD:C->Q              28   0.447   1.599  mem_manager1/instance_name/last_state_0 (mem_manager1/instance_name/last_state_0)
      LUT6:I0->O           16   0.203   1.233  mem_manager1/instance_name/_n11311 (mem_manager1/instance_name/_n1131)
-     LUT6:I3->O            1   0.205   0.000  mem_manager1/instance_name/last_state[8]_packet_5[15]_select_72_OUT<15>1 (mem_manager1/instance_name/last_state[8]_packet_5[15]_select_72_OUT<0>)
+     LUT6:I3->O            1   0.205   0.000  mem_manager1/instance_name/last_state[5]_packet_5[15]_select_72_OUT<15>1 (mem_manager1/instance_name/last_state[5]_packet_5[15]_select_72_OUT<0>)
      FD_1:D                    0.102          mem_manager1/instance_name/packet_5_0
     ----------------------------------------
     Total                      3.789ns (0.957ns logic, 2.832ns route)
@@ -1081,7 +1074,7 @@ Offset:              3.842ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IOBUF:IO->O         128   1.222   2.315  SDA_IOBUF (N73)
-     LUT6:I0->O            1   0.203   0.000  mem_manager1/instance_name/last_state[8]_packet_2[15]_select_69_OUT<7>1 (mem_manager1/instance_name/last_state[8]_packet_2[15]_select_69_OUT<8>)
+     LUT6:I0->O            1   0.203   0.000  mem_manager1/instance_name/last_state[5]_packet_2[15]_select_69_OUT<7>1 (mem_manager1/instance_name/last_state[5]_packet_2[15]_select_69_OUT<8>)
      FD_1:D                    0.102          mem_manager1/instance_name/packet_2_8
     ----------------------------------------
     Total                      3.842ns (1.527ns logic, 2.315ns route)
@@ -1178,13 +1171,13 @@ mem_manager1/instance_name/clk_div/i2c_clk|    5.687|         |    3.789|       
 
 
 Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.38 secs
+Total CPU time to Xst completion: 18.51 secs
  
 --> 
 
-Total memory usage is 366836 kilobytes
+Total memory usage is 366788 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    8 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

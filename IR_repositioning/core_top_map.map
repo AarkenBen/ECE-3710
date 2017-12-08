@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 08 11:26:46 2017
+Mapped Date    : Fri Dec 08 11:48:27 2017
 
 Mapping design into LUTs...
 Running directed packing...
@@ -50,26 +50,26 @@ Phase 8.5  Local Placement Optimization (Checksum:73b37a5f) REAL time: 9 secs
 
 Phase 9.8  Global Placement
 ...................
-........................
-.......................................................................................
-...........................................................................................................
 .........................
-Phase 9.8  Global Placement (Checksum:eb2cc611) REAL time: 23 secs 
+....................................................................
+...........................................................................................................................................................
+........................
+Phase 9.8  Global Placement (Checksum:3e37e0cc) REAL time: 23 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:eb2cc611) REAL time: 23 secs 
+Phase 10.5  Local Placement Optimization (Checksum:3e37e0cc) REAL time: 23 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:d8ddad40) REAL time: 43 secs 
+Phase 11.18  Placement Optimization (Checksum:bf341e83) REAL time: 44 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:d8ddad40) REAL time: 43 secs 
+Phase 12.5  Local Placement Optimization (Checksum:bf341e83) REAL time: 44 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:b0cfd748) REAL time: 43 secs 
+Phase 13.34  Placement Validation (Checksum:b6b26d54) REAL time: 44 secs 
 
 Total REAL time to Placer completion: 44 secs 
-Total CPU  time to Placer completion: 43 secs 
+Total CPU  time to Placer completion: 44 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
@@ -89,7 +89,7 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,414 out of   9,112   15%
+  Number of Slice LUTs:                      1,428 out of   9,112   15%
     Number used as logic:                    1,388 out of   9,112   15%
       Number using O6 output only:           1,172
       Number using O5 output only:              51
@@ -102,18 +102,18 @@ Slice Logic Utilization:
         Number using O6 output only:             2
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     24
-      Number with same-slice register load:     20
+    Number used exclusively as route-thrus:     38
+      Number with same-slice register load:     34
       Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   554 out of   2,278   24%
+  Number of occupied Slices:                   526 out of   2,278   23%
   Number of MUXCYs used:                       172 out of   4,556    3%
-  Number of LUT Flip Flop pairs used:        1,703
-    Number with an unused Flip Flop:           645 out of   1,703   37%
-    Number with an unused LUT:                 289 out of   1,703   16%
-    Number of fully used LUT-FF pairs:         769 out of   1,703   45%
+  Number of LUT Flip Flop pairs used:        1,668
+    Number with an unused Flip Flop:           623 out of   1,668   37%
+    Number with an unused LUT:                 240 out of   1,668   14%
+    Number of fully used LUT-FF pairs:         805 out of   1,668   48%
     Number of unique control sets:              52
     Number of slice register sites lost
       to control set restrictions:              61 out of  18,224    1%
@@ -155,7 +155,7 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.18
 
-Peak Memory Usage:  561 MB
+Peak Memory Usage:  562 MB
 Total REAL time to MAP completion:  45 secs 
 Total CPU time to MAP completion:   45 secs 
 
